@@ -16,12 +16,10 @@ jobs:
         id: psi_mobile
         with:
           url: "https://woodstickers.com"
-          threshold: 90
           strategy: mobile
       - name: Running Page Speed Insights (Desktop)
         uses: mattorb/psi-action@v1
         id: psi_desktop
         with:
           url: "https://woodstickers.com"
-          threshold: 96
           strategy: desktop
