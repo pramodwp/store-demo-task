@@ -30,9 +30,6 @@
           @font-face {
             font-family: '{{ name }}';
             src: url({{ url }}) format('{{ font_type }}');
-            {% if custom_font_weight != 'none' %}
-              font-weight: {{ custom_font_weight }};
-            {% endif %}
           }
   
           {% if apply_heading %}
