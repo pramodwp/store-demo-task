@@ -1,74 +1,59 @@
 {% if section.settings.enable %}
-  <style data-custom-fonts>
+  {% style %}
     {% assign items = section.blocks | reverse %}
 
-    {% for block in items %}
-      {% assign name = block.settings.name %}
-      {% assign url = block.settings.custom_font_url %}
-      {% assign custom_font_weight = block.settings.custom_font_weight %}
-      {% assign apply_h1 = block.settings.apply_h1 %}
-      {% assign apply_h2 = block.settings.apply_h2 %}
-      {% assign apply_h3 = block.settings.apply_h3 %}
-      {% assign apply_h4 = block.settings.apply_h4 %}
-      {% assign apply_h5 = block.settings.apply_h5 %}
-      {% assign apply_h6 = block.settings.apply_h6 %}
-      {% assign apply_body = block.settings.apply_body %}
-
-      {% if url != blank and url != "" %}
-        {% capture _font_type %}
-          {% if url contains ".otf" %}
-            opentype
-          {% elsif url contains ".ttf" %}
-            truetype
-          {% elsif url contains ".svg" %}
-            svg
-          {% elsif url contains ".woff2" %}
-            woff2
-          {% else %}
-            woff
+    :root {
+      {% for block in items %}
+        {% assign name = block.settings.name %}
+        {% assign url = block.settings.custom_font_url %}
+        {% assign custom_font_weight = block.settings.custom_font_weight %}
+        {% assign custom_font_weight = block.settings.custom_font_weight %}
+        {% assign apply_heading = block.settings.apply_heading %}
+        {% assign apply_body = block.settings.apply_body %}
+  
+        {% if url != blank and url != "" %}
+          {% capture _font_type %}
+            {% if url contains ".otf" %}
+              opentype
+            {% elsif url contains ".ttf" %}
+              truetype
+            {% elsif url contains ".svg" %}
+              svg
+            {% elsif url contains ".woff2" %}
+              woff2
+            {% else %}
+              woff
+            {% endif %}
+          {% endcapture %}
+          
+          {% assign font_type = _font_type | strip %}
+          
+          @font-face {
+            font-family: '{{ name }}';
+            src: url({{ url }}) format('{{ font_type }}');
+            {% if custom_font_weight != 'none' %}
+              font-weight: {{ custom_font_weight }};
+            {% endif %}
+          }
+  
+          {% if apply_heading %}
+            --font-heading-family: {{ name }}, {{ settings.type_header_font.fallback_families }};
+            --font-heading-style: normal;
+            --font-heading-weight: 400;
           {% endif %}
-        {% endcapture %}
-        
-        {% assign font_type = _font_type | strip %}
-        
-        @font-face {
-          font-family: '{{ name }}';
-          src: url({{ url }}) format('{{ font_type }}');
-          {% if custom_font_weight != 'none' %}
-            font-weight: {{ custom_font_weight }};
+    
+          {% if apply_body %}
+            --font-body-family: {{ name }}, {{ settings.type_body_font.fallback_families }};
+            --font-body-style: normal;
+            --font-body-weight: 300;
+            --font-body-weight-bold: 400;
           {% endif %}
-        }
-        
-        {% if apply_h1 %}
-          h1 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
+          
         {% endif %}
-        
-        {% if apply_h2 %}
-          h2 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-        
-        {% if apply_h3 %}
-          h3 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-        
-        {% if apply_h4 %}
-          h4 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-        
-        {% if apply_h5 %}
-          h5 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-        
-        {% if apply_h6 %}
-          h6 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-        
-        {% if apply_body %}
-          body { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </style>
+      {% endfor %}
+  }
+    
+  {% endstyle %}
 {% endif %}
 
 {% schema %}
@@ -120,38 +105,8 @@
         },
         {
           "type": "checkbox",
-          "id": "apply_h1",
-          "label": "H1",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "apply_h2",
-          "label": "H2",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "apply_h3",
-          "label": "H3",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "apply_h4",
-          "label": "H4",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "apply_h5",
-          "label": "H5",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "apply_h6",
-          "label": "H6",
+          "id": "apply_heading",
+          "label": "Headings",
           "default": true
         },
         {
