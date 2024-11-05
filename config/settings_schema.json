@@ -47,6 +47,12 @@
             "default": "#FFFFFF"
           },
           {
+            "type": "color",
+            "id": "background_2",
+            "label": "Background 2",
+            "default": "#FFFFFF"
+          },
+          {
             "type": "color_background",
             "id": "background_gradient",
             "label": "t:settings_schema.colors.settings.background_gradient.label",
