@@ -25,12 +25,27 @@
             {% endif %}
           {% endcapture %}
           
+          {% capture _font_type_2 %}
+            {% if url_2 contains ".otf" %}
+              opentype
+            {% elsif url_2 contains ".ttf" %}
+              truetype
+            {% elsif url_2 contains ".svg" %}
+              svg
+            {% elsif url_2 contains ".woff2" %}
+              woff2
+            {% else %}
+              woff
+            {% endif %}
+          {% endcapture %}
+          
           {% assign font_type_1 = _font_type_1 | strip %}
+          {% assign font_type_2 = _font_type_2 | strip %}
           
           @font-face {
             font-family: '{{ name }}';
-            src: url('{{ url_1 }}') format('woff'),
-                url('{{ url_2 }}') format('woff2');
+            src: url('{{ url_1 }}') format('{{ font_type_1 }}'),
+                url('{{ url_2 }}') format('{{ font_type_2 }}');
           }
   
           {% if apply_heading %}
