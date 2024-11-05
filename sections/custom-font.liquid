@@ -1,7 +1,6 @@
 {% if section.settings.enable %}
   {% style %}
-    {% assign items = section.blocks | reverse %}
-
+    {% assign items = section.blocks %}
     :root {
       {% for block in items %}
         {% assign name = block.settings.name %}
