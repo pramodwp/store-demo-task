@@ -148,30 +148,20 @@
           "image_BmAPUD": {
             "type": "image",
             "settings": {
-              "name": "Heading",
+              "name": "Lilita One",
               "custom_font_weight": "none",
               "custom_font_url": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LilitaOne.woff?v=1730803107",
-              "apply_h1": true,
-              "apply_h2": true,
-              "apply_h3": true,
-              "apply_h4": true,
-              "apply_h5": true,
-              "apply_h6": true,
+              "apply_heading": true,
               "apply_body": false
             }
           },
           "image_EKy6Di": {
             "type": "image",
             "settings": {
-              "name": "Body",
+              "name": "Londrina Solid",
               "custom_font_weight": "none",
               "custom_font_url": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Regular.woff?v=1730803145",
-              "apply_h1": false,
-              "apply_h2": false,
-              "apply_h3": false,
-              "apply_h4": false,
-              "apply_h5": false,
-              "apply_h6": false,
+              "apply_heading": true,
               "apply_body": true
             }
           }
@@ -192,7 +182,7 @@
       "scheme-1": {
         "settings": {
           "background": "#2c2f4b",
-          "background_2": "#E8E8E8",
+          "background_2": "#e8e8e8",
           "text": "#ffffff",
           "button": "#454a7f",
           "button_label": "#ffffff",
@@ -203,7 +193,7 @@
       "scheme-2": {
         "settings": {
           "background": "#f3f3f3",
-          "background_2": "#E8E8E8",
+          "background_2": "#e8e8e8",
           "text": "#121212",
           "button": "#121212",
           "button_label": "#f3f3f3",
@@ -214,7 +204,7 @@
       "scheme-3": {
         "settings": {
           "background": "#f5c68d",
-          "background_2": "#E8E8E8",
+          "background_2": "#e8e8e8",
           "text": "#282821",
           "button": "#282821",
           "button_label": "#ffffff",
@@ -225,7 +215,7 @@
       "scheme-4": {
         "settings": {
           "background": "#121212",
-          "background_2": "#E8E8E8",
+          "background_2": "#e8e8e8",
           "text": "#ffffff",
           "button": "#ffffff",
           "button_label": "#121212",
@@ -236,7 +226,7 @@
       "scheme-5": {
         "settings": {
           "background": "#334fb4",
-          "background_2": "#E8E8E8",
+          "background_2": "#e8e8e8",
           "text": "#ffffff",
           "button": "#ffffff",
           "button_label": "#334fb4",
