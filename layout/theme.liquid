@@ -114,6 +114,15 @@
       {% endcomment %}
       
       :root {
+        --font-body-family: "Londrina Solid", {{ settings.type_body_font.fallback_families }};
+        --font-body-style: normal;
+        --font-body-weight: 300;
+        --font-body-weight-bold: 400;
+  
+        --font-heading-family: "Lilita One", {{ settings.type_header_font.fallback_families }};
+        --font-heading-style: normal;
+        --font-heading-weight: 400;
+        
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
 
