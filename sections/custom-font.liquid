@@ -32,13 +32,13 @@
           }
   
           {% if apply_heading %}
-            --font-heading-family: "{{ name }}", {{ settings.type_header_font.fallback_families }};
+            --font-heading-family: "{{ name }}";
             --font-heading-style: normal;
             --font-heading-weight: {{ custom_font_weight }};
           {% endif %}
     
           {% if apply_body %}
-            --font-body-family: "{{ name }}", {{ settings.type_body_font.fallback_families }};
+            --font-body-family: "{{ name }}";
             --font-body-style: normal;
             --font-body-weight: {{ custom_font_weight }};
             --font-body-weight-bold: 400;
