@@ -161,7 +161,7 @@
               "name": "Londrina Solid",
               "custom_font_weight": "none",
               "custom_font_url": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Regular.woff?v=1730803145",
-              "apply_heading": true,
+              "apply_heading": false,
               "apply_body": true
             }
           }
