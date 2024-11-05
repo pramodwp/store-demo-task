@@ -150,7 +150,8 @@
             "settings": {
               "name": "Lilita One",
               "custom_font_weight": "none",
-              "custom_font_url": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LilitaOne.woff?v=1730803107",
+              "custom_font_url_1": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LilitaOne.woff?v=1730803107",
+              "custom_font_url_2": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LilitaOne.woff2?v=1730806668",
               "apply_heading": true,
               "apply_body": false
             }
@@ -160,7 +161,8 @@
             "settings": {
               "name": "Londrina Solid",
               "custom_font_weight": "none",
-              "custom_font_url": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Regular.woff?v=1730803145",
+              "custom_font_url_1": "",
+              "custom_font_url_2": "",
               "apply_heading": false,
               "apply_body": true
             }
