@@ -7,13 +7,7 @@
       {% assign url = block.settings.custom_font_url %}
       {% assign custom_font_weight = block.settings.custom_font_weight %}
       {% assign customFontStyle = block.settings.custom_font_style %}
-      {% assign apply_h1 = block.settings.apply_h1 %}
-      {% assign apply_h2 = block.settings.apply_h2 %}
-      {% assign apply_h3 = block.settings.apply_h3 %}
-      {% assign apply_h4 = block.settings.apply_h4 %}
-      {% assign apply_h5 = block.settings.apply_h5 %}
-      {% assign apply_h6 = block.settings.apply_h6 %}
-      {% assign apply_body = block.settings.apply_body %}
+      {% assign font_usage = block.settings.font_usage %}
 
       {% if url != blank and url != "" %}
         {% capture _font_type %}
@@ -42,34 +36,19 @@
             font-weight: {{ custom_font_weight }};
           {% endif %}
         }
-        
-        {% if apply_h1 %}
-          h1 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
+
+        {% if font_usage == "heading" %}
+          h1, h2, h3, h4, h5, h6 {
+            font-family: '{{ name }}' !important;
+            font-weight: {{ custom_font_weight }} !important;
+          }
+        {% elsif font_usage == "body" %}
+          body {
+            font-family: '{{ name }}' !important;
+            font-weight: {{ custom_font_weight }} !important;
+          }
         {% endif %}
         
-        {% if apply_h2 %}
-          h2 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-        
-        {% if apply_h3 %}
-          h3 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-        
-        {% if apply_h4 %}
-          h4 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-        
-        {% if apply_h5 %}
-          h5 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-        
-        {% if apply_h6 %}
-          h6 { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
-        
-        {% if apply_body %}
-          body { font-family: '{{ name }}' !important; font-weight: {{ custom_font_weight }} !important; }
-        {% endif %}
       {% endif %}
     {% endfor %}
   </style>
@@ -77,7 +56,7 @@
 
 {% schema %}
 {
-  "name": "Custom Font",
+  "name": "Custom Fonts",
   "settings": [
     {
       "type": "checkbox",
@@ -88,8 +67,8 @@
   ],
   "blocks": [
     {
-      "type": "image",
-      "name": "Font",
+      "type": "font",
+      "name": "Font Set",
       "settings": [
         {
           "type": "text",
@@ -123,46 +102,44 @@
           "label": "Font URL"
         },
         {
-          "type": "checkbox",
-          "id": "apply_h1",
-          "label": "H1",
-          "default": true
+          "type": "select",
+          "id": "font_usage",
+          "label": "Apply to",
+          "default": "heading",
+          "options": [
+            {
+              "value": "heading",
+              "label": "Headings (h1 to h6)"
+            },
+            {
+              "value": "body",
+              "label": "Body"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom Fonts",
+      "blocks": [
+        {
+          "type": "font",
+          "settings": {
+            "name": "Heading Font",
+            "custom_font_weight": "bold",
+            "font_usage": "heading"
+          }
         },
         {
-          "type": "checkbox",
-          "id": "apply_h2",
-          "label": "H2",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "apply_h3",
-          "label": "H3",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "apply_h4",
-          "label": "H4",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "apply_h5",
-          "label": "H5",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "apply_h6",
-          "label": "H6",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "apply_body",
-          "label": "Body",
-          "default": true
+          "type": "font",
+          "settings": {
+            "name": "Body Font",
+            "custom_font_weight": "normal",
+            "font_usage": "body"
+          }
         }
       ]
     }
