@@ -45,6 +45,18 @@
 
     {% style %}
 
+      @font-face {
+        font-family: 'Lilita One';
+        src: url('https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LilitaOne.woff?v=1730803107') format('woff'),
+            url('https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LilitaOne.woff2?v=1730806668') format('woff2');
+      }
+
+      @font-face {
+        font-family: 'Londrina Solid';
+        src: url('https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Regular.woff?v=1730803145') format('woff'),
+            url('https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Regular.woff2?v=1730806701') format('woff2');
+      }
+
       {% for scheme in settings.color_schemes -%}
         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
         {% if forloop.index == 1 -%}
