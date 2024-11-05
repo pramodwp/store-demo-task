@@ -5,30 +5,32 @@
       {% for block in items %}
         {% assign name = block.settings.name %}
         {% assign url_1 = block.settings.custom_font_url_1 %}
+        {% assign url_2 = block.settings.custom_font_url_2 %}
         {% assign custom_font_weight = block.settings.custom_font_weight %}
         {% assign apply_heading = block.settings.apply_heading %}
         {% assign apply_body = block.settings.apply_body %}
   
-        {% if url != blank and url != "" %}
-          {% capture _font_type %}
-            {% if url contains ".otf" %}
+        {% if url_1 != blank and url_1 != "" and url_2 != blank and url_2 %}
+          {% capture _font_type_1 %}
+            {% if url_1 contains ".otf" %}
               opentype
-            {% elsif url contains ".ttf" %}
+            {% elsif url_1 contains ".ttf" %}
               truetype
-            {% elsif url contains ".svg" %}
+            {% elsif url_1 contains ".svg" %}
               svg
-            {% elsif url contains ".woff2" %}
+            {% elsif url_1 contains ".woff2" %}
               woff2
             {% else %}
               woff
             {% endif %}
           {% endcapture %}
           
-          {% assign font_type = _font_type | strip %}
+          {% assign font_type_1 = _font_type_1 | strip %}
           
           @font-face {
             font-family: '{{ name }}';
-            src: url({{ url }}) format('{{ font_type }}');
+            src: url('{{ url_1 }}') format('woff'),
+                url('{{ url_2 }}') format('woff2');
           }
   
           {% if apply_heading %}
