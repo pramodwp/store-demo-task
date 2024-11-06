@@ -148,14 +148,11 @@
         "buttons_bXdQhP": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "shopify://shop_images/discord-icon.svg",
-            "button_link_1": "shopify://products/blue-silk-tuxedo",
+            "button_label_1": "discord",
             "button_style_secondary_1": false,
-            "button_label_2": "shopify://shop_images/youtube-icon.svg",
-            "button_link_2": "shopify://blogs/news",
+            "button_label_2": "youtube",
             "button_style_secondary_2": false,
-            "button_label_3": "shopify://shop_images/tiktok-icon.svg",
-            "button_link_3": "shopify://products/navy-sport-jacket",
+            "button_label_3": "tiktok",
             "button_style_secondary_3": false
           }
         }
