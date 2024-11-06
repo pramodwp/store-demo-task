@@ -136,7 +136,13 @@
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.button_label_1 != blank -%}
-                <a href="{{ settings.social_facebook_link }}" class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                <a
+                  {% if block.settings.button_label_1 == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ settings.social_facebook_link }}"
+                  {% endif %}
+                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                     <span class="svg-wrapper">
                         {{- block.settings.button_label_1 | inline_asset_content -}}
@@ -473,6 +479,11 @@
           ]
         },
         {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_link_1.label"
+        },
+        {
           "type": "checkbox",
           "id": "button_style_secondary_1",
           "default": false,
@@ -498,6 +509,11 @@
           ]
         },
         {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_link_2.label"
+        },
+        {
           "type": "checkbox",
           "id": "button_style_secondary_2",
           "default": false,
@@ -521,6 +537,11 @@
         	{ "value": "icon-vimeo.svg", "label": "Vimeo" },
         	{ "value": "icon-discord.svg", "label": "Discord" }
           ]
+        },
+        {
+          "type": "url",
+          "id": "button_link_3",
+          "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_link_3.label"
         },
         {
           "type": "checkbox",
