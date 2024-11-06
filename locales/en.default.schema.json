@@ -1483,9 +1483,8 @@
           "name": "Buttons",
           "settings": {
             "button_label_1": {
-              "label": "First button label",
-              "info": "Leave the label blank to hide the button.",
-              "default": "Button label"
+              "label": "First button icon",
+              "default": "Button icon"
             },
             "button_link_1": {
               "label": "First button link"
@@ -1494,9 +1493,8 @@
               "label": "Use outline button style"
             },
             "button_label_2": {
-              "label": "Second button label",
-              "info": "Leave the label blank to hide the button.",
-              "default": "Button label"
+              "label": "Second button icon",
+              "default": "Button icon"
             },
             "button_link_2": {
               "label": "Second button link"
@@ -1505,9 +1503,8 @@
               "label": "Use outline button style"
             },
 			"button_label_3": {
-              "label": "Third button label",
-              "info": "Leave the label blank to hide the button.",
-              "default": "Button label"
+              "label": "Third button icon",
+              "default": "Button icon"
             },
             "button_link_3": {
               "label": "Third button link"
