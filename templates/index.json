@@ -148,11 +148,11 @@
         "buttons_bXdQhP": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "discord",
+            "button_label_1": "icon-facebook.svg",
             "button_style_secondary_1": false,
-            "button_label_2": "youtube",
+            "button_label_2": "icon-youtube.svg",
             "button_style_secondary_2": false,
-            "button_label_3": "tiktok",
+            "button_label_3": "icon-tiktok.svg",
             "button_style_secondary_3": false
           }
         }
