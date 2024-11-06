@@ -145,13 +145,6 @@
             "heading_size": "h1"
           }
         },
-        "text_3iRyQP": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
         "buttons_bXdQhP": {
           "type": "buttons",
           "settings": {
@@ -169,7 +162,6 @@
       },
       "block_order": [
         "heading_YwhLiV",
-        "text_3iRyQP",
         "buttons_bXdQhP"
       ],
       "settings": {
