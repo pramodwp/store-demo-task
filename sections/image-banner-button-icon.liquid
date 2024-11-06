@@ -137,10 +137,10 @@
             >
               {%- if block.settings.button_label_1 != blank -%}
                 <a
-                  {% if block.settings.button_label_1 == blank %}
+                  {% if block.settings.button_link_1 == blank %}
                     role="link" aria-disabled="true"
                   {% else %}
-                    href="{{ settings.social_facebook_link }}"
+                    href="{{ settings.button_link_1 }}"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
@@ -151,10 +151,10 @@
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
                 <a
-                  {% if block.settings.button_label_2 == blank %}
+                  {% if block.settings.button_link_2 == blank %}
                     role="link" aria-disabled="true"
                   {% else %}
-                    href="{{ block.settings.button_label_2 }}"
+                    href="{{ block.settings.button_link_2 }}"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                 >
@@ -165,10 +165,10 @@
               {%- endif -%}
               {%- if block.settings.button_label_3 != blank -%}
                 <a
-                  {% if block.settings.button_label_3 == blank %}
+                  {% if block.settings.button_link_3 == blank %}
                     role="link" aria-disabled="true"
                   {% else %}
-                    href="{{ block.settings.button_label_3 }}"
+                    href="{{ block.settings.button_link_3 }}"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_3 %} button--secondary{% else %} button--primary{% endif %}"
                 >
