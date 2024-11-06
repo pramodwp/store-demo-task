@@ -1483,9 +1483,9 @@
           "name": "Buttons",
           "settings": {
             "button_label_1": {
-              "label": "First button icon",
-              "info": "Leave the icon blank to hide the button.",
-              "default": "Button icon"
+              "label": "First button social media",
+              "info": "Leave the social media blank to hide the button.",
+              "default": "Button social media"
             },
             "button_link_1": {
               "label": "First button link"
@@ -1494,9 +1494,9 @@
               "label": "Use outline button style"
             },
             "button_label_2": {
-              "label": "Second button icon",
-              "info": "Leave the icon blank to hide the button.",
-              "default": "Button icon"
+              "label": "Second button social media",
+              "info": "Leave the social media blank to hide the button.",
+              "default": "Button social media"
             },
             "button_link_2": {
               "label": "Second button link"
@@ -1505,9 +1505,9 @@
               "label": "Use outline button style"
             },
 			"button_label_3": {
-              "label": "Third button icon",
-              "info": "Leave the icon blank to hide the button.",
-              "default": "Button icon"
+              "label": "Third button social media",
+              "info": "Leave the social media blank to hide the button.",
+              "default": "Button social media"
             },
             "button_link_3": {
               "label": "Third button link"
