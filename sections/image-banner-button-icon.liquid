@@ -140,7 +140,7 @@
                   {% if block.settings.button_link_1 == blank %}
                     role="link" aria-disabled="true"
                   {% else %}
-                    href="{{ settings.button_link_1 }}"
+                    href="{{ settings.button_link_1 }}" target="_blank"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
@@ -154,7 +154,7 @@
                   {% if block.settings.button_link_2 == blank %}
                     role="link" aria-disabled="true"
                   {% else %}
-                    href="{{ block.settings.button_link_2 }}"
+                    href="{{ block.settings.button_link_2 }}" target="_blank"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                 >
@@ -168,7 +168,7 @@
                   {% if block.settings.button_link_3 == blank %}
                     role="link" aria-disabled="true"
                   {% else %}
-                    href="{{ block.settings.button_link_3 }}"
+                    href="{{ block.settings.button_link_3 }}" target="_blank"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_3 %} button--secondary{% else %} button--primary{% endif %}"
                 >
