@@ -140,12 +140,12 @@
                   {% if block.settings.button_link_1 == blank %}
                     role="link" aria-disabled="true"
                   {% else %}
-                    href="{{ block.settings.button_link_1 }}"
+                    href="{{ settings.social_facebook_link }}"
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                     <span class="svg-wrapper">
-                      <img src="{{ block.settings.button_label_1 | img_url: 'original' }}">
+                      
                     </span>
                 </a>
               {%- endif -%}
@@ -465,6 +465,7 @@
           "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_1.label",
           "info": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_1.info",
           "options": [
+            { "value": "", "label": "Select" },
         	{ "value": "facebook", "label": "Facebook" },
         	{ "value": "instagram", "label": "Instagram" },
         	{ "value": "youtube", "label": "YouTube" },
@@ -489,6 +490,7 @@
           "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_2.label",
           "info": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_2.info",
           "options": [
+            { "value": "", "label": "Select" },
         	{ "value": "facebook", "label": "Facebook" },
         	{ "value": "instagram", "label": "Instagram" },
         	{ "value": "youtube", "label": "YouTube" },
@@ -513,6 +515,7 @@
           "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_3.label",
           "info": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_3.info",
           "options": [
+            { "value": "", "label": "Select" },
         	{ "value": "facebook", "label": "Facebook" },
         	{ "value": "instagram", "label": "Instagram" },
         	{ "value": "youtube", "label": "YouTube" },
