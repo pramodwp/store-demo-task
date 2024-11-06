@@ -144,7 +144,7 @@
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
-                  {{- block.settings.button_label_1 | escape -}}
+                  <img src="{{ block.settings.button_label_1 | image_url }}" alt="Button Icon" />
                 </a>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
@@ -156,7 +156,7 @@
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                 >
-                  {{- block.settings.button_label_2 | escape -}}
+                  <img src="{{ block.settings.button_label_2 | image_url }}" alt="Button Icon" />
                 </a>
               {%- endif -%}
               {%- if block.settings.button_label_3 != blank -%}
@@ -168,7 +168,7 @@
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_3 %} button--secondary{% else %} button--primary{% endif %}"
                 >
-                  {{- block.settings.button_label_3 | escape -}}
+                  <img src="{{ block.settings.button_label_3 | image_url }}" alt="Button Icon" />
                 </a>
               {%- endif -%}
             </div>
@@ -457,8 +457,7 @@
           "type": "text",
           "id": "button_label_1",
           "default": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_1.default",
-          "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_1.label",
-          "info": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_1.info"
+          "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_1.label"
         },
         {
           "type": "url",
@@ -475,8 +474,7 @@
           "type": "text",
           "id": "button_label_2",
           "default": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_2.default",
-          "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_2.info"
+          "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_2.label"
         },
         {
           "type": "url",
@@ -493,8 +491,7 @@
           "type": "text",
           "id": "button_label_3",
           "default": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_3.default",
-          "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_3.label",
-          "info": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_3.info"
+          "label": "t:sections.image-banner-button-icon.blocks.buttons.settings.button_label_3.label"
         },
         {
           "type": "url",
