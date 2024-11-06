@@ -136,13 +136,7 @@
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.button_label_1 != blank -%}
-                <a
-                  {% if block.settings.button_label_1 == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ settings.social_facebook_link }}"
-                  {% endif %}
-                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                <a href="{{ settings.social_facebook_link }}" class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                     <span class="svg-wrapper">
                         {{- block.settings.button_label_1 | inline_asset_content -}}
