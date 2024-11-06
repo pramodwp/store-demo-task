@@ -1483,7 +1483,7 @@
           "name": "Buttons",
           "settings": {
             "button_label_1": {
-              "label": "First button social media",
+              "label": "First button social media link",
               "info": "Leave the social media blank to hide the button.",
               "default": "Button social media"
             },
@@ -1494,7 +1494,7 @@
               "label": "Use outline button style"
             },
             "button_label_2": {
-              "label": "Second button social media",
+              "label": "Second button social media link",
               "info": "Leave the social media blank to hide the button.",
               "default": "Button social media"
             },
@@ -1505,7 +1505,7 @@
               "label": "Use outline button style"
             },
 			"button_label_3": {
-              "label": "Third button social media",
+              "label": "Third button social media link",
               "info": "Leave the social media blank to hide the button.",
               "default": "Button social media"
             },
