@@ -144,8 +144,9 @@
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
+                    
                     <span class="svg-wrapper">
-                      {{- block.settings.button_label_1 -}}
+                      {{- 'icon-instagram.svg' | inline_asset_content -}}
                     </span>
                 </a>
               {%- endif -%}
@@ -159,7 +160,7 @@
                   class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                     <span class="svg-wrapper">
-                      {{- block.settings.button_label_2 -}}
+                      {{- block.settings.button_label_2 | image_url -}}
                     </span>
                 </a>
               {%- endif -%}
@@ -173,7 +174,7 @@
                   class="button{% if block.settings.button_style_secondary_3 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                     <span class="svg-wrapper">
-                      {{- block.settings.button_label_3 -}}
+                      {{- block.settings.button_label_3 | image_url -}}
                     </span>
                 </a>
               {%- endif -%}
