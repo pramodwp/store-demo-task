@@ -452,6 +452,7 @@
   display: inline-flex;
   flex-wrap: wrap;
   gap: 1rem;
+  max-width: 75rem;
   word-break: break-word;
 }
 
