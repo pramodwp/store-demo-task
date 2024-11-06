@@ -155,13 +155,13 @@
         "buttons_bXdQhP": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
+            "button_label_1": "shopify://shop_images/discord-icon.svg",
             "button_link_1": "shopify://products/blue-silk-tuxedo",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "shopify://shop_images/youtube-icon.svg",
             "button_link_2": "shopify://blogs/news",
             "button_style_secondary_2": false,
-            "button_label_3": "Button label",
+            "button_label_3": "shopify://shop_images/tiktok-icon.svg",
             "button_link_3": "shopify://products/navy-sport-jacket",
             "button_style_secondary_3": false
           }
@@ -178,7 +178,7 @@
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
