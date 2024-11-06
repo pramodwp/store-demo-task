@@ -1353,7 +1353,7 @@
         "name": "Image banner"
       }
     },
-    "image-banner": {
+    "image-banner-button-icon": {
       "name": "Image banner with Button Icon",
       "settings": {
         "image": {
