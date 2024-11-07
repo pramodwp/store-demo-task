@@ -160,6 +160,54 @@
                 </a>
               {%- endif -%}
             </div>
+          {%- when 'social-buttons' -%}
+            <div
+              class="banner_icon__buttons{% if block.settings.social_button_1 != blank and block.settings.social_button_2 != blank and block.settings.social_button_3 != blank %} banner_icon__buttons--multiple{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {%- if block.settings.social_button_1 != blank -%}
+            	<a
+            	  {% if block.settings.social_button_link_1 == blank %}
+            		role="link" aria-disabled="true"
+            	  {% else %}
+            		href="{{ settings.social_button_link_1 }}" target="_blank"
+            	  {% endif %}
+            	  class="button{% if block.settings.social_button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+            	>
+            		<span class="svg-wrapper">
+            			{{- block.settings.social_button_1 | inline_asset_content -}}
+            		</span>
+            	</a>
+              {%- endif -%}
+              {%- if block.settings.social_button_2 != blank -%}
+            	<a
+            	  {% if block.settings.social_button_link_2 == blank %}
+            		role="link" aria-disabled="true"
+            	  {% else %}
+            		href="{{ block.settings.social_button_link_2 }}" target="_blank"
+            	  {% endif %}
+            	  class="button{% if block.settings.social_button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+            	>
+            		<span class="svg-wrapper">
+            			{{- block.settings.social_button_2 | inline_asset_content -}}
+            		</span>
+            	</a>
+              {%- endif -%}
+              {%- if block.settings.social_button_3 != blank -%}
+            	<a
+            	  {% if block.settings.social_button_link_3 == blank %}
+            		role="link" aria-disabled="true"
+            	  {% else %}
+            		href="{{ block.settings.social_button_link_3 }}" target="_blank"
+            	  {% endif %}
+            	  class="button{% if block.settings.social_button_style_secondary_3 %} button--secondary{% else %} button--primary{% endif %}"
+            	>
+            		<span class="svg-wrapper">
+            			{{- block.settings.social_button_3 | inline_asset_content -}}
+            		</span>
+            	</a>
+              {%- endif -%}
+            </div>
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -540,7 +588,7 @@
       	},
       	{
       	  "type": "checkbox",
-      	  "id": "button_style_secondary_2",
+      	  "id": "social_button_style_secondary_2",
       	  "default": false,
       	  "label": "Use outline button style"
       	},
