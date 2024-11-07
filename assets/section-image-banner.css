@@ -448,7 +448,7 @@
   max-width: 45rem;
   word-break: break-word;
 }
-.banner_icon_buttons {
+.banner_icon__buttons {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 1rem;
