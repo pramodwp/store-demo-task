@@ -247,12 +247,12 @@
         "social_buttons_tVVVxf": {
           "type": "social-buttons",
           "settings": {
-            "social_button_1": "",
+            "social_button_1": "icon-discord.svg",
             "social_button_link_1": "",
             "social_button_style_secondary_1": false,
-            "social_button_2": "",
+            "social_button_2": "icon-instagram.svg",
             "button_link_2": "",
-            "social_button_3": "",
+            "social_button_3": "icon-youtube.svg",
             "social_button_link_3": "",
             "social_button_style_secondary_3": false
           }
