@@ -464,7 +464,7 @@
 .banner_icon__buttons a.button.button--primary:hover:after {
   box-shadow: none !important;
 }
-.banner_icon__buttons .banner__heading.inline-richtext.h1{
+.banner__heading.inline-richtext.h1{
   text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
 }
 
