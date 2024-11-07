@@ -459,7 +459,13 @@
   height: 42px !important;
 }
 .banner_icon__buttons a.button.button--primary {
-  padding: 16px 10px;
+  padding: 16px;
+}
+.banner_icon__buttons a.button.button--primary:hover:after {
+  box-shadow: none !important;
+}
+.banner_icon__buttons .banner__heading.inline-richtext.h1{{
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
 @media screen and (max-width: 749px) {
@@ -480,6 +486,8 @@
     flex-grow: 1;
     min-width: 5.625rem;
     min-height: 5.125rem;
+    max-width: 5.625rem;
+    max-height: 5.125rem;
   }
 }
 
@@ -497,6 +505,8 @@
     flex-grow: 1;
     min-width: 5.625rem;
     min-height: 5.125rem;
+    max-width: 5.625rem;
+    max-height: 5.125rem;
   }
 
   .banner--content-align-right .banner_icon__buttons--multiple {
