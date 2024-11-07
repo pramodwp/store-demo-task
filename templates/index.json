@@ -42,7 +42,6 @@
         "buttons_AAGfJ8"
       ],
       "settings": {
-        "image": "shopify://shop_images/discord-art-key.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "bottom-center",
@@ -74,7 +73,6 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/halloween-bundle-art-1024.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -155,7 +153,6 @@
         "heading_size": "h1",
         "enable_video_looping": false,
         "video_url": "https://www.youtube.com/watch?v=ng3CrRUP5-I",
-        "cover_image": "shopify://shop_images/YeepsLaunchTrailerThumbnail.jpg",
         "description": "Yeeps Hide And Seek Trailer",
         "full_width": false,
         "color_scheme": "scheme-4",
@@ -190,7 +187,6 @@
         "buttons_eCrebz"
       ],
       "settings": {
-        "image": "shopify://shop_images/yeeps-plush-YP1-three-plushies-hidden-in-boxes.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "bottom-center",
@@ -231,43 +227,49 @@
         "padding_bottom": 16
       }
     },
-    "image_banner_button_icon_7pUH8C": {
-      "type": "image-banner-button-icon",
+    "image_banner_D8gkyg": {
+      "type": "image-banner",
       "blocks": {
-        "heading_XCKWXU": {
+        "heading_7U7g3i": {
           "type": "heading",
           "settings": {
-            "heading": "CONNECT WITH US",
+            "heading": "Image banner",
             "heading_size": "h1"
           }
         },
-        "buttons_d8FW6p": {
-          "type": "buttons",
+        "text_ekRxnp": {
+          "type": "text",
           "settings": {
-            "button_label_1": "icon-discord.svg",
-            "button_link_1": "https://discord.gg/yeeps",
-            "button_style_secondary_1": false,
-            "button_label_2": "icon-youtube.svg",
-            "button_link_2": "https://www.youtube.com/@YeepsVR_",
-            "button_style_secondary_2": false,
-            "button_label_3": "icon-tiktok.svg",
-            "button_link_3": "https://www.tiktok.com/@YeepsVR",
-            "button_style_secondary_3": false
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "social_buttons_tVVVxf": {
+          "type": "social-buttons",
+          "settings": {
+            "social_button_1": "",
+            "social_button_link_1": "",
+            "social_button_style_secondary_1": false,
+            "social_button_2": "",
+            "button_link_2": "",
+            "social_button_3": "",
+            "social_button_link_3": "",
+            "social_button_style_secondary_3": false
           }
         }
       },
       "block_order": [
-        "heading_XCKWXU",
-        "buttons_d8FW6p"
+        "heading_7U7g3i",
+        "text_ekRxnp",
+        "social_buttons_tVVVxf"
       ],
       "settings": {
-        "image": "shopify://shop_images/social-links-art-key.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "medium",
         "desktop_content_position": "middle-center",
-        "show_text_box": false,
+        "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -283,6 +285,6 @@
     "video_GCgiPD",
     "image_banner_7NaFJU",
     "featured_collection",
-    "image_banner_button_icon_7pUH8C"
+    "image_banner_D8gkyg"
   ]
 }
