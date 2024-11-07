@@ -18,9 +18,41 @@
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": true,
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "image_banner_6e73jj": {
+      "type": "image-banner",
+      "blocks": {
+        "buttons_AAGfJ8": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Join Yeeps Discord",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "buttons_AAGfJ8"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/discord-art-key.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
       }
     },
     "image_banner": {
@@ -42,16 +74,93 @@
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/halloween-bundle-art-1024.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "collapsible_content_iydGCz": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_UEBY3Y": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{Topic} Lorem Ipsum Dolor Sit Amet",
+            "icon": "none",
+            "row_content": "<p>&lcub;TopicBody&rcub; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis sodales nisi, et lobortis velit consectetur sed. Nam quis sapien odio. Praesent vehicula convallis lectus, pulvinar rutrum leo viverra eget. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qDw9ah": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{Topic} Lorem Ipsum Dolor Sit Amet",
+            "icon": "none",
+            "row_content": "<p>&lcub;TopicBody&rcub; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis sodales nisi, et lobortis velit consectetur sed. Nam quis sapien odio. Praesent vehicula convallis lectus, pulvinar rutrum leo viverra eget. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_b93kzD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{Topic} Lorem Ipsum Dolor Sit Amet",
+            "icon": "none",
+            "row_content": "<p>&lcub;TopicBody&rcub; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis sodales nisi, et lobortis velit consectetur sed. Nam quis sapien odio. Praesent vehicula convallis lectus, pulvinar rutrum leo viverra eget. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_U4nCWe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "{Topic} Lorem Ipsum Dolor Sit Amet",
+            "icon": "none",
+            "row_content": "<p>&lcub;TopicBody&rcub; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis sodales nisi, et lobortis velit consectetur sed. Nam quis sapien odio. Praesent vehicula convallis lectus, pulvinar rutrum leo viverra eget. </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UEBY3Y",
+        "collapsible_row_qDw9ah",
+        "collapsible_row_b93kzD",
+        "collapsible_row_U4nCWe"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQS",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-2",
+        "container_color_scheme": "scheme-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_GCgiPD": {
+      "type": "video",
+      "settings": {
+        "heading": "Trailer",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=ng3CrRUP5-I",
+        "cover_image": "shopify://shop_images/YeepsLaunchTrailerThumbnail.jpg",
+        "description": "Yeeps Hide And Seek Trailer",
+        "full_width": false,
+        "color_scheme": "scheme-4",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_banner_7NaFJU": {
@@ -60,14 +169,14 @@
         "text_Pqm9wr": {
           "type": "text",
           "settings": {
-            "text": "They're coming out of hiding!",
+            "text": "Finally out of hiding!",
             "text_style": "subtitle"
           }
         },
         "buttons_eCrebz": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Order Plush",
+            "button_label_1": "Meet the Plush",
             "button_link_1": "shopify://products/yeeps-plush",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -81,12 +190,13 @@
         "buttons_eCrebz"
       ],
       "settings": {
+        "image": "shopify://shop_images/yeeps-plush-YP1-three-plushies-hidden-in-boxes.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -108,7 +218,7 @@
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -121,35 +231,21 @@
         "padding_bottom": 16
       }
     },
-    "video_GCgiPD": {
-      "type": "video",
-      "settings": {
-        "heading": "Trailer",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=ng3CrRUP5-I",
-        "description": "Yeeps Hide And Seek Trailer",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_banner_button_icon_VbRUgj": {
+    "image_banner_button_icon_7pUH8C": {
       "type": "image-banner-button-icon",
       "blocks": {
-        "heading_YwhLiV": {
+        "heading_XCKWXU": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner with Button Icon",
+            "heading": "CONNECT WITH US",
             "heading_size": "h1"
           }
         },
-        "buttons_bXdQhP": {
+        "buttons_d8FW6p": {
           "type": "buttons",
           "settings": {
             "button_label_1": "icon-discord.svg",
-            "button_link_1": "https://www.youtube.com/@YeepsVR_",
+            "button_link_1": "https://discord.gg/yeeps",
             "button_style_secondary_1": false,
             "button_label_2": "icon-youtube.svg",
             "button_link_2": "https://www.youtube.com/@YeepsVR_",
@@ -161,17 +257,17 @@
         }
       },
       "block_order": [
-        "heading_YwhLiV",
-        "buttons_bXdQhP"
+        "heading_XCKWXU",
+        "buttons_d8FW6p"
       ],
       "settings": {
-        "image": "shopify://shop_images/panel.jpg",
+        "image": "shopify://shop_images/social-links-art-key.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -181,10 +277,12 @@
   },
   "order": [
     "video_7Q9F3h",
+    "image_banner_6e73jj",
     "image_banner",
+    "collapsible_content_iydGCz",
+    "video_GCgiPD",
     "image_banner_7NaFJU",
     "featured_collection",
-    "video_GCgiPD",
-    "image_banner_button_icon_VbRUgj"
+    "image_banner_button_icon_7pUH8C"
   ]
 }

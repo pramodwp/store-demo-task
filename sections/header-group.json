@@ -26,7 +26,7 @@
         "announcement-bar-0"
       ],
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-2",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": true,
@@ -43,8 +43,8 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
-        "color_scheme": "scheme-1",
-        "menu_color_scheme": "scheme-1",
+        "color_scheme": "scheme-4",
+        "menu_color_scheme": "scheme-4",
         "enable_country_selector": true,
         "enable_language_selector": true,
         "enable_customer_avatar": true,

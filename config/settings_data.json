@@ -46,7 +46,7 @@
     "card_style": "card",
     "card_image_padding": 0,
     "card_text_alignment": "center",
-    "card_color_scheme": "scheme-2",
+    "card_color_scheme": "scheme-3",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
     "card_corner_radius": 0,
@@ -105,8 +105,8 @@
     "drawer_shadow_blur": 5,
     "badge_position": "bottom left",
     "badge_corner_radius": 8,
-    "sale_badge_color_scheme": "scheme-4",
-    "sold_out_badge_color_scheme": "scheme-3",
+    "sale_badge_color_scheme": "scheme-2",
+    "sold_out_badge_color_scheme": "scheme-2",
     "brand_headline": "{Brand information: Headline}",
     "brand_description": "<p>{Brand information: Description}</p>",
     "brand_image": "shopify://shop_images/yeeps-logo-for-footer.png",
@@ -141,40 +141,6 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
-      },
-      "custom-font": {
-        "type": "custom-font",
-        "blocks": {
-          "image_BmAPUD": {
-            "type": "image",
-            "settings": {
-              "name": "Lilita One",
-              "custom_font_weight": "none",
-              "custom_font_url_1": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LilitaOne.woff?v=1730803107",
-              "custom_font_url_2": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LilitaOne.woff2?v=1730806668",
-              "apply_heading": true,
-              "apply_body": false
-            }
-          },
-          "image_EKy6Di": {
-            "type": "image",
-            "settings": {
-              "name": "Londrina Solid",
-              "custom_font_weight": "none",
-              "custom_font_url_1": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Regular.woff?v=1730803145",
-              "custom_font_url_2": "https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Regular.woff2?v=1730806701",
-              "apply_heading": false,
-              "apply_body": true
-            }
-          }
-        },
-        "block_order": [
-          "image_BmAPUD",
-          "image_EKy6Di"
-        ],
-        "settings": {
-          "enable": true
-        }
       }
     },
     "content_for_index": [
@@ -183,55 +149,44 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#2c2f4b",
-          "background_2": "#e8e8e8",
-          "text": "#ffffff",
-          "button": "#454a7f",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#ffffff",
+          "background": "#ffffff",
+          "background_gradient": "#E8E8E8",
+          "text": "#121212",
+          "button": "#5d6bbd",
+          "button_label": "#121212",
+          "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
       },
       "scheme-2": {
         "settings": {
-          "background": "#f3f3f3",
-          "background_2": "#e8e8e8",
-          "text": "#121212",
-          "button": "#121212",
-          "button_label": "#f3f3f3",
-          "secondary_button_label": "#121212",
+          "background": "#f9d7af",
+          "background_gradient": "#F5C68D",
+          "text": "#423732",
+          "button": "#ffffff",
+          "button_label": "#423732",
+          "secondary_button_label": "#423732",
           "shadow": "#121212"
         }
       },
       "scheme-3": {
         "settings": {
-          "background": "#f5c68d",
-          "background_2": "#e8e8e8",
-          "text": "#282821",
-          "button": "#282821",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#282821",
+          "background": "#5d6bbd",
+          "background_gradient": "#6F7BC3",
+          "text": "#ffffff",
+          "button": "#ffffff",
+          "button_label": "#2c2f4b",
+          "secondary_button_label": "#2c2f4b",
           "shadow": "#121212"
         }
       },
       "scheme-4": {
         "settings": {
-          "background": "#121212",
-          "background_2": "#e8e8e8",
+          "background": "#2c2f4b",
+          "background_gradient": "#3D405B",
           "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#121212",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
-        }
-      },
-      "scheme-5": {
-        "settings": {
-          "background": "#334fb4",
-          "background_2": "#e8e8e8",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#334fb4",
+          "button": "#282821",
+          "button_label": "#ffffff",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }

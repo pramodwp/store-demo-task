@@ -47,10 +47,9 @@
             "default": "#FFFFFF"
           },
           {
-            "type": "color",
-            "id": "background_2",
-            "label": "Background 2",
-            "default": "#E8E8E8"
+            "type": "color_background",
+            "id": "background_gradient",
+            "label": "Background 2"
           },
           {
             "type": "color",
@@ -87,6 +86,7 @@
           "text": "text",
           "background": {
             "solid": "background",
+            "gradient": "background_gradient"
           },
           "links": "secondary_button_label",
           "icons": "text",

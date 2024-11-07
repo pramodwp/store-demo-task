@@ -47,14 +47,14 @@
 
       @font-face {
         font-family: 'Lilita One';
-        src: url('https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LilitaOne.woff?v=1730803107') format('woff'),
-            url('https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LilitaOne.woff2?v=1730806668') format('woff2');
+        src: url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LilitaOne.woff?v=1730807174') format('woff'),
+            url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LilitaOne.woff2?v=1730807175') format('woff2');
       }
 
       @font-face {
         font-family: 'Londrina Solid';
-        src: url('https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Regular.woff?v=1730803145') format('woff'),
-            url('https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Regular.woff2?v=1730806701') format('woff2');
+        src: url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LondrinaSolid-Regular.woff?v=1730807174') format('woff'),
+            url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LondrinaSolid-Regular.woff2?v=1730807174') format('woff2');
       }
 
       {% for scheme in settings.color_schemes -%}
@@ -64,6 +64,7 @@
         {%- endif %}
         .color-{{ scheme.id }} {
           --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        
         {% if scheme.settings.background_gradient != empty %}
           --gradient-background: {{ scheme.settings.background_gradient }};
         {% else %}
@@ -102,27 +103,16 @@
         background-color: rgb(var(--color-background));
       }
 
-      {% comment %}
-        --font-body-family: "Londrina Solid", {{ settings.type_body_font.fallback_families }};
-        --font-body-style: normal;
-        --font-body-weight: 300;
-        --font-body-weight-bold: 400;
-  
-        --font-heading-family: "Londrina Solid", {{ settings.type_header_font.fallback_families }};
-        --font-heading-style: normal;
-        --font-heading-weight: 400;
-      {% endcomment %}
-      
       :root {
         --font-body-family: "Londrina Solid", {{ settings.type_body_font.fallback_families }};
         --font-body-style: normal;
         --font-body-weight: 300;
         --font-body-weight-bold: 400;
-  
+
         --font-heading-family: "Lilita One", {{ settings.type_header_font.fallback_families }};
         --font-heading-style: normal;
         --font-heading-weight: 400;
-        
+
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
 
