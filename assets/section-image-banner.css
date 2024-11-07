@@ -465,7 +465,7 @@
   box-shadow: none !important;
 }
 .banner__heading.inline-richtext.h1{
-  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+  text-shadow: -2px -2px 0 var(--color-button-text), 2px -2px 0 var(--color-button-text), -2px 2px 0 var(--color-button-text), 2px 2px 0 var(--color-button-text);
 }
 
 @media screen and (max-width: 749px) {
