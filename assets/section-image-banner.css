@@ -458,6 +458,9 @@
   width: 55px !important;
   height: 42px !important;
 }
+.banner_icon__buttons a.button.button--primary {
+  padding: 40px;
+}
 
 @media screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__buttons--multiple {
