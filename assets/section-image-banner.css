@@ -472,6 +472,7 @@
   .banner--content-align-mobile-center .banner_icon__buttons--multiple > * {
     flex-grow: 1;
     min-width: 5.625rem;
+    min-height: 5.125rem;
   }
 }
 
@@ -488,6 +489,7 @@
   .banner--content-align-center .banner_icon__buttons--multiple > * {
     flex-grow: 1;
     min-width: 5.625rem;
+    min-height: 5.125rem;
   }
 
   .banner--content-align-right .banner_icon__buttons--multiple {
