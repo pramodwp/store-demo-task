@@ -454,6 +454,10 @@
   gap: 1rem;
   word-break: break-word;
 }
+.banner_icon__buttons .svg-wrapper {
+  width: 55px !important;
+  height: 42px !important;
+}
 
 @media screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__buttons--multiple {
