@@ -42,6 +42,7 @@
         "buttons_AAGfJ8"
       ],
       "settings": {
+        "image": "shopify://shop_images/discord-art-key.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "bottom-center",
@@ -51,11 +52,7 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": false,
-        "image_banner_space_top": 8,
-        "image_banner_space_bottom": 8,
-        "image_banner_border": 16,
-        "image_banner_section_container": false
+        "show_text_below": false
       }
     },
     "image_banner": {
@@ -77,6 +74,7 @@
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/halloween-bundle-art-1024.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -86,58 +84,7 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
-        "show_text_below": false,
-        "image_banner_space_top": 8,
-        "image_banner_space_bottom": 8,
-        "image_banner_border": 16,
-        "image_banner_section_container": false
-      }
-    },
-    "image_banner_9pp3ph": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_eRxUw4": {
-          "type": "heading",
-          "settings": {
-            "heading": "Connect with Us",
-            "heading_size": "h1"
-          }
-        },
-        "social_buttons_GawDPN": {
-          "type": "social-buttons",
-          "settings": {
-            "social_button_1": "icon-discord.svg",
-            "social_button_link_1": "https://discord.gg/yeeps",
-            "social_button_style_secondary_1": false,
-            "social_button_2": "icon-youtube.svg",
-            "social_button_link_2": "",
-            "social_button_style_secondary_2": false,
-            "social_button_3": "icon-tiktok.svg",
-            "social_button_link_3": "https://www.tiktok.com/@YeepsVR",
-            "social_button_style_secondary_3": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_eRxUw4",
-        "social_buttons_GawDPN"
-      ],
-      "custom_css": [],
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false,
-        "image_banner_space_top": 8,
-        "image_banner_space_bottom": 8,
-        "image_banner_border": 16,
-        "image_banner_section_container": true
+        "show_text_below": false
       }
     },
     "collapsible_content_iydGCz": {
@@ -211,6 +158,7 @@
         "heading_size": "h1",
         "enable_video_looping": false,
         "video_url": "https://www.youtube.com/watch?v=ng3CrRUP5-I",
+        "cover_image": "shopify://shop_images/YeepsLaunchTrailerThumbnail.jpg",
         "description": "Yeeps Hide And Seek Trailer",
         "full_width": false,
         "color_scheme": "scheme-4",
@@ -245,6 +193,7 @@
         "buttons_eCrebz"
       ],
       "settings": {
+        "image": "shopify://shop_images/yeeps-plush-YP1-three-plushies-hidden-in-boxes.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "bottom-center",
@@ -254,11 +203,7 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": true,
-        "image_banner_space_top": 8,
-        "image_banner_space_bottom": 8,
-        "image_banner_border": 16,
-        "image_banner_section_container": true
+        "show_text_below": true
       }
     },
     "featured_collection": {
@@ -288,16 +233,59 @@
         "padding_top": 16,
         "padding_bottom": 16
       }
+    },
+    "image_banner_9pp3ph": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_eRxUw4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Connect with Us",
+            "heading_size": "h1"
+          }
+        },
+        "social_buttons_GawDPN": {
+          "type": "social-buttons",
+          "settings": {
+            "social_button_1": "icon-discord.svg",
+            "social_button_link_1": "https://discord.gg/yeeps",
+            "social_button_style_secondary_1": false,
+            "social_button_2": "icon-youtube.svg",
+            "social_button_link_2": "https://www.youtube.com/@YeepsVR_",
+            "social_button_style_secondary_2": false,
+            "social_button_3": "icon-tiktok.svg",
+            "social_button_link_3": "https://www.tiktok.com/@YeepsVR",
+            "social_button_style_secondary_3": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_eRxUw4",
+        "social_buttons_GawDPN"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/social-links-art-key.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
     }
   },
   "order": [
     "video_7Q9F3h",
     "image_banner_6e73jj",
     "image_banner",
-    "image_banner_9pp3ph",
     "collapsible_content_iydGCz",
     "video_GCgiPD",
     "image_banner_7NaFJU",
-    "featured_collection"
+    "featured_collection",
+    "image_banner_9pp3ph"
   ]
 }

@@ -8,6 +8,8 @@
   border-bottom: var(--buttons-border-width) solid rgba(var(--color-secondary-button-text), var(--buttons-border-opacity));
 }
 
+
+
 .collapsible-section-layout {
   padding-bottom: 5rem;
   padding-top: 5rem;
@@ -103,7 +105,7 @@
   border-radius: 16px;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 750px) {
   .collapsible-row-layout .accordion {
     margin-bottom: 8px;
   }
