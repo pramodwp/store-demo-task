@@ -46,9 +46,9 @@
 
 .collapsible-content-wrapper-narrow {
   margin: 0 auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  max-width: 73.4rem;
+  padding-right: 8px;
+  padding-left: 8px;
+  /*max-width: 73.4rem;*/
 }
 
 .collapsible-content__header {
