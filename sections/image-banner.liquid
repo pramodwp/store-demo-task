@@ -27,12 +27,14 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
-
+  
+  .banner__media{
+    width: calc(100% - 3%);
+  }
   .image_banner_section_container_{{ section.id }}.banner__media{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: calc(100% - 3%);
   }
   
   .image_banner_section_container_{{ section.id }}{
