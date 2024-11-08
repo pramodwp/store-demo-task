@@ -42,7 +42,6 @@
         "buttons_AAGfJ8"
       ],
       "settings": {
-        "image": "shopify://shop_images/discord-art-key.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "bottom-center",
@@ -74,7 +73,6 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/halloween-bundle-art-1024.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -144,7 +142,7 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 8,
+        "padding_top": 16,
         "padding_bottom": 16
       }
     },
@@ -155,7 +153,6 @@
         "heading_size": "h1",
         "enable_video_looping": false,
         "video_url": "https://www.youtube.com/watch?v=ng3CrRUP5-I",
-        "cover_image": "shopify://shop_images/YeepsLaunchTrailerThumbnail.jpg",
         "description": "Yeeps Hide And Seek Trailer",
         "full_width": false,
         "color_scheme": "scheme-4",
@@ -190,7 +187,6 @@
         "buttons_eCrebz"
       ],
       "settings": {
-        "image": "shopify://shop_images/yeeps-plush-YP1-three-plushies-hidden-in-boxes.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "bottom-center",
@@ -248,6 +244,7 @@
             "social_button_link_1": "https://discord.gg/yeeps",
             "social_button_style_secondary_1": false,
             "social_button_2": "icon-youtube.svg",
+            "social_button_link_2": "",
             "social_button_style_secondary_2": false,
             "social_button_3": "icon-tiktok.svg",
             "social_button_link_3": "https://www.tiktok.com/@YeepsVR",
@@ -260,7 +257,6 @@
         "social_buttons_GawDPN"
       ],
       "settings": {
-        "image": "shopify://shop_images/social-links-art-key.jpg",
         "image_overlay_opacity": 0,
         "image_height": "xs",
         "desktop_content_position": "middle-center",
