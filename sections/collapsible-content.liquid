@@ -29,9 +29,7 @@
             </p>
           {% endif %}
           {%- if section.settings.heading != blank -%}
-            <h2 class="collapsible-content__heading inline-richtext {{ section.settings.heading_size }}">
-              
-              <img
+            <h2 class="collapsible-content__heading inline-richtext {{ section.settings.heading_size }}"><img
                 srcset="
                   {%- if section.settings.art_left_icon.width >= 80 -%}{{ section.settings.art_left_icon | image_url: width: 80 }} 80w,{%- endif -%}
                   {%- if section.settings.art_left_icon.width >= 100 -%}{{ section.settings.art_left_icon | image_url: width: 100 }} 100w,{%- endif -%}
@@ -43,11 +41,7 @@
                 width="{{ section.settings.art_left_icon.width }}"
                 loading="lazy"
                 class="faq_art1"
-              >
-              
-              {{ section.settings.heading }} 
-              
-              <img
+              >{{ section.settings.heading }}<img
                 srcset="
                   {%- if section.settings.art_right_icon.width >= 80 -%}{{ section.settings.art_right_icon | image_url: width: 80 }} 80w,{%- endif -%}
                   {%- if section.settings.art_right_icon.width >= 100 -%}{{ section.settings.art_right_icon | image_url: width: 100 }} 100w,{%- endif -%}
@@ -59,9 +53,7 @@
                 width="{{ section.settings.art_right_icon.width }}"
                 loading="lazy"
                 class="faq_art1"
-              >
-              
-            </h2>
+              ></h2>
           {%- else -%}
             <h2 class="visually-hidden">{{ 'accessibility.collapsible_content_title' | t }}</h2>
           {% endif %}
