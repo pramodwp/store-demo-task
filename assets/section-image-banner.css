@@ -8,8 +8,10 @@
 
 .banner{
   border-radius: 16px;
-  margin: 2px;
+  margin: 0 auto;
   max-width: var(--page-width);
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .banner__media {
   border-radius: 16px;
