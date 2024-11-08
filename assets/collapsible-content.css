@@ -71,7 +71,7 @@
 }
 
 .collapsible-row-layout .accordion:not(:first-child):not(.color-scheme-1) {
-  margin-top: 1rem;
+  /*margin-top: 1rem;*/
 }
 
 .caption-with-letter-spacing + h2 {
