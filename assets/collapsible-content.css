@@ -92,6 +92,12 @@
   border-radius: 16px;
 }
 
+@media screen and (max-width: 750px) {
+  .collapsible-row-layout .accordion {
+    margin-bottom: 8px;
+  }
+}
+
 .collapsible-row-layout .accordion summary,
 .collapsible-row-layout .accordion .accordion__content {
   padding: 1.5rem;
