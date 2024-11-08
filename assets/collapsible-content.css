@@ -67,6 +67,7 @@
   margin-top: 0;
   display: flex;
   justify-content: center;
+  gap:32px;
 }
 
 @media screen and (min-width: 750px) {
