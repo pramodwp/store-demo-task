@@ -27,6 +27,21 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+
+  .image_banner_border {
+  	border-radius: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  .image_banner_container {
+  	margin: 0 auto;
+  	max-width: var(--page-width);
+  }
+  .image_banner_space_top {
+  	margin-top: 8px;
+  }
+  .image_banner_space_bottom {
+  	margin-bottom: 8px;
+  }
+  
 {%- endstyle -%}
 
 {%- liquid
@@ -418,7 +433,7 @@
     },
     {
       "type": "range",
-      "id": "section_margin_top",
+      "id": "image_banner_space_top",
       "min": 0,
       "max": 100,
       "step": 4,
@@ -428,7 +443,7 @@
     },
     {
       "type": "range",
-      "id": "section_margin_bottom",
+      "id": "image_banner_space_bottom",
       "min": 0,
       "max": 100,
       "step": 4,
@@ -438,7 +453,7 @@
     },
     {
       "type": "range",
-      "id": "section_border_radius",
+      "id": "image_banner_border",
       "min": 0,
       "max": 100,
       "step": 4,
@@ -448,7 +463,7 @@
     },
     {
       "type": "checkbox",
-      "id": "is_container_section",
+      "id": "image_banner_container",
       "default": false,
       "label": "Container"
     }
