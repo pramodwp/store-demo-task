@@ -3,6 +3,11 @@
   z-index: 0;
 }
 
+.collapsible-content-outline{
+  border-top: var(--buttons-border-width) solid rgba(var(--color-secondary-button-text), var(--buttons-border-opacity));
+  border-bottom: var(--buttons-border-width) solid rgba(var(--color-secondary-button-text), var(--buttons-border-opacity));
+}
+
 .collapsible-section-layout {
   padding-bottom: 5rem;
   padding-top: 5rem;
