@@ -41,6 +41,11 @@
                 width="{{ section.settings.art_left_icon.width }}"
                 loading="lazy"
                 class="faq_art1"
+                                                                                                           
+                sizes="
+                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+                (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+                calc(100vw - 3rem)"                                                                                          
               >
               <span class="faq_heading">{{ section.settings.heading }}</span>
               <img
@@ -55,6 +60,12 @@
                 width="{{ section.settings.art_right_icon.width }}"
                 loading="lazy"
                 class="faq_art1"
+
+                sizes="
+                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+                (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+                calc(100vw - 3rem)" 
+                
               ></h2>
           {%- else -%}
             <h2 class="visually-hidden">{{ 'accessibility.collapsible_content_title' | t }}</h2>
