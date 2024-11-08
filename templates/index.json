@@ -93,6 +93,53 @@
         "image_banner_section_container": false
       }
     },
+    "image_banner_9pp3ph": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_eRxUw4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Connect with Us",
+            "heading_size": "h1"
+          }
+        },
+        "social_buttons_GawDPN": {
+          "type": "social-buttons",
+          "settings": {
+            "social_button_1": "icon-discord.svg",
+            "social_button_link_1": "https://discord.gg/yeeps",
+            "social_button_style_secondary_1": false,
+            "social_button_2": "icon-youtube.svg",
+            "social_button_link_2": "",
+            "social_button_style_secondary_2": false,
+            "social_button_3": "icon-tiktok.svg",
+            "social_button_link_3": "https://www.tiktok.com/@YeepsVR",
+            "social_button_style_secondary_3": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_eRxUw4",
+        "social_buttons_GawDPN"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false,
+        "image_banner_space_top": 8,
+        "image_banner_space_bottom": 8,
+        "image_banner_border": 16,
+        "image_banner_section_container": true
+      }
+    },
     "collapsible_content_iydGCz": {
       "type": "collapsible-content",
       "blocks": {
@@ -241,63 +288,16 @@
         "padding_top": 16,
         "padding_bottom": 16
       }
-    },
-    "image_banner_9pp3ph": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_eRxUw4": {
-          "type": "heading",
-          "settings": {
-            "heading": "Connect with Us",
-            "heading_size": "h1"
-          }
-        },
-        "social_buttons_GawDPN": {
-          "type": "social-buttons",
-          "settings": {
-            "social_button_1": "icon-discord.svg",
-            "social_button_link_1": "https://discord.gg/yeeps",
-            "social_button_style_secondary_1": false,
-            "social_button_2": "icon-youtube.svg",
-            "social_button_link_2": "",
-            "social_button_style_secondary_2": false,
-            "social_button_3": "icon-tiktok.svg",
-            "social_button_link_3": "https://www.tiktok.com/@YeepsVR",
-            "social_button_style_secondary_3": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_eRxUw4",
-        "social_buttons_GawDPN"
-      ],
-      "custom_css": [],
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false,
-        "image_banner_space_top": 8,
-        "image_banner_space_bottom": 8,
-        "image_banner_border": 16,
-        "image_banner_section_container": true
-      }
     }
   },
   "order": [
     "video_7Q9F3h",
     "image_banner_6e73jj",
     "image_banner",
+    "image_banner_9pp3ph",
     "collapsible_content_iydGCz",
     "video_GCgiPD",
     "image_banner_7NaFJU",
-    "featured_collection",
-    "image_banner_9pp3ph"
+    "featured_collection"
   ]
 }
