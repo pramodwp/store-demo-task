@@ -465,6 +465,7 @@
   box-shadow: none !important;
 }
 .banner__heading.inline-richtext.h1{
+  text-transform: uppercase;
   text-shadow: -2px -2px 0 rgb(var(--color-button-text)), 2px -2px 0 rgb(var(--color-button-text)), -2px 2px 0 rgb(var(--color-button-text)), 2px 2px 0 rgb(var(--color-button-text));
 }
 

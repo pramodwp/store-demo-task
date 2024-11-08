@@ -170,7 +170,7 @@
             	  {% if block.settings.social_button_link_1 == blank %}
             		role="link" aria-disabled="true"
             	  {% else %}
-            		href="{{ settings.social_button_link_1 }}" target="_blank"
+            		href="{{ block.settings.social_button_link_1 }}" target="_blank"
             	  {% endif %}
             	  class="button{% if block.settings.social_button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
             	>
@@ -265,7 +265,7 @@
         },
         {
           "value": "xs",
-          "label": "t:sections.image-banner.settings.image_height.options_5.label"
+          "label": "t:sections.image-banner.settings.image_height.options__5.label"
         }
       ],
       "default": "medium",
@@ -587,7 +587,7 @@
       	},
       	{
       	  "type": "url",
-      	  "id": "button_link_2",
+      	  "id": "social_button_link_2",
       	  "label": "Second button link"
       	},
       	{
