@@ -163,7 +163,8 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  border: var(--buttons-border-width, 2px) solid rgb(var(--color-button-text));
+  width: calc(100% - 10rem);
 }
 
 .banner__media_border{
