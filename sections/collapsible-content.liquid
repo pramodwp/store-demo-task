@@ -30,7 +30,7 @@
           {% endif %}
           {%- if section.settings.heading != blank -%}
             <h2 class="collapsible-content__heading inline-richtext {{ section.settings.heading_size }}">
-              {{ section.settings.heading }}
+              <img class="faq_art1" src="{{ section.settings.art_left_icon | image_url }}" alt="FAQS" /> {{ section.settings.heading }} <img class="faq_art2" src="{{ section.settings.art_right_icon | image_url }}" alt="FAQS" />
             </h2>
           {%- else -%}
             <h2 class="visually-hidden">{{ 'accessibility.collapsible_content_title' | t }}</h2>
