@@ -259,7 +259,7 @@
         "social_buttons_GawDPN"
       ],
       "custom_css": [
-        "#Banner-template--22389895954616__image_banner_9pp3ph {border-radius: 16px;border: var(--buttons-border-width, 2px) solid rgb(var(--color-button-text));}"
+        ".banner__media{border-radius: 16px; border: var(--buttons-border-width, 2px) solid rgb(var(--color-button-text));}"
       ],
       "settings": {
         "image_overlay_opacity": 0,
