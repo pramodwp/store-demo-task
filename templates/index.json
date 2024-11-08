@@ -146,7 +146,7 @@
         "desktop_layout": "image_second",
         "padding_top": 8,
         "padding_bottom": 0,
-        "is_container_section": false
+        "is_container_section": true
       }
     },
     "video_GCgiPD": {
