@@ -19,10 +19,6 @@
         content: '';
         display: block;
       }
-      .banner__media {
-        left: 5rem;
-        width: calc(100% - 10rem);
-      }
     }
   {%- endstyle -%}
 {%- endif -%}
@@ -50,6 +46,10 @@
     .image_banner_section_container_{{ section.id }}{
       padding-right: 5rem;
       padding-left: 5rem;
+    }
+    .banner__media {
+        left: 5rem;
+        width: calc(100% - 10rem);
     }
   }
 {%- endstyle -%}
