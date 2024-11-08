@@ -90,7 +90,7 @@
         "image_banner_space_top": 8,
         "image_banner_space_bottom": 8,
         "image_banner_border_radius": 16,
-        "image_banner_section_container": true
+        "image_banner_section_container": false
       }
     },
     "collapsible_content_iydGCz": {
