@@ -8,6 +8,8 @@
   border-bottom: var(--buttons-border-width) solid rgba(var(--color-secondary-button-text), var(--buttons-border-opacity));
 }
 
+
+
 .collapsible-section-layout {
   padding-bottom: 5rem;
   padding-top: 5rem;
@@ -69,6 +71,11 @@
   .collapsible-content__heading {
     margin-bottom: 0;
   }
+}
+
+.collapsible-content__heading span{
+  display: flex;
+  justify-content: center;
 }
 
 .collapsible-none-layout .accordion + .accordion {
