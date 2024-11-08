@@ -42,7 +42,7 @@
                 loading="lazy"
                 class="faq_art1"
               >
-              <span>{{ section.settings.heading }}</span>
+              <span class="faq_heading">{{ section.settings.heading }}</span>
               <img
                 srcset="
                   {%- if section.settings.art_right_icon.width >= 80 -%}{{ section.settings.art_right_icon | image_url: width: 80 }} 80w,{%- endif -%}
