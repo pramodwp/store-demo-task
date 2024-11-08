@@ -65,6 +65,8 @@
 .collapsible-content__heading {
   margin-bottom: 0;
   margin-top: 0;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 750px) {
@@ -73,10 +75,6 @@
   }
 }
 
-.collapsible-content__heading span{
-  display: flex;
-  justify-content: center;
-}
 
 .collapsible-none-layout .accordion + .accordion {
   border-top: 0;
