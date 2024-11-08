@@ -8,8 +8,6 @@
   border-bottom: var(--buttons-border-width) solid rgba(var(--color-secondary-button-text), var(--buttons-border-opacity));
 }
 
-
-
 .collapsible-section-layout {
   padding-bottom: 5rem;
   padding-top: 5rem;
@@ -55,9 +53,6 @@
   margin: 0 auto;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  max-width: var(--page-width);
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 
 .collapsible-content__header {
@@ -115,13 +110,6 @@
   .collapsible-content__heading img{
     width:91px;
     height: 80px;
-  }
-
-  .collapsible-content-wrapper-narrow {
-    margin: 0 auto;
-    max-width: var(--page-width);
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 }
 
