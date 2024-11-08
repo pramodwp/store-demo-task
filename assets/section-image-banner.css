@@ -9,6 +9,7 @@
 .banner{
   border-radius: 16px;
   margin: 2px;
+  max-width: var(--page-width);
 }
 .banner__media {
   border-radius: 16px;
