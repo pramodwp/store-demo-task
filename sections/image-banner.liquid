@@ -29,17 +29,17 @@
   }
 
   .image_banner_border {
-  	border-radius: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  	border-radius: {{ section.settings.image_banner_border | round: 0 }}px;
   }
   .image_banner_container {
   	margin: 0 auto;
   	max-width: var(--page-width);
   }
   .image_banner_space_top {
-  	margin-top: 8px;
+  	margin-top: {{ section.settings.image_banner_border | round: 0 }}px;
   }
   .image_banner_space_bottom {
-  	margin-bottom: 8px;
+  	margin-bottom: {{ section.settings.image_banner_border | round: 0 }}px;
   }
   
 {%- endstyle -%}
