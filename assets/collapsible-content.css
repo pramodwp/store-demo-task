@@ -8,8 +8,6 @@
   border-bottom: var(--buttons-border-width) solid rgba(var(--color-secondary-button-text), var(--buttons-border-opacity));
 }
 
-
-
 .collapsible-section-layout {
   padding-bottom: 5rem;
   padding-top: 5rem;
@@ -53,11 +51,8 @@
 
 .collapsible-content-wrapper-narrow {
   margin: 0 auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  max-width: var(--page-width);
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .collapsible-content__header {
@@ -108,7 +103,7 @@
   border-radius: 16px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 749px) {
   .collapsible-row-layout .accordion {
     margin-bottom: 8px;
   }
