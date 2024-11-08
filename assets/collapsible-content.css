@@ -77,9 +77,6 @@
   .collapsible-content__heading {
     margin-bottom: 0;
   }
-  .collapsible-content__heading img{
-    width:80px;
-  }
 }
 
 
@@ -112,6 +109,9 @@
 @media screen and (max-width: 750px) {
   .collapsible-row-layout .accordion {
     margin-bottom: 8px;
+  }
+  .collapsible-content__heading img{
+    height:80px;
   }
 }
 
