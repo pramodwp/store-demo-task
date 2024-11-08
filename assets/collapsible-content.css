@@ -116,6 +116,11 @@
     width:91px;
     height: 80px;
   }
+
+  .collapsible-content-wrapper-narrow {
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
+  }
 }
 
 .collapsible-row-layout .accordion summary,
