@@ -5,7 +5,10 @@
   z-index: auto;
   isolation: isolate;
 }
-
+.banner__media {
+  border-radius: 16px;
+  border: var(--buttons-border-width, 2px) solid rgb(var(--color-button-text));
+}
 .banner__box {
   text-align: center;
 }
