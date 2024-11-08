@@ -258,10 +258,7 @@
         "heading_eRxUw4",
         "social_buttons_GawDPN"
       ],
-      "custom_css": [
-        ".banner__media {border-radius: 16px; border: var(--buttons-border-width, 2px) solid rgb(var(--color-button-text));}",
-        "#Banner-template--22389895954616__image_banner_9pp3ph{border-radius: 16px;}"
-      ],
+      "custom_css": [],
       "settings": {
         "image_overlay_opacity": 0,
         "image_height": "small",
