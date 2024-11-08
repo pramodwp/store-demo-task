@@ -9,19 +9,12 @@
 
   .section_container{
     max-width: var(--page-width);
-    padding-left: 5rem;
-    padding-right: 5rem;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-
-    .section_container{
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
     }
   }
 {%- endstyle -%}
