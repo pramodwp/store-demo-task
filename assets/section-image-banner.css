@@ -6,6 +6,14 @@
   isolation: isolate;
 }
 
+.banner{
+  border-radius: 16px;
+}
+.banner__media {
+  border-radius: 16px;
+  border: var(--buttons-border-width, 2px) solid rgb(var(--color-button-text));
+}
+
 .banner__box {
   text-align: center;
 }
