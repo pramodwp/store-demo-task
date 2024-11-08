@@ -4,14 +4,6 @@
   flex-direction: column;
   z-index: auto;
   isolation: isolate;
-
-  border-radius: 16px;
-  margin: 0 auto;
-  max-width: var(--page-width);
-  margin-top: 8px;
-  margin-bottom: 8px;
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 
 .banner__box {
