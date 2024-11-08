@@ -4,18 +4,12 @@
   flex-direction: column;
   z-index: auto;
   isolation: isolate;
-}
 
-.banner{
   border-radius: 16px;
   margin: 0 auto;
   max-width: var(--page-width);
   margin-top: 8px;
   margin-bottom: 8px;
-}
-.banner__media {
-  border-radius: 16px;
-  border: var(--buttons-border-width, 2px) solid rgb(var(--color-button-text));
 }
 
 .banner__box {
@@ -176,6 +170,11 @@
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.banner__media_border{
+  border-radius: 16px;
+  border: var(--buttons-border-width, 2px) solid rgb(var(--color-button-text));
 }
 
 .banner__media-half {
