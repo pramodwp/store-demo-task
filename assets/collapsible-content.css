@@ -68,7 +68,11 @@
   display: flex;
   justify-content: center;
   gap:32px;
-  line-height: 0;
+  align-items: flex-end;
+}
+
+.collapsible-content__heading span{
+  
 }
 
 @media screen and (min-width: 750px) {
