@@ -161,9 +161,9 @@
 .banner__media {
   height: 100%;
   position: absolute;
-  left: 0;
+  left: 0.5rem;
   top: 0;
-  width: 100%;
+  width: calc(100% - 0.5rem);;
 }
 
 .banner__media_border{
