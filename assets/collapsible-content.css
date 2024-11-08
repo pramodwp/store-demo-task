@@ -67,8 +67,8 @@
   margin-top: 0;
   display: flex;
   justify-content: center;
-  gap:32px;
   align-items: flex-end;
+  gap: 32px;
   align-self: stretch;
 }
 
