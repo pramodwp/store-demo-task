@@ -283,7 +283,7 @@
 }
 
 .banner--xs:not(.banner--adapt) {
-  min-height: 22.5rem;
+  min-height: 30rem;
 }
 
 @media screen and (min-width: 750px) {
