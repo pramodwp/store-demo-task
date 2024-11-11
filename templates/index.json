@@ -12,7 +12,7 @@
     "video_7Q9F3h": {
       "type": "video",
       "settings": {
-        "heading": "",
+        "heading": "test",
         "heading_size": "h2",
         "enable_video_looping": true,
         "video": "shopify://files/videos/Yeeps Hide and Seek.mp4",
