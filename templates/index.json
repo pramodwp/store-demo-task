@@ -57,7 +57,7 @@
           "settings": {
             "button_label_1": "Join Yeeps Discord",
             "button_link_1": "shopify://pages/contact",
-            "button_style_secondary_1": false,
+            "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -317,8 +317,6 @@
     "video_banner_aXFHNP": {
       "type": "video-banner",
       "settings": {
-        "heading": "Video",
-        "heading_size": "h1",
         "enable_video_looping": true,
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
