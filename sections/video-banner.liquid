@@ -8,6 +8,7 @@
   }
   .video_banner_border_radius_{{ section.id }} {
   	border-radius: {{ section.settings.video_banner_border_radius | round: 0 }}px;
+    border: var(--buttons-border-width, 2px) solid rgb(var(--color-button-text));
   }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
