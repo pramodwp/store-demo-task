@@ -27,20 +27,12 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
-  
-  .banner__media{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 2%);
-  }
   .image_banner_section_container_{{ section.id }}.banner__media{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: calc(100% - 2%);
   }
-  
   .image_banner_section_container_{{ section.id }}{
     margin: 0 auto;
     max-width: var(--page-width);
@@ -60,9 +52,6 @@
     .image_banner_section_container_{{ section.id }}{
       padding-right: 5rem;
       padding-left: 5rem;
-    }
-    .banner__media{
-      width: calc(100% - 1%);
     }
     .image_banner_section_container_{{ section.id }}.banner__media{
       width: calc(var(--page-width) - 10rem);
@@ -287,7 +276,7 @@
     {
       "type": "select",
       "id": "image_height",
-      "options": [        
+      "options": [
         {
           "value": "adapt",
           "label": "t:sections.image-banner.settings.image_height.options__1.label"
