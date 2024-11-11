@@ -303,7 +303,7 @@
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-2",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -314,16 +314,45 @@
         "image_banner_section_container": true
       }
     },
-    "video_banner_aXFHNP": {
+    "video_banner_PWxx7J": {
       "type": "video-banner",
+      "blocks": {
+        "heading_hgntkR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Video Banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_xaMYT9": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_q7CNUB": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_hgntkR",
+        "text_xaMYT9",
+        "buttons_q7CNUB"
+      ],
       "settings": {
-        "enable_video_looping": true,
+        "enable_video_looping": false,
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "color_scheme": "scheme-2",
+        "padding_top": 8,
+        "padding_bottom": 8
       }
     }
   },
@@ -337,6 +366,6 @@
     "image_banner_7NaFJU",
     "featured_collection",
     "image_banner_9pp3ph",
-    "video_banner_aXFHNP"
+    "video_banner_PWxx7J"
   ]
 }
