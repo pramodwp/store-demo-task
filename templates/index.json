@@ -13,14 +13,15 @@
       "type": "video",
       "settings": {
         "heading": "",
-        "heading_size": "hxl",
+        "heading_size": "h2",
         "enable_video_looping": true,
+        "video": "shopify://files/videos/Yeeps Hide and Seek.mp4",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": "",
-        "full_width": true,
-        "color_scheme": "scheme-4",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 8,
+        "padding_bottom": 8
       }
     },
     "image_banner_6e73jj": {
