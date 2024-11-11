@@ -38,8 +38,8 @@
   {%- endif %}
 {%- endcapture -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+
+  <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
     <div
       {% if section.settings.full_width %}
         class="page-width"
@@ -118,7 +118,7 @@
       </template>
     </deferred-media>
   </div>
-</div>
+
 
 {% schema %}
 {
