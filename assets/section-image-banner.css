@@ -284,6 +284,7 @@
 
 .banner--xs:not(.banner--adapt) {
   min-height: 30rem;
+  max-height: 30rem;
 }
 
 @media screen and (min-width: 750px) {
