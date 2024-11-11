@@ -359,6 +359,7 @@
   word-wrap: break-word;
   z-index: 1;
   
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
