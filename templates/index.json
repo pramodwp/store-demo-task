@@ -324,13 +324,6 @@
             "heading_size": "h1"
           }
         },
-        "text_xaMYT9": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_style": "body"
-          }
-        },
         "buttons_q7CNUB": {
           "type": "buttons",
           "settings": {
@@ -342,7 +335,6 @@
       },
       "block_order": [
         "heading_hgntkR",
-        "text_xaMYT9",
         "buttons_q7CNUB"
       ],
       "settings": {
