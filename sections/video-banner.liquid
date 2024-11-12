@@ -175,7 +175,7 @@
         
         <video class="video-js" {% if block.settings.video_loop %} loop {% endif %} {% if block.settings.video_autoplay %} autoplay muted {% endif %} preload="none" playsinline
           poster="https:{{ block.settings.video_image | img_url: 'master' }}" style="width: 100%; height: 100%;">
-          <source src="{{ block.settings.video }}" type="video/mp4">
+          <source src="{{ block.settings.video | video_url }}" type="video/mp4">
         </video>
         
         <div class="video-overlay-play-icon">▶</div>
