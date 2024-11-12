@@ -204,13 +204,13 @@
       },
       {
         "type": "range",
-        "id": "border__thickness",
+        "id": "panel__border__thickness",
         "min": 0,
         "max": 40,
         "step": 2,
         "default": 2,
         "unit": "px",
-        "label": "t:settings_schema.layout.settings.border__thickness.label"
+        "label": "t:settings_schema.layout.settings.panel__border__thickness.label"
       },
       {
         "type": "range",
