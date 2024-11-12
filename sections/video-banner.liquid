@@ -129,7 +129,7 @@
     align-items: center;
     justify-content: center;
   }
-  .video-banner-{{ section.id }} .button {
+  .video-banner-{{ section.id }} .custom_button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -196,7 +196,7 @@
       
       {% if block.type == "button" %}
         <div
-            class="banner__buttons{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
+            class="custom_button banner__buttons{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
             {{ block.shopify_attributes }}
           >
             {%- if block.settings.button_label != blank -%}
