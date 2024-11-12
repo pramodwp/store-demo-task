@@ -257,6 +257,44 @@
         "stack_images_on_mobile": true,
         "show_text_below": false
       }
+    },
+    "video_banner_34jyWf": {
+      "type": "video-banner",
+      "blocks": {
+        "heading_96YptV": {
+          "type": "heading",
+          "settings": {
+            "heading_text": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "video_6ArD9c": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Yeeps Hide and Seek.mp4",
+            "video_loop": true,
+            "video_autoplay": false
+          }
+        },
+        "button_eFQJic": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "shopify://pages/contact",
+            "outline_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_96YptV",
+        "video_6ArD9c",
+        "button_eFQJic"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "desktop_banner_height": 200,
+        "mobile_banner_height": 200
+      }
     }
   },
   "order": [
@@ -266,6 +304,7 @@
     "video_GCgiPD",
     "image_banner_7NaFJU",
     "featured_collection",
-    "image_banner_9pp3ph"
+    "image_banner_9pp3ph",
+    "video_banner_34jyWf"
   ]
 }
