@@ -155,7 +155,7 @@
   }
 {% endstyle %}
 
-<div class="video-banner" style="height: {{ section.settings.desktop_banner_height }}px;">
+<div class="video-banner color-{{ section.settings.color_scheme }} gradient" style="height: {{ section.settings.desktop_banner_height }}px;">
   {% if block.type == "video" %}
     <video
       {% if block.settings.video_autoplay %} autoplay {% endif %}
