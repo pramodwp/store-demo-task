@@ -375,6 +375,18 @@
         },
         "spacing_grid_vertical": {
           "label": "Vertical space"
+        },
+        "header__panels": {
+          "content": "Panels"
+        },
+        "border__thickness": {
+          "label": "Border thickness"
+        },
+        "panel__radius": {
+          "label": "Panel radius"
+        },
+        "panel__margin": {
+          "label": "Panel margin"
         }
       }
     }
