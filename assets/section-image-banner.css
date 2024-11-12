@@ -168,7 +168,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: calc(100% - 2%);
-  border: var(--buttons-border-width, 2px) solid rgb(var(--color-button-text));
+  border: var(--panel-border-width, 2px) solid rgb(var(--color-button-text));
 }
 
 .banner__media-half {
