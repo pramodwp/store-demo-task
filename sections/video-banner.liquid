@@ -150,8 +150,15 @@
       max-height: {{ section.settings.mobile_banner_height }}px;
       height:100%;
   }
+  .video-banner-{{ section.id }} video{
+      max-height: {{ section.settings.mobile_banner_height }}px;
+      height:100%;
+  }
   @media screen and (min-width: 750px) {
     .video-banner-{{ section.id }} {
+        max-height: {{ section.settings.desktop_banner_height }}px;
+    }
+    video-banner-{{ section.id }} video{
         max-height: {{ section.settings.desktop_banner_height }}px;
     }
   }
@@ -174,12 +181,10 @@
         {{
           block.settings.video
           | video_tag:
-            image_size: '1100x',
             autoplay: block.settings.video_autoplay,
             loop: block.settings.video_loop,
             controls: false,
-            muted: block.settings.video_autoplay,
-            style: 'width: 100%; height: 100%;'
+            muted: block.settings.video_autoplay
         }}
 
         {% if block.settings.video_autoplay == true %}
