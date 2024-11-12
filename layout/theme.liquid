@@ -225,9 +225,9 @@
         --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
 
-        --border-thickness: {{ settings.border__thickness }}px;
-        --panel-radius: {{ settings.panel__radius }}px;
-        --panel-margin: {{ settings.panel__margin }}px;
+        --border-thickness: {{ settings.border__thickness | round: 0 }}px;
+        --panel-radius: {{ settings.panel__radius | round: 0 }}px;
+        --panel-margin: {{ settings.panel__margin | round: 0 }}px;
       }
 
       *,
