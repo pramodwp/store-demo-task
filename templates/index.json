@@ -295,6 +295,30 @@
         "desktop_banner_height": 200,
         "mobile_banner_height": 200
       }
+    },
+    "video_background_sample_rffi36": {
+      "type": "video-background-sample",
+      "blocks": {
+        "video_e93AFV": {
+          "type": "video",
+          "settings": {
+            "video_link": "",
+            "image_link": "",
+            "overlay_opacity": 0,
+            "title": "Video slide",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "color_text": "#ffffff",
+            "button_label": "",
+            "button_link": "",
+            "color_btn_bg": "#ffffff",
+            "color_btn_text": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "video_e93AFV"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -305,6 +329,7 @@
     "image_banner_7NaFJU",
     "featured_collection",
     "image_banner_9pp3ph",
-    "video_banner_34jyWf"
+    "video_banner_34jyWf",
+    "video_background_sample_rffi36"
   ]
 }
