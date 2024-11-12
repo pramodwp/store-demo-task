@@ -174,14 +174,14 @@
             muted: block.settings.video_autoplay,
             style: 'width: 100%; height: 100%;'
         }}
+
+        {% if block.settings.video_autoplay == false %}
+          <div class="video-overlay-play-icon">▶</div>
+        {% endif %}
         
-        <div class="video-overlay-play-icon">▶</div>
       {% endif %}
       
-      
-      
       {% if block.type == "button" %}
-
         <div
             class="button banner__buttons{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
             {{ block.shopify_attributes }}
