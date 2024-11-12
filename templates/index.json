@@ -292,8 +292,8 @@
       ],
       "settings": {
         "color_scheme": "scheme-3",
-        "desktop_banner_height": 200,
-        "mobile_banner_height": 200
+        "desktop_banner_height": 567,
+        "mobile_banner_height": 484
       }
     }
   },
