@@ -9,31 +9,6 @@
  */
 {
   "sections": {
-    "video_background_sample_AiTrUK": {
-      "type": "video-background-sample",
-      "blocks": {
-        "video_ibKA8C": {
-          "type": "video",
-          "settings": {
-            "video_link": "https://cdn.shopify.com/videos/c/o/v/c27933f89cf84fbfbac688bd46bb3c4d.mp4",
-            "image_link": "",
-            "video_image": "shopify://shop_images/putting-on-your-shoes_925x_ac88bb53-7702-490e-b56c-65de24ad7add.jpg",
-            "overlay_opacity": 0,
-            "title": "Build",
-            "text": "",
-            "color_text": "#ffffff",
-            "button_label": "Play On Quest - Free",
-            "button_link": "shopify://pages/contact",
-            "color_btn_bg": "#ffffff",
-            "color_btn_text": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "video_ibKA8C"
-      ],
-      "settings": {}
-    },
     "image_banner_6e73jj": {
       "type": "image-banner",
       "blocks": {
@@ -282,42 +257,15 @@
         "stack_images_on_mobile": true,
         "show_text_below": false
       }
-    },
-    "video_banner_PWxx7J": {
-      "type": "video-banner",
-      "blocks": {
-        "video_6TG8DH": {
-          "type": "video",
-          "settings": {
-            "video_link": "",
-            "image_link": "",
-            "video_image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_a7bfe067-86c9-41d6-8469-e0f8840bfc90.jpg",
-            "overlay_opacity": 0,
-            "title": "Video slide",
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
-            "color_text": "#ffffff",
-            "button_label": "fgfd",
-            "button_link": "shopify://pages/contact",
-            "color_btn_bg": "#ffffff",
-            "color_btn_text": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "video_6TG8DH"
-      ],
-      "settings": {}
     }
   },
   "order": [
-    "video_background_sample_AiTrUK",
     "image_banner_6e73jj",
     "image_banner",
     "collapsible_content_iydGCz",
     "video_GCgiPD",
     "image_banner_7NaFJU",
     "featured_collection",
-    "image_banner_9pp3ph",
-    "video_banner_PWxx7J"
+    "image_banner_9pp3ph"
   ]
 }
