@@ -152,6 +152,9 @@
       min-width: 100%;
       object-fit: cover;
   }
+  .video_banner_border_radius_{{ section.id }} {
+  	border-radius: var(--panel-radius);
+  }
   @media screen and (min-width: 750px) {
     .video-banner-{{ section.id }} {
         max-width: calc(var(--page-width) - 10rem);
@@ -159,7 +162,7 @@
   }
 {% endstyle %}
 
-<div id="Banner-{{ section.id }}" class="video-banner-{{ section.id }} page-width color-{{ section.settings.color_scheme }} gradient">
+<div id="Banner-{{ section.id }}" class="video-banner-{{ section.id }} page-width video_banner_border_radius_{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
   {%- for block in section.blocks -%}
       {% if block.type == "video" %}
         
