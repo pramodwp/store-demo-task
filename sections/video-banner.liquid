@@ -135,8 +135,6 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    border: 2px solid #000;
-    padding: 10px 20px;
   }
 
   .video-banner-{{ section.id }} .video-overlay-play-icon {
@@ -147,7 +145,7 @@
     transform: translate(-50%, -50%);
   }
   .video-banner-{{ section.id }} {
-      max-height: {{ section.settings.mobile_banner_height }}px;
+      max-height: 100%;
       height:100%;
       width: 100%;
       max-width: calc(100% - 2%);
@@ -158,10 +156,6 @@
       object-fit: cover;
   }
   @media screen and (min-width: 750px) {
-    .video-banner-{{ section.id }} {
-        max-height: {{ section.settings.desktop_banner_height }}px;
-        max-width: calc(var(--page-width) - 10rem);
-    }
   }
 {% endstyle %}
 
