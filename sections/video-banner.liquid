@@ -163,6 +163,7 @@
 <div class="video-banner color-{{ section.settings.color_scheme }} gradient" style="height: {{ section.settings.desktop_banner_height }}px;">
   {%- for block in section.blocks -%}
       {% if block.type == "video" %}
+        {% comment %}
         <video
           {% if block.settings.video_autoplay %} autoplay {% endif %}
           {% if block.settings.video_loop %} loop {% endif %} muted playsinline
@@ -170,13 +171,11 @@
           style="width: 100%; height: 100%;">
           <source src="{{ block.settings.video | video_url }}" type="video/mp4">
         </video>
-
-        <video class="video-js" loop autoplay preload="none" muted playsinline
-    
+        {% endcomment %}
+        
+        <video class="video-js" {% if block.settings.video_loop %} loop {% endif %} {% if block.settings.video_autoplay %} autoplay muted {% endif %} preload="none" playsinline
           poster="https:{{ block.settings.video_image | img_url: 'master' }}">
-          
-          <source src="{{ block.settings.video_link }}" type="video/mp4">
-          
+          <source src="{{ block.settings.video }}" type="video/mp4">
         </video>
         
         <div class="video-overlay-play-icon">▶</div>
