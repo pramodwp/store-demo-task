@@ -272,8 +272,9 @@
           "type": "video",
           "settings": {
             "video": "shopify://files/videos/Yeeps Hide and Seek.mp4",
+            "video_image": "shopify://shop_images/man-adjusts-blue-tuxedo-bowtie_925x_a7bfe067-86c9-41d6-8469-e0f8840bfc90.jpg",
             "video_loop": true,
-            "video_autoplay": true
+            "video_autoplay": false
           }
         },
         "button_eFQJic": {
