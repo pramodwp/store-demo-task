@@ -176,9 +176,14 @@
         }}
 
         {% if block.settings.video_autoplay == false %}
-          <div class="video-overlay-play-icon">▶</div>
+          <div class="video-overlay-play-icon">
+            <span class="deferred-media__poster-button motion-reduce">
+              <span class="svg-wrapper">
+                {{- 'icon-play.svg' | inline_asset_content -}}
+              </span>
+            </span>
+          </div>
         {% endif %}
-        
       {% endif %}
       
       {% if block.type == "button" %}
