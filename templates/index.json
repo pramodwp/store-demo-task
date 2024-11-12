@@ -290,6 +290,9 @@
         "video_6ArD9c",
         "button_eFQJic"
       ],
+      "custom_css": [
+        "#Banner-template--18105497682147__image_banner_6e73jj {margin-top: var(--spacing-sections-desktop);}"
+      ],
       "settings": {
         "color_scheme": "scheme-3",
         "desktop_banner_height": 567,
