@@ -166,6 +166,7 @@
 <div class="video-banner color-{{ section.settings.color_scheme }} gradient" style="height: {{ section.settings.desktop_banner_height }}px;">
   {%- for block in section.blocks -%}
       {% if block.type == "video" %}
+        {{ block.settings.video }}
         {% comment %}
         <video
           {% if block.settings.video_autoplay %} autoplay {% endif %}
