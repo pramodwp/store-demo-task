@@ -178,13 +178,9 @@
         <div class="video-overlay-play-icon">▶</div>
       {% endif %}
       
-      {% if block.type == "heading" %}
-        <h1 style="font-size: {{ block.settings.heading_size }};">{{ block.settings.heading_text }}</h1>
-      {% endif %}
+      
       
       {% if block.type == "button" %}
-        <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_label }}</a>
-
 
         <div
             class="banner__buttons{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
