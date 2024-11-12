@@ -31,7 +31,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: calc(100% - 2%);
+    max-width: calc(100% - 2%);
   }
   .image_banner_section_container_{{ section.id }}{
     margin: 0 auto;
@@ -51,7 +51,7 @@
       padding-left: 5rem;
     }
     .image_banner_section_container_{{ section.id }}.banner__media{
-      width: calc(var(--page-width) - 10rem);
+      max-width: calc(var(--page-width) - 10rem);
     }
   }
 {%- endstyle -%}
