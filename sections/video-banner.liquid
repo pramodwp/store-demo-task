@@ -156,22 +156,24 @@
 {% endstyle %}
 
 <div class="video-banner color-{{ section.settings.color_scheme }} gradient" style="height: {{ section.settings.desktop_banner_height }}px;">
-  {% if block.type == "video" %}
-    <video
-      {% if block.settings.video_autoplay %} autoplay {% endif %}
-      {% if block.settings.video_loop %} loop {% endif %}
-      controls
-      style="width: 100%; height: 100%;">
-      <source src="{{ block.settings.video | video_url }}" type="video/mp4">
-    </video>
-    <div class="video-overlay-play-icon">▶</div>
-  {% endif %}
-  
-  {% if block.type == "heading" %}
-    <h1 style="font-size: {{ block.settings.heading_size }};">{{ block.settings.heading_text }}</h1>
-  {% endif %}
-  
-  {% if block.type == "button" %}
-    <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_label }}</a>
-  {% endif %}
+  {%- for block in section.blocks -%}
+      {% if block.type == "video" %}
+        <video
+          {% if block.settings.video_autoplay %} autoplay {% endif %}
+          {% if block.settings.video_loop %} loop {% endif %}
+          controls
+          style="width: 100%; height: 100%;">
+          <source src="{{ block.settings.video | video_url }}" type="video/mp4">
+        </video>
+        <div class="video-overlay-play-icon">▶</div>
+      {% endif %}
+      
+      {% if block.type == "heading" %}
+        <h1 style="font-size: {{ block.settings.heading_size }};">{{ block.settings.heading_text }}</h1>
+      {% endif %}
+      
+      {% if block.type == "button" %}
+        <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_label }}</a>
+      {% endif %}
+  {%- endfor -%}  
 </div>
