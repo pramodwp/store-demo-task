@@ -197,6 +197,40 @@
         "default": 8,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.spacing_grid_vertical.label"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.layout.settings.header__panels.content"
+      },
+      {
+        "type": "range",
+        "id": "border__thickness",
+        "min": 4,
+        "max": 40,
+        "step": 4,
+        "default": 8,
+        "unit": "px",
+        "label": "t:settings_schema.layout.settings.border__thickness.label"
+      },
+      {
+        "type": "range",
+        "id": "panel__radius",
+        "min": 4,
+        "max": 40,
+        "step": 4,
+        "default": 8,
+        "unit": "px",
+        "label": "t:settings_schema.layout.settings.panel__radius.label"
+      },
+      {
+        "type": "range",
+        "id": "panel__margin",
+        "min": 4,
+        "max": 40,
+        "step": 4,
+        "default": 8,
+        "unit": "px",
+        "label": "t:settings_schema.layout.settings.panel__margin.label"
       }
     ]
   },
