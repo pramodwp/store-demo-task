@@ -123,7 +123,7 @@
 {% endschema %}
 
 {% style %}
-  .video-banner {
+  .video-banner-{{ section.id }} {
     position: relative;
     display: flex;
     align-items: center;
@@ -131,7 +131,7 @@
     color: #000;
   }
   
-  .video-banner .button {
+  .video-banner-{{ section.id }} .button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -139,18 +139,24 @@
     padding: 10px 20px;
   }
 
-  .video-overlay-play-icon {
-    display: {{ section.settings.video_autoplay }};
+  .video-banner-{{ section.id }} .video-overlay-play-icon {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
-    color: #000;
+  }
+  .video-banner-{{ section.id }} {
+      max-height: {{ section.settings.mobile_banner_height }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .video-banner-{{ section.id }} {
+        max-height: {{ section.settings.desktop_banner_height }}px;
+    }
   }
 {% endstyle %}
 
-<div id="Banner-{{ section.id }}" class="video-banner color-{{ section.settings.color_scheme }} gradient" style="height: {{ section.settings.desktop_banner_height }}px;">
+<div id="Banner-{{ section.id }}" class="video-banner-{{ section.id }} color-{{ section.settings.color_scheme }} gradient" style="max-height: {{ section.settings.desktop_banner_height }}px;">
   {%- for block in section.blocks -%}
       {% if block.type == "video" %}
         
