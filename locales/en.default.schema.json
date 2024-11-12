@@ -379,7 +379,7 @@
         "header__panels": {
           "content": "Panels"
         },
-        "border__thickness": {
+        "panel__border__thickness": {
           "label": "Border thickness"
         },
         "panel__radius": {
