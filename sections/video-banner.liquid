@@ -179,17 +179,15 @@
         
         <deferred-media>
           <template>
-            
               {{
                 section.settings.video
                 | video_tag:
                   image_size: '1100x',
                   autoplay: true,
-                  loop: section.settings.enable_video_looping,
+                  loop: block.settings.video_autoplay,
                   controls: true,
                   muted: false
               }}
-            
           </template>
         </deferred-media>
         
