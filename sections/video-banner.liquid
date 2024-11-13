@@ -68,10 +68,8 @@
 {% endstyle %}
 
 <div id="Banner-{{ section.id }}" class="video-banner-{{ section.id }} page-width video_banner_border_radius_{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
-  <div class="video__banner__box">
-  {%- for block in section.blocks -%}
+    {%- for block in section.blocks -%}
       {% if block.type == "video" %}
-        
         {% comment %}
         <video
           {% if block.settings.video_autoplay %} autoplay {% endif %}
@@ -81,7 +79,6 @@
           <source src="{{ block.settings.video | video_url }}" type="video/mp4">
         </video>
         {% endcomment %}
-        
         {{
           block.settings.video
           | video_tag:
@@ -90,7 +87,6 @@
             controls: false,
             muted: block.settings.video_autoplay
         }}
-
         {% if block.settings.video_autoplay == true %}
           <div class="video-overlay-play-icon">
             <span class="deferred-media__poster-button motion-reduce">
@@ -101,15 +97,15 @@
           </div>
         {% endif %}
       {% endif %}
+  {%- endfor -%} 
 
-      
+  {%- for block in section.blocks -%}
       <h2
           class="banner__heading inline-richtext {{ block.settings.heading_size }}"
           {{ block.shopify_attributes }}
         >
           {{ block.settings.heading_text }}
       </h2>
-    
       {% if block.type == "button" %}
         <div
             class="custom_button banner__buttons{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
@@ -129,8 +125,6 @@
             {%- endif -%}
           </div>
       {% endif %}
-      
-    
   {%- endfor -%} 
   </div>
 </div>
