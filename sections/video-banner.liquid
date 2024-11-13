@@ -165,6 +165,10 @@ document.addEventListener('DOMContentLoaded', function() {
   video.addEventListener('ended', function() {
     playButton.style.display = 'block'; // Show the button when video ends
   });
+  if (video.ended) {
+    playButton.style.display = 'block'; // Show the button when video ends
+  }
+  
 });
 </script>
 
