@@ -55,10 +55,9 @@
       flex-direction: column;
       justify-content: space-between;
   }
-  .video__banner__box .banner__heading{
-      padding: 0.625rem 0;
-      line-height: 0 !important;
-  }  
+  .video__banner__box>*:first-child {
+      margin-top: 0;
+  }
   @media screen and (min-width: 750px) {
     .video-banner-{{ section.id }} {
         max-width: calc(var(--page-width) - 10rem);
