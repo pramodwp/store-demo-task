@@ -58,7 +58,7 @@
   }
   @media screen and (min-width: 750px) {
     .video-banner-{{ section.id }} {
-        max-width: calc(var(--page-width) - 11rem);
+        max-width: calc(var(--page-width) - 10rem);
     }
     .video-banner-{{ section.id }} video{
       min-height: {{ section.settings.desktop_banner_height }}px;
@@ -66,11 +66,6 @@
     }
     video-banner-{{ section.id }} .video__banner__box {
       padding: 2rem 0;
-    }
-  }
-  @media screen and (min-width: 1201px) {
-    .video-banner-{{ section.id }} {
-        max-width: calc(var(--page-width) - 10rem);
     }
   }
 {% endstyle %}
