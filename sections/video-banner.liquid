@@ -1,3 +1,106 @@
+{% style %}
+  #Banner-{{ section.id }}.page-width{
+    padding:0px;
+  }
+  .video-banner-{{ section.id }} {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-banner-{{ section.id }} .custom_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .video-banner-{{ section.id }} .video-overlay-play-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .video-banner-{{ section.id }} {
+      max-height: 100%;
+      height:100%;
+      width: 100%;
+      max-width: calc(100% - 2%);
+  }
+  .video-banner-{{ section.id }} video{
+      min-height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+  }
+  .video_banner_border_radius_{{ section.id }} {
+  	border-radius: var(--panel-radius);
+    border: var(--panel-border-width, 2px) solid rgb(var(--color-button-text));
+  }
+  .video_banner_border_radius_{{ section.id }} video{
+    border-radius: var(--panel-radius);
+  }
+  @media screen and (min-width: 750px) {
+    .video-banner-{{ section.id }} {
+        max-width: calc(var(--page-width) - 10rem);
+    }
+  }
+{% endstyle %}
+
+<div id="Banner-{{ section.id }}" class="video-banner-{{ section.id }} page-width video_banner_border_radius_{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+  {%- for block in section.blocks -%}
+      {% if block.type == "video" %}
+        
+        {% comment %}
+        <video
+          {% if block.settings.video_autoplay %} autoplay {% endif %}
+          {% if block.settings.video_loop %} loop {% endif %} muted playsinline
+          controls
+          style="width: 100%; height: 100%;">
+          <source src="{{ block.settings.video | video_url }}" type="video/mp4">
+        </video>
+        {% endcomment %}
+        
+        {{
+          block.settings.video
+          | video_tag:
+            autoplay: block.settings.video_autoplay,
+            loop: block.settings.video_loop,
+            controls: false,
+            muted: block.settings.video_autoplay
+        }}
+
+        {% if block.settings.video_autoplay == true %}
+          <div class="video-overlay-play-icon">
+            <span class="deferred-media__poster-button motion-reduce">
+              <span class="svg-wrapper">
+                {{- 'icon-play.svg' | inline_asset_content -}}
+              </span>
+            </span>
+          </div>
+        {% endif %}
+      {% endif %}
+      
+      {% if block.type == "button" %}
+        <div
+            class="custom_button banner__buttons{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.button_label != blank -%}
+              <a
+                {% if block.settings.button_link == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ block.settings.button_link }}"
+                {% endif %}
+                class="button{% if block.settings.outline_button %} button--secondary{% else %} button--primary{% endif %}"
+              >
+                {{- block.settings.button_label | escape -}}
+              </a>
+            {%- endif -%}
+          </div>
+      {% endif %}
+  {%- endfor -%}  
+</div>
+
 {% schema %}
 {
   "name": "Video Banner",
@@ -121,103 +224,3 @@
   ]
 }
 {% endschema %}
-
-{% style %}
-  .video-banner-{{ section.id }} {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .video-banner-{{ section.id }} .custom_button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .video-banner-{{ section.id }} .video-overlay-play-icon {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .video-banner-{{ section.id }} {
-      max-height: 100%;
-      height:100%;
-      width: 100%;
-      max-width: calc(100% - 2%);
-  }
-  .video-banner-{{ section.id }} video{
-      min-height: 100%;
-      min-width: 100%;
-      object-fit: cover;
-  }
-  .video_banner_border_radius_{{ section.id }} {
-  	border-radius: var(--panel-radius);
-    border: var(--panel-border-width, 2px) solid rgb(var(--color-button-text));
-  }
-  .video_banner_border_radius_{{ section.id }} video{
-    border-radius: var(--panel-radius);
-  }
-  @media screen and (min-width: 750px) {
-    .video-banner-{{ section.id }} {
-        max-width: calc(var(--page-width) - 10rem);
-    }
-  }
-{% endstyle %}
-
-<div id="Banner-{{ section.id }}" class="video-banner-{{ section.id }} page-width video_banner_border_radius_{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
-  {%- for block in section.blocks -%}
-      {% if block.type == "video" %}
-        
-        {% comment %}
-        <video
-          {% if block.settings.video_autoplay %} autoplay {% endif %}
-          {% if block.settings.video_loop %} loop {% endif %} muted playsinline
-          controls
-          style="width: 100%; height: 100%;">
-          <source src="{{ block.settings.video | video_url }}" type="video/mp4">
-        </video>
-        {% endcomment %}
-        
-        {{
-          block.settings.video
-          | video_tag:
-            autoplay: block.settings.video_autoplay,
-            loop: block.settings.video_loop,
-            controls: false,
-            muted: block.settings.video_autoplay
-        }}
-
-        {% if block.settings.video_autoplay == true %}
-          <div class="video-overlay-play-icon">
-            <span class="deferred-media__poster-button motion-reduce">
-              <span class="svg-wrapper">
-                {{- 'icon-play.svg' | inline_asset_content -}}
-              </span>
-            </span>
-          </div>
-        {% endif %}
-      {% endif %}
-      
-      {% if block.type == "button" %}
-        <div
-            class="custom_button banner__buttons{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
-            {{ block.shopify_attributes }}
-          >
-            {%- if block.settings.button_label != blank -%}
-              <a
-                {% if block.settings.button_link == blank %}
-                  role="link" aria-disabled="true"
-                {% else %}
-                  href="{{ block.settings.button_link }}"
-                {% endif %}
-                class="button{% if block.settings.outline_button %} button--secondary{% else %} button--primary{% endif %}"
-              >
-                {{- block.settings.button_label | escape -}}
-              </a>
-            {%- endif -%}
-          </div>
-      {% endif %}
-  {%- endfor -%}  
-</div>
