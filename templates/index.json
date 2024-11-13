@@ -176,18 +176,33 @@
         "padding_bottom": 0
       }
     },
-    "video_GCgiPD": {
-      "type": "video",
+    "video_banner_7CWjUN": {
+      "type": "video-banner",
+      "blocks": {
+        "heading_iEnQQB": {
+          "type": "heading",
+          "settings": {
+            "heading_text": "Trailer",
+            "heading_size": "h1"
+          }
+        },
+        "video_Nm9YC9": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Yeeps Hide and Seek  Official Launch Trailer.mp4",
+            "video_loop": true,
+            "video_autoplay": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_iEnQQB",
+        "video_Nm9YC9"
+      ],
       "settings": {
-        "heading": "Trailer",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=ng3CrRUP5-I",
-        "description": "Yeeps Hide And Seek Trailer",
-        "full_width": false,
-        "color_scheme": "scheme-4",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "color_scheme": "scheme-3",
+        "desktop_banner_height": 579,
+        "mobile_banner_height": 213
       }
     },
     "image_banner_7NaFJU": {
@@ -305,7 +320,7 @@
     "image_banner_6e73jj",
     "image_banner",
     "collapsible_content_iydGCz",
-    "video_GCgiPD",
+    "video_banner_7CWjUN",
     "image_banner_7NaFJU",
     "featured_collection",
     "image_banner_9pp3ph"
