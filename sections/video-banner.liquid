@@ -79,6 +79,8 @@
   }
 {% endstyle %}
 
+{% assign video_id = 'video-player-' | append: section.id %}
+
 <div id="Banner-{{ section.id }}" class="video-banner-{{ section.id }} page-width video_banner_border_radius_{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     {%- for block in section.blocks -%}
       {% if block.type == "video" %}
@@ -97,10 +99,11 @@
             autoplay: block.settings.video_autoplay,
             loop: block.settings.video_loop,
             controls: false,
-            muted: block.settings.video_autoplay
+            muted: block.settings.video_autoplay,
+            id: video_id
         }}
         {% if block.settings.video_autoplay == false %}
-          <div class="video-overlay-play-icon">
+          <div id="video-overlay-play-icon-{{ section.id }}" class="video-overlay-play-icon">
             <span class="deferred-media__poster-button motion-reduce">
               <span class="svg-wrapper">
                 {{- 'icon-play.svg' | inline_asset_content -}}
@@ -144,6 +147,20 @@
   
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('video-player-{{ section.id }}');
+    var playButton = document.getElementById('video-overlay-play-icon-{{ section.id }}');
+
+    playButton.addEventListener('click', function() {
+      if (video.paused) {
+        video.play();
+        playButton.style.display = 'none'; // Hide the button when playing
+      }
+    });
+  });
+</script>
 
 {% schema %}
 {
