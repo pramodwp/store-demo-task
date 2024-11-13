@@ -99,13 +99,16 @@
       {% endif %}
   {%- endfor -%} 
 
+  <div class="video__banner__box">
   {%- for block in section.blocks -%}
-      <h2
-          class="banner__heading inline-richtext {{ block.settings.heading_size }}"
-          {{ block.shopify_attributes }}
-        >
-          {{ block.settings.heading_text }}
-      </h2>
+      {% if block.type == "heading" %}
+        <h2
+            class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+            {{ block.shopify_attributes }}
+          >
+            {{ block.settings.heading_text }}
+        </h2>
+      {% endif %}
       {% if block.type == "button" %}
         <div
             class="custom_button banner__buttons{% if block.settings.button_label != blank %} banner__buttons--multiple{% endif %}"
@@ -126,6 +129,7 @@
           </div>
       {% endif %}
   {%- endfor -%} 
+  
   </div>
 </div>
 
