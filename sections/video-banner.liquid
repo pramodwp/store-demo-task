@@ -149,24 +149,23 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('video-player-{{ section.id }}');
-    var playButton = document.getElementById('video-overlay-play-icon-{{ section.id }}');
+document.addEventListener('DOMContentLoaded', function() {
+  var video = document.getElementById('video-player-{{ section.id }}');
+  var playButton = document.getElementById('video-overlay-play-icon-{{ section.id }}');
 
-    // Play button click event
-    playButton.addEventListener('click', function() {
-      if (video.paused) {
-        video.play();
-        playButton.style.display = 'none'; // Hide the button when playing
-      }
-    });
-
-    // Video ended event
-    video.addEventListener('ended', function() {
-      console.log('endLLL');
-      playButton.style.display = 'block'; // Show the button when video ends
-    });
+  // Play button click event
+  playButton.addEventListener('click', function() {
+    if (video.paused) {
+      video.play();
+      playButton.style.display = 'none'; // Hide the button when playing
+    }
   });
+
+  // Video ended event
+  video.addEventListener('ended', function() {
+    playButton.style.display = 'block'; // Show the button when video ends
+  });
+});
 </script>
 
 {% schema %}
