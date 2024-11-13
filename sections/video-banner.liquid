@@ -153,10 +153,13 @@ document.addEventListener('DOMContentLoaded', function() {
   var video = document.getElementById('video-player-{{ section.id }}');
   var playButton = document.getElementById('video-overlay-play-icon-{{ section.id }}');
 
-  
-  if (video.ended) {
-    playButton.style.display = 'block'; // Show the button when video ends
-  }
+  // Play button click event
+  playButton.addEventListener('click', function() {
+    if (video.paused) {
+      video.play();
+      playButton.style.display = 'none'; // Hide the button when playing
+    }
+  });
   
 });
 </script>
