@@ -17,7 +17,8 @@
           "settings": {
             "video": "shopify://files/videos/Yeeps Hide and Seek.mp4",
             "video_loop": true,
-            "video_autoplay": true
+            "video_autoplay": true,
+            "video_control": false
           }
         },
         "button_eFQJic": {
@@ -120,7 +121,8 @@
           "settings": {
             "video": "shopify://files/videos/Yeeps Hide and Seek  Official Launch Trailer.mp4",
             "video_loop": true,
-            "video_autoplay": false
+            "video_autoplay": false,
+            "video_control": true
           }
         }
       },
@@ -129,7 +131,7 @@
         "video_HpYpp9"
       ],
       "custom_css": [
-        "#Banner-template--22389895954616__video_banner_MQptpa{margin-bottom: var(--spacing-sections-desktop);}"
+        "#Banner-template--22389895954616__video_banner_MQptpa {margin-bottom: var(--spacing-sections-desktop);}"
       ],
       "settings": {
         "color_scheme": "scheme-3",
