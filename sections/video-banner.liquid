@@ -21,14 +21,15 @@
     transform: translate(-50%, -50%);
   }
   .video-banner-{{ section.id }} {
-      max-height: {{ section.settings.desktop_banner_height }}px;
-      height: {{ section.settings.desktop_banner_height }}px;
+      max-height: 100%;
+      height:100%;
       width: 100%;
       max-width: calc(100% - 2%);
   }
   .video-banner-{{ section.id }} video{
-      min-height: {{ section.settings.desktop_banner_height }}px;
+      min-height: 100%;
       min-width: 100%;
+      max-height: {{ section.settings.mobile_banner_height }}px;
       object-fit: cover;
   }
   .video_banner_border_radius_{{ section.id }} {
@@ -42,6 +43,9 @@
     .video-banner-{{ section.id }} {
         max-width: calc(var(--page-width) - 10rem);
     }
+    .video-banner-{{ section.id }} video{
+      max-height: {{ section.settings.desktop_banner_height }}px;
+  }
   }
 {% endstyle %}
 
