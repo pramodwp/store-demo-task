@@ -68,6 +68,7 @@
 {% endstyle %}
 
 <div id="Banner-{{ section.id }}" class="video-banner-{{ section.id }} page-width video_banner_border_radius_{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+  <div class="video__banner__box">
   {%- for block in section.blocks -%}
       {% if block.type == "video" %}
         
@@ -101,7 +102,7 @@
         {% endif %}
       {% endif %}
 
-      <div class="video__banner__box">
+      
       <h2
           class="banner__heading inline-richtext {{ block.settings.heading_size }}"
           {{ block.shopify_attributes }}
@@ -128,9 +129,10 @@
             {%- endif -%}
           </div>
       {% endif %}
-      </div>
+      
     
-  {%- endfor -%}  
+  {%- endfor -%} 
+  </div>
 </div>
 
 {% schema %}
