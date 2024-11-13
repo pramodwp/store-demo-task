@@ -128,7 +128,9 @@
         "heading_wwLd9k",
         "video_HpYpp9"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "#Banner-template--22389895954616__video_banner_MQptpa{margin-bottom: var(--spacing-sections-desktop);}"
+      ],
       "settings": {
         "color_scheme": "scheme-3",
         "desktop_banner_height": 579,
