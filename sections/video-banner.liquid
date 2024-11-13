@@ -104,7 +104,7 @@
           | video_tag:
             autoplay: block.settings.video_autoplay,
             loop: block.settings.video_loop,
-            controls: false,
+            controls: block.settings.video_control,
             muted: block.settings.video_autoplay,
             id: video_id
         }}
@@ -255,6 +255,12 @@ document.addEventListener('DOMContentLoaded', function() {
           "type": "checkbox",
           "id": "video_autoplay",
           "label": "Autoplay",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "video_control",
+          "label": "Controls",
           "default": false
         }
       ]
