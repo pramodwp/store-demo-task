@@ -12,13 +12,6 @@
     "video_banner_34jyWf": {
       "type": "video-banner",
       "blocks": {
-        "heading_96YptV": {
-          "type": "heading",
-          "settings": {
-            "heading_text": "Trailer",
-            "heading_size": "h1"
-          }
-        },
         "video_6ArD9c": {
           "type": "video",
           "settings": {
@@ -37,7 +30,6 @@
         }
       },
       "block_order": [
-        "heading_96YptV",
         "video_6ArD9c",
         "button_eFQJic"
       ],
