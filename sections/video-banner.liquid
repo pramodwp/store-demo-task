@@ -42,7 +42,7 @@
 
 
   .video__banner__box {
-      padding: 0;
+      padding: 2rem 0;
       position: absolute;
       height: fit-content;
       align-items: center;
@@ -55,7 +55,9 @@
       flex-direction: column;
       justify-content: space-between;
   }
-    
+  .video__banner__box .banner__heading{
+      padding: 2rem 0;
+  }  
   @media screen and (min-width: 750px) {
     .video-banner-{{ section.id }} {
         max-width: calc(var(--page-width) - 10rem);
