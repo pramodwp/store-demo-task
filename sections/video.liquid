@@ -120,7 +120,7 @@
       {%- else -%}
         {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
       {%- endif -%}
-      <span class="deferred-media__poster-button motion-reduce">
+      <span id="video-overlay-play-icon-{{ section.id }}" class="deferred-media__poster-button motion-reduce">
         <span class="svg-wrapper">
           {{- 'icon-play.svg' | inline_asset_content -}}
         </span>
@@ -166,6 +166,17 @@
   </deferred-media>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var playButton = document.getElementById('video-overlay-play-icon-{{ section.id }}');
+
+  // Play button click event
+  playButton.addEventListener('click', function() {
+    playButton.style.display = 'none'; // Hide the button when playing
+  });
+});
+</script>
+      
 {% schema %}
 {
   "name": "t:sections.video.name",
