@@ -2496,7 +2496,9 @@ input[type='checkbox'] {
   .header--top-left .header__heading-link {
     margin-left: -0.75rem;
   }
-  
+  .header__heading-link {
+    padding: 0.75rem;
+  }
   .header__heading,
   .header__heading-link {
     justify-self: start;
