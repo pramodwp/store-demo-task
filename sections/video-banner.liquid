@@ -1,7 +1,7 @@
 {{ 'video-section.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
-{%- if section.settings.color_scheme == "scheme-3" -%}
+{% if section.settings.color_scheme == "scheme-3" %}
   {% style %}
     .video-banner-{{ section.id }} .deferred-media__poster-button{
       background-color: rgb(var(--color-button-text));
