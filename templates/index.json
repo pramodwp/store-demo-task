@@ -17,7 +17,7 @@
           "settings": {
             "video": "shopify://files/videos/Yeeps Hide and Seek.mp4",
             "video_loop": true,
-            "video_autoplay": true,
+            "video_autoplay": false,
             "video_control": false
           }
         },
