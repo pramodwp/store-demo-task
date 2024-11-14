@@ -398,7 +398,7 @@
   "platform_customizations": {
     "custom_css": [
       ".subtitle {font-size: 150%; color: rgba(var(--color-foreground), 1);}",
-      ".header__menu-item {font-size: 120%; font-weight: 400;}",
+      ".header__menu-item {font-size: 150%; font-weight: 400;}",
       ".button--primary {font-size: 150%; border: 2px solid;}"
     ]
   }
