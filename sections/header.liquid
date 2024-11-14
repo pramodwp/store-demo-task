@@ -140,7 +140,7 @@
 
                 {%- if settings.enable_art_favicon -%}
                   {%- assign f_logo_alt = settings.favicon.alt | default: shop.name | escape -%}
-                  {%- assign f_logo_height = settings.logo_width | divided_by: settings.favicon.aspect_ratio -%}
+                  {%- assign f_logo_height = settings.logo_width | divided_by: 2 -%}
                   {% capture f_sizes %}(max-width: {{ settings.logo_width | divided_by: 2 }}px) 20vw, {{ settings.logo_width }}px{% endcapture %}
                   {% capture f_widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
                   {{ settings.favicon | image_url: width: 200 | image_tag:
