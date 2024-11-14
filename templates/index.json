@@ -139,6 +139,21 @@
         "mobile_banner_height": 213
       }
     },
+    "video_pcEh6V": {
+      "type": "video",
+      "settings": {
+        "heading": "Trailer",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=ng3CrRUP5-I",
+        "cover_image": "shopify://shop_images/YeepsLaunchTrailerThumbnail.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collapsible_content_iydGCz": {
       "type": "collapsible-content",
       "blocks": {
@@ -317,6 +332,7 @@
     "image_banner_6e73jj",
     "image_banner",
     "video_banner_MQptpa",
+    "video_pcEh6V",
     "collapsible_content_iydGCz",
     "image_banner_7NaFJU",
     "featured_collection",
