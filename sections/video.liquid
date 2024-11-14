@@ -81,6 +81,7 @@
 {%- endcapture -%}
 
 <div id="Banner-{{ section.id }}" class="video-section  isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+  {{ section.settings.color_scheme }}
   <div
     {% if section.settings.full_width %}
       class="page-width"
