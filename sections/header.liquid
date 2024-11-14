@@ -145,7 +145,7 @@
                   {% capture f_sizes %}(max-width: {{ settings.logo_width | divided_by: 2 }}px) 25vw, {{ settings.logo_width }}px{% endcapture %}
                   {% capture f_widths %}{{ settings.logo_width | divided_by: 2 }}, {{ settings.logo_width | divided_by: 2 | times: 1.5 | round }}, {{ settings.logo_width | divided_by: 2 | times: 2 }}{% endcapture %}
                   {{ settings.favicon | image_url: width: settings.logo_width | image_tag:
-                    class: 'header__heading-logo motion-reduce',
+                    class: 'header__heading-flogo motion-reduce',
                     widths: f_widths,
                     height: f_logo_height,
                     width: f_logo_width,
