@@ -92,13 +92,13 @@
         style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
       {% endif %}
     >
-      {%- if block.settings.heading != null -%}
+      {%- if section.settings.heading != null -%}
         <div class="video__banner__box">
             <h2
-              class="banner__heading inline-richtext {{ block.settings.heading_size }}"
-              {{ block.shopify_attributes }}
+              class="banner__heading inline-richtext {{ section.settings.heading_size }}"
+              {{ section.shopify_attributes }}
             >
-              {{ block.settings.heading }}
+              {{ section.settings.heading }}
             </h2>
         </div>
       {%- endif -%}
