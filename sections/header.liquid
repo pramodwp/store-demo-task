@@ -96,8 +96,13 @@
   }
   
   {%- if settings.enable_art_favicon -%}
+    #heaer__heading-logo{
+        display: none;
+    }
     @media screen and (min-width: 990px) {
-        
+        #heaer__heading-logo{
+            display: inline-block;
+        }
     }
   {%- endif -%}
   
