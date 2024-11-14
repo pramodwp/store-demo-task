@@ -1,14 +1,6 @@
 {{ 'video-section.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
-{% if section.settings.color_scheme == "scheme-3" %}
-  {% style %}
-    .video-banner-{{ section.id }} .deferred-media__poster-button{
-      background-color: rgb(var(--color-button-text));
-    }
-  {% endstyle %}  
-{% endif %}
-
 {% style %}
   #Banner-{{ section.id }} {
     margin-top: var(--spacing-sections-mobile);
@@ -21,6 +13,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .color-scheme-3 .video-banner-{{ section.id }} .deferred-media__poster-button{
+      background-color: rgb(var(--color-button-text));
   }
   .video-banner-{{ section.id }} .custom_button {
     /*position: absolute;
