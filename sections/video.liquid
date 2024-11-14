@@ -2,6 +2,10 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
+  .video_banner_border_radius_{{ section.id }} {
+  	border-radius: var(--panel-radius);
+    border: var(--panel-border-width, 2px) solid rgb(var(--color-button-text));
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -39,7 +43,7 @@
 {%- endcapture -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
+  <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding video_banner_border_radius_{{ section.id }}">
     <div
       {% if section.settings.full_width %}
         class="page-width"
