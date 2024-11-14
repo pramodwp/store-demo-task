@@ -2806,7 +2806,7 @@ details[open] > .header__submenu {
   font-size: 125%;
   text-decoration: none;
   /*color: rgba(var(--color-foreground), 0.75);*/
-  text-shadow: -2px -2px 0 #454A7F, 2px -2px 0 #454A7F, -2px 2px 0 #454A7F, 2px 2px 0 #454A7F;
+  text-shadow: -1px -1px 0 #454A7F, 1px -1px 0 #454A7F, -1px 1px 0 #454A7F, 1px 1px 0 #454A7F;
   line-height: normal;
 }
 
