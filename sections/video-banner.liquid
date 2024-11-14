@@ -14,13 +14,9 @@
     align-items: center;
     justify-content: center;
   }
-  
-  {%- if section.settings.color_scheme == 'scheme-3' -%}
-    .video-banner-{{ section.id }} .deferred-media__poster-button{
-      background-color: rgb(var(--color-button-text));
-    }
-  {% endif %}
-  
+  .video-banner-{{ section.id }} .deferred-media__poster-button{
+    background-color: rgb(var(--color-button-text));
+  }
   .video-banner-{{ section.id }} .custom_button {
     /*position: absolute;
     top: 50%;
@@ -99,7 +95,7 @@
 
 {% assign video_id = 'video-player-' | append: section.id %}
 
-<div id="Banner-{{ section.id }}" class="video-banner-{{ section.id }} page-width video_banner_border_radius_{{ section.id }} color-{{ section.settings.color_scheme }} gradient"> {{ section.settings.color_scheme }}
+<div id="Banner-{{ section.id }}" class="video-banner-{{ section.id }} page-width video_banner_border_radius_{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
     {%- for block in section.blocks -%}
       {% if block.type == "video" %}
         {% comment %}
