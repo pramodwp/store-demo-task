@@ -140,10 +140,10 @@
 
                 {%- if settings.enable_art_favicon -%}
                   {%- assign f_logo_alt = settings.favicon.alt | default: shop.name | escape -%}
-                  {%- assign f_logo_height = settings.logo_width | divided_by: 2 -%}
-                  {%- assign f_logo_width = settings.logo_width | divided_by: 2 -%}
-                  {% capture f_sizes %}(max-width: {{ settings.logo_width | divided_by: 2 }}px) 25vw, {{ settings.logo_width }}px{% endcapture %}
-                  {% capture f_widths %}{{ settings.logo_width | divided_by: 2 }}, {{ settings.logo_width | divided_by: 2 | times: 1.5 | round }}, {{ settings.logo_width | divided_by: 2 | times: 2 }}{% endcapture %}
+                  {%- assign f_logo_height = settings.logo_width | divided_by: 2.5 -%}
+                  {%- assign f_logo_width = settings.logo_width | divided_by: 2.5 -%}
+                  {% capture f_sizes %}(max-width: {{ settings.logo_width | divided_by: 2.5 }}px) 25vw, {{ settings.logo_width }}px{% endcapture %}
+                  {% capture f_widths %}{{ settings.logo_width | divided_by: 2.5 }}, {{ settings.logo_width | divided_by: 2.5 | times: 1.5 | round }}, {{ settings.logo_width | divided_by: 2.5 | times: 2 }}{% endcapture %}
                   {{ settings.favicon | image_url: width: settings.logo_width | image_tag:
                     class: 'header__heading-logo motion-reduce',
                     widths: f_widths,
