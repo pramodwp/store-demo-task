@@ -77,11 +77,13 @@
         class="page-width"
       {% endif %}
     >
-      {%- unless section.settings.heading == blank -%}
-        <div class="title-wrapper title-wrapper--no-top-margin{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-          <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
-        </div>
-      {%- endunless -%}
+      {% comment %}
+        {%- unless section.settings.heading == blank -%}
+          <div class="title-wrapper title-wrapper--no-top-margin{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+            <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
+          </div>
+        {%- endunless -%}
+      {% endcomment %}
     </div>
     <deferred-media
       class="video-section__media deferred-media gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} video_banner_border_radius_{{ section.id }}"
@@ -90,8 +92,17 @@
         style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
       {% endif %}
     >
-      <div class="video__banner__box">
-      </div>
+      {%- if block.settings.heading != null -%}
+        <div class="video__banner__box">
+            <h2
+              class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+              {{ block.shopify_attributes }}
+            >
+              {{ block.settings.heading }}
+            </h2>
+        </div>
+      {%- endif -%}
+      
       <button
         id="Deferred-Poster-Modal-{{ video_id }}"
         class="video-section__poster media deferred-media__poster media--landscape"
