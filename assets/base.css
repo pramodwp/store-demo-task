@@ -2155,6 +2155,7 @@ input[type='checkbox'] {
   flex-wrap: wrap;
   align-content: center;
   grid-area: announcements;
+  padding: 4px 8px;
 }
 
 .announcement-bar .slider--everywhere {
