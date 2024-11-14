@@ -2,7 +2,7 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  #Banner-{{ section.id }} {
+   #Banner-{{ section.id }} {
     margin-top: var(--spacing-sections-mobile);
   }
   .video_banner_border_radius_{{ section.id }} {
@@ -38,6 +38,7 @@
   }
   #Banner-{{ section.id }} .deferred-media__poster-button {
       z-index: 2;
+      background-color: rgb(var(--color-button-text));
   }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
