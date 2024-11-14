@@ -47,6 +47,10 @@
       background-color: rgb(var(--color-button));
       color: rgb(var(--color-button-text));
   }
+  #Banner-{{ section.id }} .video-section__media {
+      max-width: calc(100% - 2.5%);
+      margin:0 auto;
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -57,7 +61,6 @@
     }
     #Banner-{{ section.id }} .video-section__media {
         max-width: calc(var(--page-width) - 10rem);
-        margin:0 auto;
     }
   }
 {%- endstyle -%}
