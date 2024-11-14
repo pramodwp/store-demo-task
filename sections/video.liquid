@@ -39,6 +39,9 @@
   #Banner-{{ section.id }} .deferred-media__poster-button {
       z-index: 2;
   }
+  .video-banner-{{ section.id }} .deferred-media__poster-button{
+      background-color: rgb(var(--color-button-text));
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
