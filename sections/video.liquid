@@ -19,11 +19,33 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-
+  .video-banner-{{ section.id }} .video__banner__box {
+      padding: 1.3333rem 0;
+      position: absolute;
+      height: fit-content;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      word-wrap: break-word;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .video-banner-{{ section.id }} .video__banner__box>*:first-child {
+      margin-top: 0;
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }.
+    #Banner-{{ section.id }} .video__banner__box {
+      padding: 2rem 0;
+    }
+    .video-banner-{{ section.id }} .video__banner__box {
+      padding: 2rem 0;
     }
   }
 {%- endstyle -%}
@@ -71,6 +93,8 @@
         style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
       {% endif %}
     >
+      <div class="video__banner__box">
+      </div>
       <button
         id="Deferred-Poster-Modal-{{ video_id }}"
         class="video-section__poster media deferred-media__poster media--landscape"
