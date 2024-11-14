@@ -34,11 +34,11 @@
     cursor: pointer;
   }
   .video-banner-{{ section.id }} {
-      min-height: {{ section.settings.mobile_banner_height }}px;
       max-height: 100%;
       height:100%;
       width: 100%;
       max-width: calc(100% - 2.5%);
+      min-height: {{ section.settings.mobile_banner_height }}px;
   }
   .video-banner-{{ section.id }} video{
       min-width: 100%;
@@ -76,6 +76,7 @@
     }
     .video-banner-{{ section.id }} {
         max-width: calc(100% - 1%);
+        min-height: {{ section.settings.desktop_banner_height }}px;
     }
     .video-banner-{{ section.id }} video{
       min-height: {{ section.settings.desktop_banner_height }}px;
