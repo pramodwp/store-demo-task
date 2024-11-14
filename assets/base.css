@@ -2258,6 +2258,7 @@ input[type='checkbox'] {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  min-height: 0.625rem;
 }
 
 .announcement-bar-slider--fade-in-next .announcement-bar__message,
