@@ -40,6 +40,18 @@
       z-index: 2;
       background-color: rgb(var(--color-button-text));
   }
+
+  {%- if section.settings.color_scheme == 'scheme-3' -%}
+    #Banner-{{ section.id }} .deferred-media__poster-button {
+        z-index: 2;
+        background-color: rgb(var(--color-button-text));
+    }
+  {% else %}
+    #Banner-{{ section.id }} .deferred-media__poster-button {
+        z-index: 2;
+    }
+  {% endif %}
+  
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
