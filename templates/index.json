@@ -323,6 +323,44 @@
         "stack_images_on_mobile": true,
         "show_text_below": false
       }
+    },
+    "video_banner_izNfWj": {
+      "type": "video-banner",
+      "blocks": {
+        "heading_REaFCe": {
+          "type": "heading",
+          "settings": {
+            "heading_text": "Video",
+            "heading_size": "h1"
+          }
+        },
+        "video_QzpPdk": {
+          "type": "video",
+          "settings": {
+            "video_loop": true,
+            "video_autoplay": false,
+            "video_control": false
+          }
+        },
+        "button_V7TdJa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "outline_button": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_REaFCe",
+        "video_QzpPdk",
+        "button_V7TdJa"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "desktop_banner_height": 567,
+        "mobile_banner_height": 484
+      }
     }
   },
   "order": [
@@ -334,6 +372,7 @@
     "collapsible_content_iydGCz",
     "image_banner_7NaFJU",
     "featured_collection",
-    "image_banner_9pp3ph"
+    "image_banner_9pp3ph",
+    "video_banner_izNfWj"
   ]
 }
