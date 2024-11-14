@@ -34,7 +34,7 @@
       {
         "type": "checkbox",
         "id": "enable_art_favicon",
-        "label": "Enable Art Favicon",
+        "label": "Show favicon icon on header",
         "default": false
       }
     ]
