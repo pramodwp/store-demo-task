@@ -2,9 +2,10 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  #Banner-{{ section.id }}.page-width{
-    
-  #Banner-{{ section.id }}.page-width{
+  #Banner-{{ section.id }} {
+    margin-top: var(--spacing-sections-mobile);
+  }
+  #Banner-{{ section.id }}.page-width {
     padding:0;
   }
   .video-banner-{{ section.id }} {
@@ -69,6 +70,9 @@
       margin-top: 0;
   }
   @media screen and (min-width: 750px) {
+    #Banner-{{ section.id }} {
+      margin-top: var(--spacing-sections-desktop);
+    }
     .video-banner-{{ section.id }} {
         max-width: calc(100% - 1%);
     }
