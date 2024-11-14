@@ -36,6 +36,9 @@
   .video-section .video__banner__box>*:first-child {
       margin-top: 0;
   }
+  .video-banner-{{ section.id }} .video-overlay-play-icon {
+    z-index: 2;
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
