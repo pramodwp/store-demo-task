@@ -34,9 +34,7 @@
         "video_6ArD9c",
         "button_eFQJic"
       ],
-      "custom_css": [
-        "#Banner-template--22389895954616__video_banner_34jyWf {margin-top: var(--spacing-sections-desktop);}"
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-3",
         "desktop_banner_height": 567,
