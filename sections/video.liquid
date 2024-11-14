@@ -9,6 +9,9 @@
   .video_banner_border_radius_{{ section.id }} video{
     border-radius: calc(var(--panel-radius) - 1.5px);
   }
+  .video_banner_border_radius_{{ section.id }} img{
+    border-radius: calc(var(--panel-radius) - 1.5px);
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
