@@ -2,7 +2,7 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .video-section{
+  .video-section {
     margin-top: var(--spacing-sections-mobile);
   }
   .video_banner_border_radius_{{ section.id }} {
@@ -36,8 +36,8 @@
   .video-section .video__banner__box>*:first-child {
       margin-top: 0;
   }
-  .video-banner-{{ section.id }} .deferred-media__poster-button {
-    z-index: 2;
+  .video-section .deferred-media__poster-button {
+      z-index: 2;
   }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
