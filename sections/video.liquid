@@ -152,7 +152,7 @@
         {%- if section.settings.video_url.type == 'youtube' -%}
           <iframe
             src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
-            class="js-youtube"
+            class="js-youtube video_banner_border_radius_{{ section.id }}"
             allow="autoplay; encrypted-media"
             allowfullscreen
             title="{{ section.settings.description | escape }}"
@@ -160,7 +160,7 @@
         {%- else -%}
           <iframe
             src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
-            class="js-vimeo"
+            class="js-vimeo video_banner_border_radius_{{ section.id }}"
             allow="autoplay; encrypted-media"
             allowfullscreen
             title="{{ section.settings.description | escape }}"
