@@ -102,6 +102,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   padding: 1.1rem 3rem;
   text-decoration: none;
   font-size: 1.8rem;
+  text-shadow: -1px -1px 0 #454A7F, 1px -1px 0 #454A7F, -1px 1px 0 #454A7F, 1px 1px 0 #454A7F;
 }
 
 .menu-drawer summary.menu-drawer__menu-item {
