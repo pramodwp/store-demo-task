@@ -39,13 +39,9 @@
   #Banner-{{ section.id }} .deferred-media__poster-button {
       z-index: 2;
   }
-  
-  {%- if section.settings.color_scheme == 'scheme-3' -%}
-    #Banner-{{ section.id }} .deferred-media__poster-button {
-        background-color: rgb(var(--color-button-text));
-    }
-  {% endif %}
-  
+  .color-scheme-3 .video-banner-{{ section.id }} .deferred-media__poster-button{
+      background-color: rgb(var(--color-button-text));
+  }
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -81,7 +77,6 @@
 {%- endcapture -%}
 
 <div id="Banner-{{ section.id }}" class="video-section  isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
-  {{ section.settings.color_scheme }}
   <div
     {% if section.settings.full_width %}
       class="page-width"
