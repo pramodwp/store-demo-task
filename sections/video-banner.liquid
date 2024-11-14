@@ -136,7 +136,7 @@
   <div class="video__banner__box">
   {%- for block in section.blocks -%}
       
-      <h2
+      <h2 id="video-banner-box-{{ section.id }}"
           class="banner__heading inline-richtext {{ block.settings.heading_size }}"
           {{ block.shopify_attributes }}
         >
