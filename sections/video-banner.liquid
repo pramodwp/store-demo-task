@@ -30,6 +30,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
     width: 100%;
     /*height: 100%;*/
     cursor: pointer;
@@ -62,14 +63,17 @@
       text-align: center;
       width: 100%;
       word-wrap: break-word;
+      z-index: 1;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      z-index:1;
   }
   .video-banner-{{ section.id }} .video__banner__box>*:first-child {
       margin-top: 0;
+  }
+  .video-banner-{{ section.id }} .banner__buttons{
+      z-index:3;
   }
   @media screen and (min-width: 750px) {
     #Banner-{{ section.id }} {
