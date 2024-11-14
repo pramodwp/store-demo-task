@@ -2797,12 +2797,12 @@ details[open] > .header__submenu {
 
 .header__menu {
   padding: 0 1rem;
-  font-size: 120%;
+  font-size: 150%;
 }
 
 .header__menu-item {
   padding: 1.2rem;
-  font-size: 120%;
+  font-size: 150%;
   text-decoration: none;
   /*color: rgba(var(--color-foreground), 0.75);*/
 }
