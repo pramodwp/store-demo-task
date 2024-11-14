@@ -140,7 +140,7 @@
     "video_pcEh6V": {
       "type": "video",
       "settings": {
-        "heading": "Trailer",
+        "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
         "video_url": "https://www.youtube.com/watch?v=ng3CrRUP5-I",
