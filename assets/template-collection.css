@@ -72,7 +72,7 @@
   text-align:center;
 }
 
-.collection__title .title:not(:only-child) {
+.collection__title .title:not(:only-child), .collection__title .title {
   /*margin-bottom: 1rem;*/
   margin: 0;
   padding: 0;
