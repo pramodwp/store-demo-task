@@ -129,6 +129,7 @@
   padding: 1rem;
   width: 100%;
   flex-grow: 1;
+  border-top: var(--border-width) solid rgba(var(--color-foreground), var(--border-opacity));
 }
 
 .card__content--auto-margins {
