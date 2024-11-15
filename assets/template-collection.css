@@ -83,7 +83,7 @@
 @media screen and (min-width: 990px) {
   .collection__title--desktop-slider .title {
     /*margin-bottom: 2.5rem;*/
-    
+    margin-bottom:0;
   }
 
   .collection__title.title-wrapper--self-padded-tablet-down {
