@@ -44,7 +44,7 @@
                   {%- if section.settings.art_left_icon.width >= 100 -%}{{ section.settings.art_left_icon | image_url: width: 100 }} 100w,{%- endif -%}
                   {{ section.settings.art_left_icon | image_url }} {{ section.settings.art_left_icon.width }}w
                 "
-                src="{{ section.settings.art_left_icon | image_url: width: 100 }}"
+                src="{{ section.settings.art_left_icon | image_url: width: 50 }}"
                 alt="{{ section.settings.art_left_icon.alt | escape }}"
                 height="{{ section.settings.art_left_icon.height }}"
                 width="{{ section.settings.art_left_icon.width }}"
