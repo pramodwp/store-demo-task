@@ -259,7 +259,7 @@
       "settings": {
         "title": "Merch",
         "heading_size": "h1",
-        "description": "<p>test</p>",
+        "description": "",
         "show_description": false,
         "description_style": "body",
         "collection": "frontpage",
