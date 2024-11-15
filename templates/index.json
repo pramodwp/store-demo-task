@@ -257,9 +257,9 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "{Heading} Merch has arrived!",
+        "title": "Merch",
         "heading_size": "h1",
-        "description": "<p>&lcub;Optional Description&rcub; goes here</p>",
+        "description": "",
         "show_description": false,
         "description_style": "body",
         "collection": "frontpage",
