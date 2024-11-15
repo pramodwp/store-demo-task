@@ -68,7 +68,9 @@
 }
 
 .collection__title.title-wrapper {
-  margin-bottom: 2.5rem;
+  /*margin-bottom: 2.5rem;*/
+  margin:0;
+  padding:0;
   text-align:center;
 }
 
