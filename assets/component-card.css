@@ -337,6 +337,7 @@
 
 .card--card.card--media > .card__content {
   margin-top: calc(0rem - var(--image-padding));
+  border-top: var(--border-width) solid rgba(var(--color-button-text), var(--border-opacity));
 }
 
 .card--standard.card--text a::after,
