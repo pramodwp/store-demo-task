@@ -50,7 +50,7 @@
     "card_text_alignment": "center",
     "card_color_scheme": "scheme-3",
     "card_border_thickness": 2,
-    "card_border_opacity": 0,
+    "card_border_opacity": 100,
     "card_corner_radius": 16,
     "card_shadow_opacity": 0,
     "card_shadow_horizontal_offset": 0,
