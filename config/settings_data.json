@@ -49,7 +49,7 @@
     "card_image_padding": 0,
     "card_text_alignment": "center",
     "card_color_scheme": "scheme-3",
-    "card_border_thickness": 0,
+    "card_border_thickness": 2,
     "card_border_opacity": 10,
     "card_corner_radius": 16,
     "card_shadow_opacity": 0,
