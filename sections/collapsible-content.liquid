@@ -40,14 +40,14 @@
           {%- if section.settings.heading != blank -%}
             <h2 class="collapsible-content__heading inline-richtext {{ section.settings.heading_size }}"><img
                 srcset="
-                  {%- if section.settings.art_left_icon.width >= 80 -%}{{ section.settings.art_left_icon | image_url: width: 80 }} 80w,{%- endif -%}
+                  {%- if section.settings.art_left_icon.width >= 80 -%}{{ section.settings.art_left_icon | image_url: width: 50 }} 80w,{%- endif -%}
                   {%- if section.settings.art_left_icon.width >= 100 -%}{{ section.settings.art_left_icon | image_url: width: 100 }} 100w,{%- endif -%}
                   {{ section.settings.art_left_icon | image_url }} {{ section.settings.art_left_icon.width }}w
                 "
                 src="{{ section.settings.art_left_icon | image_url: width: 50 }}"
                 alt="{{ section.settings.art_left_icon.alt | escape }}"
-                height="{{ section.settings.art_left_icon.height }}"
-                width="{{ section.settings.art_left_icon.width }}"
+                height="100"
+                width="115"
                 loading="lazy"
                 class="faq_art1"
                                                                                                            
@@ -65,8 +65,8 @@
                 "
                 src="{{ section.settings.art_right_icon | image_url: width: 100 }}"
                 alt="{{ section.settings.art_right_icon.alt | escape }}"
-                height="{{ section.settings.art_right_icon.height }}"
-                width="{{ section.settings.art_right_icon.width }}"
+                height="100"
+                width="115"
                 loading="lazy"
                 class="faq_art1"
 
