@@ -40,6 +40,10 @@
   .color-{{ section.settings.color_scheme }}, color-{{ section.settings.color_scheme }}.gradient {
       background:none;
   }
+
+  .collection__title.page-width{
+      max-width: calc(var(--page-width) - 10rem);
+  }
 {%- endstyle -%}
 
 {%- liquid
