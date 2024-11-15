@@ -69,13 +69,15 @@
 
 .collection__title.title-wrapper {
   /*margin-bottom: 2.5rem;*/
+  margin-bottom:0;
+  padding-bottom:0;
   text-align:center;
 }
 
 .collection__title .title:not(:only-child), .collection__title .title {
   /*margin-bottom: 1rem;*/
-  margin: 0;
-  padding: 0;
+  margin-bottom:0;
+  padding-bottom:0;
 }
 
 @media screen and (min-width: 990px) {
