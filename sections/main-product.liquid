@@ -735,6 +735,9 @@
 
 <script>
 function default_variant_remove(){
+    //************************************************************************
+    //************ Sta Step-1 ************************************************
+    //************************************************************************
     document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
         input.checked = false;
     });
@@ -746,16 +749,14 @@ function default_variant_remove(){
     });
     document.querySelector('.price').style.display = 'none'; 
     document.querySelector('[name="add"]').disabled = true;
-
-    //var mainImage = document.getElementById('Slide-template--22450557649080__main-49301179302072');
-    //mainImage.click(); 
-}
-document.addEventListener('DOMContentLoaded', function() {
-    default_variant_remove();
-});
+    //************************************************************************
+    //************ End Step-1 ************************************************
+    //************************************************************************
 
 
-document.addEventListener('DOMContentLoaded', function () {
+    //************************************************************************
+    //************ Sta Step-2 ************************************************
+    //************************************************************************
     // Replace with the correct ID or class of your slider component
     var slider = document.querySelector('.product__media-list');
     
@@ -778,9 +779,14 @@ document.addEventListener('DOMContentLoaded', function () {
             //slides[slideNumber].scrollIntoView({ behavior: 'smooth' });
         }
     }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
+    //************************************************************************
+    //************ End Step-2 ************************************************
+    //************************************************************************
+  
+  
+    //************************************************************************
+    //************ Sta Step-3 ************************************************
+    //************************************************************************
     // Select the product media list container
     var mediaList = document.querySelector('.product__media-list');
 
@@ -789,9 +795,15 @@ document.addEventListener('DOMContentLoaded', function () {
         // Add your custom class
         mediaList.classList.add('product__media_custom-list');
     }
-});
+    //************************************************************************
+    //************ End Step-3 ************************************************
+    //************************************************************************
 
-document.addEventListener('DOMContentLoaded', function () {
+  
+
+    //************************************************************************
+    //************ Sta Step-4 ************************************************
+    //************************************************************************
     // Select the main product media list container
     var mediaList = document.querySelector('.product__media-list');
     if (mediaList) {
@@ -814,19 +826,29 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
-});
-document.addEventListener('DOMContentLoaded', function () {  
-  // Function to handle the change or click event
-  function handleChange() {
-    document.querySelectorAll('.product__media-item').forEach(function(slide) {
-      slide.removeAttribute('style');
+    //************************************************************************
+    //************ End Step-4 ************************************************
+    //************************************************************************
+
+  
+
+    //************************************************************************
+    //************ Sta Step-5 ************************************************
+    //************************************************************************
+    // Function to handle the change or click event
+    function handleChange() {
+      document.querySelectorAll('.product__media-item').forEach(function(slide) {
+        slide.removeAttribute('style');
+      });
+    }
+    document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
+        input.addEventListener('change', handleChange); // 'change' event for radio inputs
+        input.addEventListener('click', handleChange);  // Add 'click' if needed
     });
-  }
-  document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
-      input.addEventListener('change', handleChange); // 'change' event for radio inputs
-      input.addEventListener('click', handleChange);  // Add 'click' if needed
-  });
-});
+    //************************************************************************
+    //************ End Step-5 ************************************************
+    //************************************************************************
+}
 </script>
 
 {% schema %}
