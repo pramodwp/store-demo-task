@@ -33,12 +33,11 @@
         {% assign option_name = 'Select ' | append: option.name %}
         {% assign option.selected_value = '' %}
 
-        {% assign new_option = '' %}
+        {% assign new_option = option %}
 
         {%- for value in option.values -%}
-          {% assign new_option = value %}
+          {{ value }}
         {%- endfor -%}
-        
         
         <!-- Output the new_option -->
         {{ new_option }}
