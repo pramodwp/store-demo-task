@@ -32,7 +32,9 @@
           <legend class="form__label">
             Select {{ option.name }}:
             <span data-selected-value>
-              {{- option.selected_value -}}
+              {% comment %}
+                {{- option.selected_value -}}
+              {% endcomment %}
             </span>
           </legend>
           {% render 'product-variant-options',
