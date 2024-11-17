@@ -738,12 +738,39 @@ function default_variant_remove(){
     document.querySelector('.price').style.display = 'none'; 
     document.querySelector('[name="add"]').disabled = true;
 
-    var mainImage = document.getElementById('Slide-template--22450557649080__main-49301179302072');
-    mainImage.click(); 
+    //var mainImage = document.getElementById('Slide-template--22450557649080__main-49301179302072');
+    //mainImage.click(); 
 }
 document.addEventListener('DOMContentLoaded', function() {
     default_variant_remove();
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Replace with the correct ID or class of your slider component
+    var slider = document.querySelector('.slider-component');
+    
+    // Replace with the specific slide number you want to activate (e.g., slide 2)
+    var slideNumber = 2; // Index starts from 0, so 2 means the 3rd slide
+
+    if (slider) {
+        var slides = slider.querySelectorAll('.product__media-item');
+        
+        if (slides && slides.length > slideNumber) {
+            // Remove 'is-active' or equivalent class from other slides
+            slides.forEach(function (slide) {
+                slide.classList.remove('is-active');
+            });
+
+            // Add 'is-active' or equivalent class to the target slide
+            slides[slideNumber].classList.add('is-active');
+
+            // Scroll to the target slide if necessary
+            slides[slideNumber].scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+});
+
 </script>
 
 {% schema %}
