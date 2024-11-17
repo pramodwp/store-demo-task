@@ -33,11 +33,6 @@
         {% assign option_name = 'Select ' | append: option.name %}
         {% assign option.selected_value = '' %}
         
-      
-        {%- for value in option.values -%}
-            {% assign value.selected = false %}
-        {%- endfor -%}
-        
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
             {{ option_name }}:
