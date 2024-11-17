@@ -1,3 +1,11 @@
+<style>
+.product:not(.product--columns) .product__media-list.product__media_custom-list .product__media-item:nth-child(1){
+	width: auto;
+}
+.product:not(.product--columns) .product__media-list.product__media_custom-list .product__media-item:nth-child(2){
+	width: 100%;
+}
+</style>
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
