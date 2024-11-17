@@ -37,7 +37,7 @@
 
         {% for value in option.values %}
           {% assign new_value = value | jsonify | replace: '"selected":true', '"selected":false' | parse_json %}
-          {{ new_value.selected }}
+          {{ new_value.value.selected }}
         {% endfor %}
 
         
