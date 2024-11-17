@@ -33,7 +33,7 @@
         {% assign option_name = 'Select ' | append: option.name %}
         {% assign option.selected_value = '' %}
 
-        {% assign new_option = '' %}
+        {% assign new_option = option %}
         {% for value in option.values %}
           {% assign new_value = value | jsonify | replace: '"selected":true', '"selected":false' | parse_json %}
           {% assign new_option = new_option | append: new_value %}
