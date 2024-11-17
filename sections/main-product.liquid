@@ -724,24 +724,39 @@
   </div>
 </product-info>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
-    input.checked = false;
-});
-document.querySelectorAll('.product-form__input .form__label span').forEach(function(span) {
-    span.innerHTML = '';
-});
-document.querySelector('[name="add"]').disabled = true;
- 
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
-      input.checked = false;
-  });
-  document.querySelectorAll('.product-form__input .form__label span').forEach(function(span) {
-      span.innerHTML = '';
-  });
-  document.querySelector('[name="add"]').disabled = true;
+  
+
+    /*const variantSelect = document.getElementById('template--22450557649080__main-1-0');
+    const addToCartButton = document.querySelector('[name="add"]'); // Adjust selector if needed
+    const mainImage = document.getElementById('49301179302072'); // Adjust for actual image class
+  
+    // Initial state
+    addToCartButton.disabled = true;
+    variantSelect.value = ''; // Ensures no initial selection
+  
+    variantSelect.addEventListener('change', function() {
+      if (variantSelect.value === '') {
+        addToCartButton.disabled = true;
+        // Show the main product image if no variant is selected
+        mainImage.src = mainImage.dataset.defaultImage;
+      } else {
+        addToCartButton.disabled = false;
+        // Update image when a variant is selected
+        const selectedVariant = variantSelect.options[variantSelect.selectedIndex];
+        const variantImage = selectedVariant.dataset.image; // Ensure this data attribute is set server-side
+        if (variantImage) {
+          mainImage.src = variantImage;
+        }
+      }
+    });*/
+
+    jQuery('#template--22450557649080__main-1-0').prop('checked',false);
+    jQuery('#variant-selects-template--22450557649080__main .form__label span').html('');
+    document.querySelector('[name="add"]').disabled = true;
+  
 });
 </script>
 
