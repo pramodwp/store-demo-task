@@ -39,9 +39,6 @@
           {% assign new_option = new_option | append: '{ "value": "' | append: value | append: '", "selected": false },' %}
         {%- endfor -%}
         
-        {%- if new_option != '' -%}
-          {% assign new_option = new_option | slice: 0, new_option.size | minus: 1 %}  {# Remove the trailing comma #}
-        {%- endif -%}
         
         <!-- Output the new_option -->
         {{ new_option }}
