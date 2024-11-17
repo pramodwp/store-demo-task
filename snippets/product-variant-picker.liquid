@@ -37,13 +37,13 @@
 
         {% for value in option.values %}
           {% assign new_value = value | jsonify | replace: '"selected":true', '"selected":false' | parse_json %}
-          {{ new_value.selected }}
+          {% assign new_option = new_option | append: new_value %}
         {% endfor %}
 
         
         
         <!-- Output the new_option -->
-      
+        {{ new_option }}
         
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
