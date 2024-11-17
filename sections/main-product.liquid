@@ -735,6 +735,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.price .price-item').forEach(function(span) {
         span.innerHTML = '';
     });
+    document.querySelector('.price').style.display = 'none'; 
     document.querySelector('[name="add"]').disabled = true;
 });
 
