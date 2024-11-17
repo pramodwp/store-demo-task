@@ -785,21 +785,25 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     // Select the main product media list container
     var mediaList = document.querySelector('.product__media_custom-list');
-    
     if (mediaList) {
         // Select all product media items
         var mediaItems = mediaList.querySelectorAll('.product__media-item.slider__slide');
         
         // Ensure there are at least 2 items to switch
         if (mediaItems.length > 1) {
-            // Select the second item
-            var secondItem = mediaItems[1];
-            
-            // Set the order of the second item to 0
-            secondItem.style.order = '0';
-            
-            // Optionally, move the first item to a different order to avoid conflicts
-            mediaItems[0].style.order = '1';
+            // Loop through each item
+            mediaItems.forEach(function(item, index) {
+                if(index==0){
+                    mediaItems[0].style.order = '1';
+                }
+                else if(index==1){
+                    mediaItems[0].style.order = '0';
+                }
+                else if(index > 1){
+                    mediaItems[0].style.order = index;
+                }
+              
+            });
         }
     }
 });
