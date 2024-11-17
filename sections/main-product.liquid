@@ -772,6 +772,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });*/
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Select the product media list container
+    var mediaList = document.querySelector('.product__media-list');
+
+    // Check if the element exists
+    if (mediaList) {
+        // Add your custom class
+        mediaList.classList.add('my-custom-gallery');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
     // Select the main product media list container
     var mediaList = document.querySelector('.product__media-list');
     
