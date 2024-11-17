@@ -725,8 +725,8 @@
 </product-info>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
+function default_variant_remove(){
+   document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
         input.checked = false;
     });
     document.querySelectorAll('.product-form__input .form__label span').forEach(function(span) {
@@ -737,10 +737,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.querySelector('.price').style.display = 'none'; 
     document.querySelector('[name="add"]').disabled = true;
-});
-document.addEventListener('DOMContentLoaded', function () {
+
     var mainImage = document.getElementById('Slide-template--22450557649080__main-49301179302072');
-    mainImage.click();
+    mainImage.click(); 
+}
+document.addEventListener('DOMContentLoaded', function() {
+    default_variant_remove();
 });
 </script>
 
