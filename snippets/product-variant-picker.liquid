@@ -15,6 +15,7 @@
     {{ block.shopify_attributes }}
   >
     {%- for option in product.options_with_values -%}
+      option.value.selected = false;
       {%- liquid
         assign swatch_count = option.values | map: 'swatch' | compact | size
         assign picker_type = block.settings.picker_type
@@ -87,6 +88,8 @@
       {%- endif -%}
     {%- endfor -%}
 
-    
+    <script type="application/json" data-selected-variant>
+      {{ product.selected_or_first_available_variant | json }}
+    </script>
   </variant-selects>
 {%- endunless -%}
