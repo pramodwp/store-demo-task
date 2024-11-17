@@ -36,7 +36,7 @@
         {% assign new_option = '' %}
 
         {%- for value in option.values -%}
-          {% assign new_option = new_option | append: '{ "value": "' | append: value | append: '", "selected": false },' %}
+          {% assign new_option = value %}
         {%- endfor -%}
         
         
