@@ -724,6 +724,35 @@
   </div>
 </product-info>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const variantSelect = document.getElementById('template--22450557649080__main-1-0');
+  const addToCartButton = document.querySelector('[name="add"]'); // Adjust selector if needed
+  const mainImage = document.getElementById('49301179302072'); // Adjust for actual image class
+
+  // Initial state
+  addToCartButton.disabled = true;
+  variantSelect.value = ''; // Ensures no initial selection
+
+  variantSelect.addEventListener('change', function() {
+    if (variantSelect.value === '') {
+      addToCartButton.disabled = true;
+      // Show the main product image if no variant is selected
+      mainImage.src = mainImage.dataset.defaultImage;
+    } else {
+      addToCartButton.disabled = false;
+      // Update image when a variant is selected
+      const selectedVariant = variantSelect.options[variantSelect.selectedIndex];
+      const variantImage = selectedVariant.dataset.image; // Ensure this data attribute is set server-side
+      if (variantImage) {
+        mainImage.src = variantImage;
+      }
+    }
+  });
+});
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
