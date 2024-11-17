@@ -15,7 +15,7 @@
     {{ block.shopify_attributes }}
   >
     {%- for option in product.options_with_values -%}
-      option.value.selected = false;
+      
       {%- liquid
         assign swatch_count = option.values | map: 'swatch' | compact | size
         assign picker_type = block.settings.picker_type
@@ -29,6 +29,7 @@
         endif
       -%}
       {%- if picker_type == 'swatch' -%}
+        {% assign option.value.selected = false %}
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
             Select {{ option.name }}:
