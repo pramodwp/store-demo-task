@@ -126,7 +126,7 @@ if (!customElements.get('product-form')) {
       }
 
       get variantIdInput() {
-        return this.form.querySelector('[name=id]');
+        
       }
     }
   );
