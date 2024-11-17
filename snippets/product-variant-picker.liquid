@@ -30,7 +30,7 @@
       -%}
       {%- if picker_type == 'swatch' -%}
       
-        {% assign option_name = 'Select ' | concat: option.name %}
+        {% assign option_name = 'Select ' | append: option.name %}
         {% assign option.value.selected = false %}
         
         <fieldset class="js product-form__input product-form__input--swatch">
