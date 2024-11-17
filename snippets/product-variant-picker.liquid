@@ -32,6 +32,19 @@
       
         {% assign option_name = 'Select ' | append: option.name %}
         {% assign option.selected_value = '' %}
+
+        {% assign new_option = '' %}
+
+        {%- for value in option.values -%}
+          {% assign new_option = new_option | append: '{ "value": "' | append: value | append: '", "selected": false },' %}
+        {%- endfor -%}
+        
+        {%- if new_option != '' -%}
+          {% assign new_option = new_option | slice: 0, new_option.size | minus: 1 %}  {# Remove the trailing comma #}
+        {%- endif -%}
+        
+        <!-- Output the new_option -->
+        {{ new_option }}
         
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
