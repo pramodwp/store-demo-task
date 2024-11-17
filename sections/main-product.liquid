@@ -734,6 +734,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.querySelector('[name="add"]').disabled = true;
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Select the main product image element by class or ID
+    var mainImage = document.querySelector('.product_media-item.grid_item.slider__slide[data-media-id]');
+
+    if (mainImage) {
+        // Add or simulate an 'active' class if needed to display it
+        mainImage.classList.add('is-active');
+
+        // Optionally scroll to or highlight the main image (if necessary)
+        mainImage.scrollIntoView({ behavior: 'smooth' });
+    }
+});
 </script>
 
 {% schema %}
