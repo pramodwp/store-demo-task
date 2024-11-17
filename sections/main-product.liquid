@@ -725,6 +725,13 @@
 </product-info>
 
 <script>
+document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
+    input.checked = false;
+});
+document.querySelectorAll('.product-form__input .form__label span').forEach(function(span) {
+    span.innerHTML = '';
+});
+document.querySelector('[name="add"]').disabled = true;
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
         input.checked = false;
