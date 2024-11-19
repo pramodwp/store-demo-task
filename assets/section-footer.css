@@ -323,14 +323,10 @@
 }
 
 .footer-block__details-content {
-  margin-bottom: 4rem;
+    margin-bottom: 0;
 }
 
 @media screen and (min-width: 750px) {
-  .footer-block__details-content {
-    margin-bottom: 0;
-  }
-
   .footer-block__details-content > p,
   .footer-block__details-content > li {
     padding: 0;
