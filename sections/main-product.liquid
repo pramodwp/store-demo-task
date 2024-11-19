@@ -475,10 +475,10 @@
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
               
-                {% assign current_date = "now" | date: "%s" %}
+                {% assign current_at = "now" | date: "%s" %}
                 {% assign check_available_at = product.metafields.custom.available_at | date: "%s" %}
 
-                {% if product.metafields.custom.available_at and current_date >= check_available_at %}
+                {% if product.metafields.custom.available_at and current_at >= check_available_at %}
                   {%- render 'buy-buttons',
                     block: block,
                     product: product,
@@ -489,7 +489,7 @@
                 {% else %}
                   <div class="availability-message">
                       <span class="badge">
-                        Current {{ current_date | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
+                        Current {{ current_at | date: "%m/%d/%Y" }} at {{ current_at | date: "%I:%M%p" }} PST
                       </span>
                   </div>
                   <div class="availability-message">
