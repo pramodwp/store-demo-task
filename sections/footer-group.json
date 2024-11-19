@@ -44,6 +44,7 @@
         "color_scheme": "scheme-4",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our occasional emails about game and plush updates",
+        "copyright_content": "Trass Games, Inc. All rights reserved.",
         "enable_follow_on_shop": true,
         "show_social": false,
         "enable_country_selector": true,
