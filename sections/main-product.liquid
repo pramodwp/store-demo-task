@@ -478,7 +478,7 @@
                 {% assign current_at = "now" | date: "%s" %}
                 {% assign check_available_at = product.metafields.custom.available_at | date: "%s" %}
 
-                {% if product.metafields.custom.available_at and current_at >= check_available_at %}
+                {% if product.metafields.custom.available_at !=blank and current_at >= check_available_at %}
                   {%- render 'buy-buttons',
                     block: block,
                     product: product,
