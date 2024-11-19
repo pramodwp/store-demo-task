@@ -308,7 +308,7 @@
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
-        {% endcomment %}
+          {% endcomment %}
         
         {% comment %} <small class="copyright__content">{{ powered_by_link }}</small> {% endcomment %}
         {% comment %}
@@ -461,6 +461,16 @@
       "id": "newsletter_heading",
       "default": "t:sections.footer.settings.newsletter_heading.default",
       "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "header",
+      "content": "Copyright"
+    },
+    {
+      "type": "text",
+      "id": "copyright_content",
+      "default": "Trass Games, Inc. All rights reserved.",
+      "label": "Copyright Content"
     },
     {
       "type": "header",
