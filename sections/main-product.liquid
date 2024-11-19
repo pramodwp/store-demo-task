@@ -474,8 +474,11 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
-    
-                {% if product.metafields.custom.available_at %}
+              
+                {% assign current_date = "now" | date: "%s" %}
+                {% assign check_available_at = product.metafields.custom.available_at | date: "%s" %}
+
+                {% if product.metafields.custom.available_at and current_date >= check_available_at %}
                   <div class="availability-message">
                       <span class="badge">
                         Available {{ product.metafields.custom.available_at | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
