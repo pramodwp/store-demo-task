@@ -482,12 +482,6 @@
               {{ check_available_at }}
 
                 {% if product.metafields.custom.available_at != blank and current_at >= check_available_at %}
-                  <div class="availability-message">
-                      <span class="badge color-{{ settings.sale_badge_color_scheme }}">
-                        Available {{ product.metafields.custom.available_at | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
-                      </span>
-                  </div>
-                {% else %}
                   {%- render 'buy-buttons',
                     block: block,
                     product: product,
@@ -495,6 +489,12 @@
                     section_id: section.id,
                     show_pickup_availability: true
                   -%}
+                {% else %}
+                  <div class="availability-message">
+                      <span class="badge color-{{ settings.sale_badge_color_scheme }}">
+                        Available {{ product.metafields.custom.available_at | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
+                      </span>
+                  </div>
                 {% endif %}
               
               {%- when 'rating' -%}
