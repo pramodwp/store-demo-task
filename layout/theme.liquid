@@ -49,12 +49,14 @@
         font-family: 'Lilita One';
         src: url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LilitaOne.woff?v=1730807174') format('woff'),
             url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LilitaOne.woff2?v=1730807175') format('woff2');
+        font-display: swap;
       }
 
       @font-face {
         font-family: 'Londrina Solid';
         src: url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LondrinaSolid-Regular.woff?v=1730807174') format('woff'),
             url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LondrinaSolid-Regular.woff2?v=1730807174') format('woff2');
+        font-display: swap;
       }
 
       {% for scheme in settings.color_schemes -%}
@@ -227,7 +229,6 @@
 
         --panel-border-width: {{ settings.panel__border__thickness | round: 0 }}px;
         --panel-radius: {{ settings.panel__radius | round: 0 }}px;
-        --panel-margin: {{ settings.panel__margin | round: 0 }}px;
       }
 
       *,

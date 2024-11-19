@@ -227,16 +227,6 @@
         "default": 16,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.panel__radius.label"
-      },
-      {
-        "type": "range",
-        "id": "panel__margin",
-        "min": 0,
-        "max": 40,
-        "step": 2,
-        "default": 8,
-        "unit": "px",
-        "label": "t:settings_schema.layout.settings.panel__margin.label"
       }
     ]
   },

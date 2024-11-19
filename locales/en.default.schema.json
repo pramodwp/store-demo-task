@@ -384,9 +384,6 @@
         },
         "panel__radius": {
           "label": "Panel radius"
-        },
-        "panel__margin": {
-          "label": "Panel margin"
         }
       }
     }
