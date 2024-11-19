@@ -26,11 +26,19 @@
             "heading": "",
             "menu": "footer"
           }
+        },
+        "link_list_3VQYCx": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "privacy-menu"
+          }
         }
       },
       "block_order": [
         "brand_information_b8AnJd",
-        "link_list_WNfKiF"
+        "link_list_WNfKiF",
+        "link_list_3VQYCx"
       ],
       "settings": {
         "color_scheme": "scheme-4",
