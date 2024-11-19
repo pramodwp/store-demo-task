@@ -487,16 +487,11 @@
                     show_pickup_availability: true
                   -%}
                 {% else %}
-                  
-                  <!-- In your Shopify theme file, e.g., theme.liquid -->
-<p>Your current timezone is: <span id="timezone"></span></p>
-
-<script>
-  // Fetch and display the user's timezone
-  document.getElementById('timezone').innerText = Intl.DateTimeFormat().resolvedOptions().timeZone;
-</script>
-
-                  
+                  <div class="availability-message">
+                      <span class="badge">
+                        {{ shop.timezone }}
+                      </span>
+                  </div>
                   <div class="availability-message">
                       <span class="badge">
                         Available {{ product.metafields.custom.available_at | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
