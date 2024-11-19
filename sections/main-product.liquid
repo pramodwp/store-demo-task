@@ -478,16 +478,7 @@
                 {% assign current_date = "now" | date: "%s" %}
                 {% assign check_available_at = product.metafields.custom.available_at | date: "%s" %}
 
-                {{ current_date }} <Br />
-                {{ check_available_at }}
-
                 {% if product.metafields.custom.available_at and current_date >= check_available_at %}
-                  <div class="availability-message">
-                      <span class="badge">
-                        Available {{ product.metafields.custom.available_at | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
-                      </span>
-                  </div>
-                {% else %}
                   {%- render 'buy-buttons',
                     block: block,
                     product: product,
@@ -495,6 +486,13 @@
                     section_id: section.id,
                     show_pickup_availability: true
                   -%}
+                {% else %}
+                  <div class="availability-message">
+                      <span class="badge">
+                        Available {{ product.metafields.custom.available_at | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
+                      </span>
+                  </div>
+                  
                 {% endif %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
