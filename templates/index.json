@@ -9,34 +9,36 @@
  */
 {
   "sections": {
-    "video_banner_zB4K4H": {
+    "video_banner_34jyWf": {
       "type": "video-banner",
       "blocks": {
-        "video_dz63wJ": {
+        "video_6ArD9c": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/ShortTrailer30NewV13.mov",
+            "video": "shopify://files/videos/Yeeps Hide and Seek.mp4",
             "video_loop": true,
-            "video_autoplay": true,
+            "video_autoplay": false,
             "video_control": false
           }
         },
-        "button_NmKGzV": {
+        "button_eFQJic": {
           "type": "button",
           "settings": {
             "button_label": "Play On Quest - Free",
-            "button_link": "https://www.meta.com/experiences/7276525889052788/",
+            "button_link": "https://www.oculus.com/experiences/quest/3919415921458774/",
             "outline_button": false
           }
         }
       },
       "block_order": [
-        "video_dz63wJ",
-        "button_NmKGzV"
+        "video_6ArD9c",
+        "button_eFQJic"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "#Banner-template--22461656760504__video_banner_34jyWf {margin-bottom: var(--spacing-sections-desktop);}"
+      ],
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "desktop_banner_height": 567,
         "mobile_banner_height": 484
       }
@@ -48,7 +50,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Join Yeeps Discord",
-            "button_link_1": "https://discord.gg/yeeps",
+            "button_link_1": "shopify://pages/contact",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -59,14 +61,11 @@
       "block_order": [
         "buttons_AAGfJ8"
       ],
-      "custom_css": [
-        "#Banner-template--18105497682147__image_banner_6e73jj {margin-top: var(--spacing-sections-desktop);}"
-      ],
       "settings": {
-        "image": "shopify://shop_images/discord-art-key.jpg",
+        "image": "shopify://shop_images/woman-in-the-city_925x_2b86eef9-c107-4080-9cf6-8a8293db6bd7.jpg",
         "image_overlay_opacity": 0,
         "image_height": "xs",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
@@ -82,8 +81,8 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Get Spartan Bundle",
-            "button_link_1": "https://www.meta.com/experiences/spartan-bundle/1218314595955489/",
+            "button_label_1": "Get Halloween Bundle",
+            "button_link_1": "https://www.meta.com/en-gb/experiences/halloween-bundle/1042073453912522/",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -95,9 +94,8 @@
         "button"
       ],
       "settings": {
-        "image": "shopify://shop_images/cover-art-landscape.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -108,87 +106,90 @@
         "show_text_below": false
       }
     },
+    "video_banner_MQptpa": {
+      "type": "video-banner",
+      "blocks": {
+        "heading_wwLd9k": {
+          "type": "heading",
+          "settings": {
+            "heading_text": "Trailer",
+            "heading_size": "h1"
+          }
+        },
+        "video_HpYpp9": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Yeeps Hide and Seek  Official Launch Trailer.mp4",
+            "video_loop": true,
+            "video_autoplay": false,
+            "video_control": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_wwLd9k",
+        "video_HpYpp9"
+      ],
+      "custom_css": [
+        "#Banner-template--22389895954616__video_banner_MQptpa {margin-bottom: var(--spacing-sections-desktop);}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "desktop_banner_height": 579,
+        "mobile_banner_height": 213
+      }
+    },
+    "video_pcEh6V": {
+      "type": "video",
+      "settings": {
+        "heading": "Trailer",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=ng3CrRUP5-I",
+        "cover_image": "shopify://shop_images/YeepsLaunchTrailerThumbnail.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "scheme-3",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "collapsible_content_iydGCz": {
       "type": "collapsible-content",
       "blocks": {
         "collapsible_row_UEBY3Y": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What are Parent Managed Accounts?",
+            "heading": "{Topic} Test content",
             "icon": "none",
-            "row_content": "<p>Everyone who uses a Meta Quest headset should have their own Meta account that’s meant for their age. Meta requires that children ages 10-12 (age may vary by region) use a Parent Managed Account (PMA)</p><p>PMAs allow parents to customize their child’s experience, block certain games, restrict purchases, set time limits, and more.</p><p>Important: We will never ask you for your age, personal information, or payment methods. However, you will be banned if you tell people you are under the age of 10, even as a joke. This is due to Meta’s age restriction policy. </p>",
+            "row_content": "<p>&lcub;TopicBody&rcub; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis sodales nisi, et lobortis velit consectetur sed. Nam quis sapien odio. Praesent vehicula convallis lectus, pulvinar rutrum leo viverra eget. </p>",
             "page": ""
           }
         },
         "collapsible_row_qDw9ah": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How do I play Yeeps?",
+            "heading": "{Topic} Lorem Ipsum Dolor Sit Amet",
             "icon": "none",
-            "row_content": "<p>Yeeps: Hide and Quest is available to play on the Quest 2, Quest 3, Quest 3s and Quest Pro.</p><p>You can download it <a href=\"https://www.meta.com/experiences/yeeps-hide-and-seek/7276525889052788/\" target=\"_blank\" title=\"Yeeps: Hide and Seek\">here</a>.</p>",
+            "row_content": "<p>&lcub;TopicBody&rcub; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis sodales nisi, et lobortis velit consectetur sed. Nam quis sapien odio. Praesent vehicula convallis lectus, pulvinar rutrum leo viverra eget. </p>",
             "page": ""
           }
         },
         "collapsible_row_b93kzD": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How much does Yeeps cost?",
+            "heading": "{Topic} Lorem Ipsum Dolor Sit Amet",
             "icon": "none",
-            "row_content": "<p>Nothing! Yeeps: Hide and Seek is a free to play game.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_zTzEfL": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Are there in-app purchases?",
-            "icon": "none",
-            "row_content": "<p>Yeeps: Hide and Seek offers in-app purchases for in-game currency. However, all in-game content and gameplay features are available without in-app purchases, aside from occasional cosmetic bundles. Players can also earn in-game currency simply by playing Yeeps. </p><p>Meta does NOT allow refund of in-app purchases, which is stated in their <a href=\"https://www.meta.com/help/quest/articles/orders-and-purchases/returns/refunds-for-games-apps/\" target=\"_blank\" title=\"Meta Quest Refund Policy\">official policy</a>. <br/><br/>For your safety, we recommend adding a PIN to your account to prevent unauthorized purchases. </p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_xWErKQ": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How do I play with my friends?",
-            "icon": "none",
-            "row_content": "<p>When your Meta friends are online, signposts will appear to help you meet up! Follow them to join their lobbies automatically.</p><p>You can also start a private session using either Private Worlds or a Public World Code.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_b9n4KR": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How do I play in Private Worlds?",
-            "icon": "none",
-            "row_content": "<p>Private Worlds are a safe space for just you (and optionally your Meta friends). Here, you can build and play on your own maps whenever you want!</p><p>You can find your Private World by going to the purple portal North of the Blue House map.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_zAtENK": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What are the Community Guidelines?",
-            "icon": "none",
-            "row_content": "<p>You can view the Community Guidelines in-game next to the player list.</p><p>Yeeps is an open-ended, social game where we expect that you:</p><ul><li>Have fun, share items, and make friends</li><li>Build pillow forts and destroy them</li><li>Be kind and make sure everyone is enjoying the game</li><li>Report players who break the rules</li></ul>",
+            "row_content": "<p>&lcub;TopicBody&rcub; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis sodales nisi, et lobortis velit consectetur sed. Nam quis sapien odio. Praesent vehicula convallis lectus, pulvinar rutrum leo viverra eget. </p>",
             "page": ""
           }
         },
         "collapsible_row_U4nCWe": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How does moderation work?",
+            "heading": "{Topic} Lorem Ipsum Dolor Sit Amet",
             "icon": "none",
-            "row_content": "<p>We take moderation seriously, and leverage a combination of in-game tools and a responsive moderation team to keep our community safe.</p><p>In-game, players can report or mute problematic players in the short term, and there are dozens of in-game moderators checking up on the community.</p><p>We also work with ToxMod, a proactive voice moderation tool that helps report offensive behavior, bullying, and toxicity. You can learn more about ToxMod <a href=\"https://www.modulate.ai/toxmod/gaming\" target=\"_blank\" title=\"ToxMod\">here</a>.<span style=\"text-decoration:underline\"><br/></span><br/>Breaking our Community Guidelines will result in a temporary suspension from online multiplayer, though continued violations may result in a permanent suspension. However even while suspended, you will never lose access to any purchased items or built maps, unless you are suspended for modding.</p><p>If you were banned by mistake, please you can reach our team in our <a href=\"https://discord.gg/yeeps\" title=\"https://discord.gg/yeeps\">Discord</a>, or at our email (appeal@trassgames.com).</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_gXdWFn": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is the Yeeps Companion App?",
-            "icon": "none",
-            "row_content": "<p>The Yeeps Companion App is the ultimate free support tool for content creators and Yeeps fans.</p><p>With it, you can:</p><ul><li>Check up on the Yeeps world anytime</li><li>Capture moments easily from first person or shoulder cam</li><li>Film with awesome in-game gadgets, like a selfie stick or drone.</li></ul><p>Download the Yeeps Companion App on the<a href=\"https://apps.apple.com/us/app/yeeps-companion/id6476233499\" target=\"_blank\" title=\"Yeeps Companion on iOS\"> iOS App Store</a> or the <a href=\"https://play.google.com/store/apps/details?id=com.TrassGames.G2Companion\" target=\"_blank\" title=\"Yeeps Companion on Android\">Google Play Store</a>.</p>",
+            "row_content": "<p>&lcub;TopicBody&rcub; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis sodales nisi, et lobortis velit consectetur sed. Nam quis sapien odio. Praesent vehicula convallis lectus, pulvinar rutrum leo viverra eget. </p>",
             "page": ""
           }
         }
@@ -197,12 +198,7 @@
         "collapsible_row_UEBY3Y",
         "collapsible_row_qDw9ah",
         "collapsible_row_b93kzD",
-        "collapsible_row_zTzEfL",
-        "collapsible_row_xWErKQ",
-        "collapsible_row_b9n4KR",
-        "collapsible_row_zAtENK",
-        "collapsible_row_U4nCWe",
-        "collapsible_row_gXdWFn"
+        "collapsible_row_U4nCWe"
       ],
       "settings": {
         "caption": "",
@@ -213,62 +209,13 @@
         "color_scheme": "scheme-2",
         "container_color_scheme": "scheme-2",
         "open_first_collapsible_row": false,
-        "art_left_icon": "shopify://shop_images/faq-yeep1-art.png",
-        "art_right_icon": "shopify://shop_images/faq-yeep2-art.png",
+        "art_left_icon": "shopify://shop_images/faq-yeep1-art_00d90086-5bfb-4feb-a4c6-08f90828870b.png",
+        "art_right_icon": "shopify://shop_images/faq-yeep2-art_e31c6d5b-1839-4955-b5c3-8add89f4d48c.png",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 8,
         "padding_bottom": 0,
-        "is_container_section": true
-      }
-    },
-    "video_GCgiPD": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=ng3CrRUP5-I",
-        "cover_image": "shopify://shop_images/YeepsLaunchTrailerThumbnail.jpg",
-        "description": "Yeeps Hide And Seek Trailer",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "video_banner_bAkTMV": {
-      "type": "video-banner",
-      "blocks": {
-        "heading_yjAwPq": {
-          "type": "heading",
-          "settings": {
-            "heading_text": "Trailer",
-            "heading_size": "h1"
-          }
-        },
-        "video_MxJFmb": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Yeeps Hide and Seek Official Launch Trailer.mp4",
-            "video_loop": false,
-            "video_autoplay": false,
-            "video_control": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_yjAwPq",
-        "video_MxJFmb"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "#Banner-template--18105497682147__video_banner_bAkTMV {margin-bottom: var(--spacing-sections-desktop); margin-top: var(--spacing-sections-desktop);}"
-      ],
-      "settings": {
-        "color_scheme": "scheme-3",
-        "desktop_banner_height": 567,
-        "mobile_banner_height": 213
+        "is_container_section": false
       }
     },
     "image_banner_7NaFJU": {
@@ -297,11 +244,9 @@
         "heading_nC48Rm",
         "buttons_eCrebz"
       ],
-      "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/yeeps-plush-YP1-three-plushies-hidden-in-boxes.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "medium",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -314,7 +259,6 @@
     },
     "featured_collection": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "title": "Merch",
         "heading_size": "h1",
@@ -325,10 +269,10 @@
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -370,12 +314,10 @@
         "heading_eRxUw4",
         "social_buttons_GawDPN"
       ],
-      "custom_css": [],
       "settings": {
-        "image": "shopify://shop_images/social-links-art-key.jpg",
         "image_overlay_opacity": 0,
         "image_height": "xs",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
@@ -387,12 +329,12 @@
     }
   },
   "order": [
-    "video_banner_zB4K4H",
+    "video_banner_34jyWf",
     "image_banner_6e73jj",
     "image_banner",
+    "video_banner_MQptpa",
+    "video_pcEh6V",
     "collapsible_content_iydGCz",
-    "video_GCgiPD",
-    "video_banner_bAkTMV",
     "image_banner_7NaFJU",
     "featured_collection",
     "image_banner_9pp3ph"
