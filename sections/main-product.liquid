@@ -764,6 +764,8 @@ function remove_default_variant_selected(){
     //************************************************************************
     document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
         input.checked = false;
+        document.querySelector('.price').style.display = 'none'; 
+        document.querySelector('[name="add"]').disabled = true;
     });
     document.querySelectorAll('.product-form__input .form__label span').forEach(function(span) {
         span.innerHTML = '';
@@ -771,8 +773,6 @@ function remove_default_variant_selected(){
     document.querySelectorAll('.price .price-item').forEach(function(span) {
         span.innerHTML = '';
     });
-    document.querySelector('.price').style.display = 'none'; 
-    document.querySelector('[name="add"]').disabled = true;
     //************************************************************************
     //************ End Step-1 ************************************************
     //************************************************************************
