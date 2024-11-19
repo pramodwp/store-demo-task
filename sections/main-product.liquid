@@ -476,14 +476,11 @@
               {%- when 'buy_buttons' -%}
     
                 {% if product.metafields.custom.available_at %}
-                  <span class="badge">Available {{ product.metafields.custom.available_at }}</span>
-
                   <div class="availability-message">
                       <span class="badge">
                         Available {{ product.metafields.custom.available_at | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
                       </span>
                   </div>
-                  
                 {% endif %}
               
                 {%- render 'buy-buttons',
