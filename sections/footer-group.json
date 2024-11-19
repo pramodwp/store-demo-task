@@ -20,17 +20,40 @@
             "heading": "",
             "menu": "footer"
           }
+        },
+        "image_rKE4xx": {
+          "type": "image",
+          "settings": {
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "brand_information_b8AnJd": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "text_nxQj89": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+          }
         }
       },
       "block_order": [
-        "link_list_WNfKiF"
+        "link_list_WNfKiF",
+        "image_rKE4xx",
+        "brand_information_b8AnJd",
+        "text_nxQj89"
       ],
       "settings": {
         "color_scheme": "scheme-4",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "Subscribe to our occasional emails about game and plush updates",
         "enable_follow_on_shop": true,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": true,
         "enable_language_selector": true,
         "payment_enable": false,
