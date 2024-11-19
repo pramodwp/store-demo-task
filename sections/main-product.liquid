@@ -199,11 +199,11 @@
                         {{- 'products.product.inventory_out_of_stock' | t -}}
                       {%- endif -%}
                     {%- endif -%}
-                  {%- endif -%} rr
+                  {%- endif -%} 
                 </p>
-              {%- when 'description' -%}
+              {%- when 'description' -%} 
                 {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}> rddr
                     {{ product.description }}
                   </div>
                 {%- endif -%}
