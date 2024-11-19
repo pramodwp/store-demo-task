@@ -407,7 +407,7 @@
                     {%- endif -%}
                   </div>
                   {%- if product.quantity_price_breaks_configured? -%}
-                    <volume-pricing class="parent-display" id="Volume-{{ section.id }}">
+                    <volume-pricing class="parent-display" id="Volume-{{ section.id }}"> dd
                       {%- if product.selected_or_first_available_variant.quantity_price_breaks.size > 0 -%}
                         <span class="caption-large">{{ 'products.product.volume_pricing.title' | t }}</span>
                         <ul class="list-unstyled">
