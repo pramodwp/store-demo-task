@@ -478,7 +478,7 @@
                 {% assign current_at = "now" | date: "%s" %}
                 {% assign check_available_at = product.metafields.custom.available_at | date: "%s" %}
 
-                {% if product.metafields.custom.available_at != blank and current_at >= check_available_at %}
+                {% if product.metafields.custom.available_at != blank and check_available_at >= current_at  %}
                   <div class="availability-message">
                       <span class="badge color-{{ settings.sale_badge_color_scheme }}">
                         Available {{ product.metafields.custom.available_at | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
