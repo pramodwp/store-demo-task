@@ -793,7 +793,7 @@ function remove_default_variant_selected(){
       });
       document.querySelector('.price').style.display = 'none';*/
       
-      if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
+      if(document.querySelectorAll('[name="add"]').length > 0){
           document.querySelector('[name="add"]').disabled = true;
       }
     }
@@ -898,8 +898,26 @@ function remove_default_variant_selected(){
       }
 
       if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
-          document.querySelector('[name="add"]').disabled = true;
+          //document.querySelector('[name="add"]').disabled = true;
+
+          const originalXHR = window.XMLHttpRequest;
+
+          window.XMLHttpRequest = function () {
+              const xhr = new originalXHR();
+      
+              // Listen for the `load` event (fires when the request completes)
+              xhr.addEventListener("load", function () {
+                  console.log("AJAX request completed.");
+                  console.log("Request URL:", xhr.responseURL);
+                  console.log("Response:", xhr.responseText);
+              });
+      
+              return xhr;
+          };
+        
       }
+
+      
     }
     document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
         input.addEventListener('change', handleChange); // 'change' event for radio inputs
