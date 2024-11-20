@@ -919,6 +919,18 @@ function remove_default_variant_selected(){
 document.addEventListener('DOMContentLoaded', function () {
     remove_default_variant_selected();
 });
+
+const originalXHR = window.XMLHttpRequest;
+window.XMLHttpRequest = function () {
+    const xhr = new originalXHR();
+    // Listen for the `readystatechange` event (fires when the request completes)
+    xhr.addEventListener("readystatechange", function () {
+        console.log("AJAX request completed.");
+        console.log("Request URL:", xhr.responseURL);
+        console.log("Response:", xhr.responseText);
+    });
+    return xhr;
+};
 </script>
 
 {% schema %}
