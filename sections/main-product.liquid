@@ -888,7 +888,7 @@ function remove_default_variant_selected(){
     //************************************************************************
     // Function to handle the change or click event
     function handleChange() {
-      console.log("AJAX request completed." + add_to_cart_disabled);
+      
       document.querySelectorAll('.product__media-item').forEach(function(slide) {
         slide.removeAttribute('style');
       });
@@ -899,7 +899,7 @@ function remove_default_variant_selected(){
       }
 
       if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
-        
+          console.log("AJAX request completed." + add_to_cart_disabled);
           //document.querySelector('[name="add"]').disabled = true;
 
           const originalXHR = window.XMLHttpRequest;
