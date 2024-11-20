@@ -59,6 +59,15 @@
         font-display: swap;
       }
 
+      @font-face {
+        font-family: 'Londrina Solid';
+        src: url('https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Light.woff?v=1732135527') format('woff'),
+            url('https://cdn.shopify.com/s/files/1/0776/6848/3256/files/LondrinaSolid-Light.woff2?v=1732135526') format('woff2');
+        font-display: swap;
+        font-weight: 300;
+      }
+      
+
       {% for scheme in settings.color_schemes -%}
         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
         {% if forloop.index == 1 -%}
