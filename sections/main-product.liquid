@@ -898,7 +898,7 @@ function remove_default_variant_selected(){
       }
 
       var mybtn = setInterval(function(){
-        if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
+        if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled && document.querySelector('[name="add"]').disabled == false){
           document.querySelector('[name="add"]').disabled = true;
           clearInterval(mybtn);
         }
