@@ -474,6 +474,12 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
+
+                {% assign current_at = "now" | date: "%s" %}
+                {% assign check_available_at = product.metafields.custom.available_at | date: "%s" %}
+
+
+              
                 {%- render 'buy-buttons',
                   block: block,
                   product: product,
@@ -481,6 +487,8 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+
+              
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
