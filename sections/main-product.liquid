@@ -921,16 +921,28 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const originalXHR = window.XMLHttpRequest;
-window.XMLHttpRequest = function () {
+
+function CustomXHR() {
     const xhr = new originalXHR();
-    // Listen for the `readystatechange` event (fires when the request completes)
+
+    // Wrap the `readystatechange` listener
     xhr.addEventListener("readystatechange", function () {
-        console.log("AJAX request completed.");
-        console.log("Request URL:", xhr.responseURL);
-        console.log("Response:", xhr.responseText);
+        if (xhr.readyState === XMLHttpRequest.DONE) { // Only log when the request is completed
+            console.log("AJAX request completed.");
+            console.log("Request URL:", xhr.responseURL);
+            console.log("Response:", xhr.responseText);
+        }
     });
+
     return xhr;
-};
+}
+
+// Preserve the prototype chain to ensure full functionality
+CustomXHR.prototype = originalXHR.prototype;
+
+// Override the default XMLHttpRequest
+window.XMLHttpRequest = CustomXHR;
+
 </script>
 
 {% schema %}
