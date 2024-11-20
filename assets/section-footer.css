@@ -70,6 +70,8 @@
   .footer__content-bottom-wrapper {
     flex-wrap: wrap;
     row-gap: 0rem;
+    padding-left: calc(4rem / var(--font-body-scale));
+    padding-right: calc(4rem / var(--font-body-scale));
     /*justify-content: center;*/
   }
 
