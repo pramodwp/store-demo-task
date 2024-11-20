@@ -461,7 +461,9 @@
 
 .copyright__content {
   /* font-size: 1.1rem; */
-  font-size: 1.125rem;
+  font-size: 18px;
+  color: #FFF;
+  line-height: normal;
 }
 
 .copyright__content a {
