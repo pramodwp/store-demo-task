@@ -917,6 +917,19 @@ function remove_default_variant_selected(){
 document.addEventListener('DOMContentLoaded', function () {
     remove_default_variant_selected();
 });
+
+
+  // Select all radio buttons with the specified class
+const radioButtons = document.querySelectorAll('.radio-class');
+
+// Add a click event listener to each radio button
+radioButtons.forEach(radio => {
+    radio.addEventListener('click', (event) => {
+        console.log(`Radio button with value "${event.target.value}" clicked!`);
+        // Add your custom logic here
+    });
+});
+
 </script>
 
 {% schema %}
