@@ -887,30 +887,28 @@ function remove_default_variant_selected(){
     //************ Sta Step-5 ************************************************
     //************************************************************************
     // Function to handle the change or click event
-    var clicked_variant_option = false;
     function handleChange() {
-      if(clicked_variant_option == false){
-        document.querySelectorAll('.product__media-item').forEach(function(slide) {
-          slide.removeAttribute('style');
-        });
-        const element = document.querySelector('.product__media_custom-list');
-        // Check if the element exists before trying to remove the class
-        if (element) {
-          element.classList.remove('product__media_custom-list');
-        }
-        
-        clicked_variant_option = true;
+      document.querySelectorAll('.product__media-item').forEach(function(slide) {
+        slide.removeAttribute('style');
+      });
+      const element = document.querySelector('.product__media_custom-list');
+      // Check if the element exists before trying to remove the class
+      if (element) {
+        element.classList.remove('product__media_custom-list');
       }
-      
       if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
           document.querySelector('[name="add"]').disabled = true;
       }
     }
-    document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
+    /*document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
         input.addEventListener('change', handleChange); // 'change' event for radio inputs
         input.addEventListener('click', handleChange);  // Add 'click' if needed
+    });*/
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('swatch-input__input')) {
+            handleChange();
+        }
     });
-    
     //************************************************************************
     //************ End Step-5 ************************************************
     //************************************************************************
