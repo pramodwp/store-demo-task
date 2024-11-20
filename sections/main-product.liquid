@@ -773,7 +773,9 @@ function remove_default_variant_selected(){
       });
 
       document.querySelector('.price').style.display = 'none'; 
-      document.querySelector('[name="add"]').disabled = true;
+      if(document.querySelector('[name="add"]').length > 0){
+          document.querySelector('[name="add"]').disabled = true;
+      }
     }
     //************************************************************************
     //************ End Step-1 ************************************************
