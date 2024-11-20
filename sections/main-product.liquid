@@ -896,11 +896,11 @@ function remove_default_variant_selected(){
       if (element) {
         element.classList.remove('product__media_custom-list');
       }
-      
-      setInterval(function(){
-        console.log('test');
+
+      var mybtn = setInterval(function(){
         if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
           document.querySelector('[name="add"]').disabled = true;
+          clearInterval(mybtn);
         }
       }, 100);
     }
