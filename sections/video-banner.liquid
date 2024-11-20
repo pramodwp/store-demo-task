@@ -168,17 +168,17 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  var videov = document.getElementById('video-player-{{ section.id }}');
-  var playButtonv = document.getElementById('video-overlay-play-icon-{{ section.id }}');
-  var playheadv = document.getElementById('video-banner-box-{{ section.id }}');
-  console.log("test:"+playButtonv);
+  var video = document.getElementById('video-player-{{ section.id }}');
+  var playButton = document.getElementById('video-overlay-play-icon-{{ section.id }}');
+  var playhead = document.getElementById('video-banner-box-{{ section.id }}');
+  
   // Play button click event
-  if(playButtonv.length>0){
-    playButtonv.addEventListener('click', function() {
-      if (videov.paused) {
-        videov.play();
-        playButtonv.style.display = 'none'; // Hide the button when playing
-        playheadv.style.display = 'none'; // Hide the head when playing
+  if(playButton){
+    playButton.addEventListener('click', function() {
+      if (video.paused) {
+        video.play();
+        playButton.style.display = 'none'; // Hide the button when playing
+        playhead.style.display = 'none'; // Hide the head when playing
       }
     });
   }
