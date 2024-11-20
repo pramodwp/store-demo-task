@@ -499,13 +499,13 @@
 
                 {% assign badge_show = false %}
                 {% if product.metafields.custom.available_at != blank and check_available_at > current_at %}
-                  <script>var add_to_cart_disabled = true;<script>
+                  <script>var add_to_cart_disabled = true;</script>
                   {% assign badge_show = true %}
                 {% endif %}
 
                   
                 {%- if badge_show -%}
-                  <div class="availability-message">
+                    <div class="availability-message">
                 		<span class="badge color-{{ settings.sale_badge_color_scheme }}">
                 		  Available {{ product.metafields.custom.available_at | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
                 		</span>
