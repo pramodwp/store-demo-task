@@ -478,7 +478,6 @@
                 {% assign current_at = "now" | date: "%s" %}
                 {% assign check_available_at = product.metafields.custom.available_at | date: "%s" %}
 
-
                 {% comment %} 
                   Not available yet ("Condition 1")
                   WHEN available_at is set and in the future
@@ -496,14 +495,12 @@
                   THEN "Sold Out" badge shows
                 {% endcomment %}
 
-
                 {% assign badge_show = false %}
                 {% if product.metafields.custom.available_at != blank and check_available_at > current_at %}
                   <script>var add_to_cart_disabled = true;</script>
                   {% assign badge_show = true %}
                 {% endif %}
 
-                  
                 {%- if badge_show -%}
                     <div class="availability-message">
                 		<span class="badge color-{{ settings.sale_badge_color_scheme }}">
@@ -511,7 +508,6 @@
                 		</span>
                 	</div>
                 {% endif %}
-          
               
                 {%- render 'buy-buttons',
                   block: block,
