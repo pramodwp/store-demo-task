@@ -157,12 +157,16 @@
   font-family: "Londrina Solid";
   margin-bottom: 2rem;
   margin-top: 0;
-  font-size: calc(var(--font-heading-scale) * 1.8rem);
+  /*font-size: calc(var(--font-heading-scale) * 1.8rem);*/
+  font-family: "Londrina Solid";
+  font-size: 24px;
+  line-height: normal;
 }
 
 @media screen and (min-width: 990px) {
   .footer-block__heading {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    /*font-size: calc(var(--font-heading-scale) * 1.8rem);*/
+    font-size: 24px;
   }
 }
 
