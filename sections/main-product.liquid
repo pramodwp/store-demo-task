@@ -793,7 +793,7 @@ function remove_default_variant_selected(){
       });
       document.querySelector('.price').style.display = 'none';*/
       
-      if(document.querySelectorAll('[name="add"]').length > 0){
+      if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
           document.querySelector('[name="add"]').disabled = true;
       }
     }
