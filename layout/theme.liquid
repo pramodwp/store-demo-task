@@ -62,11 +62,10 @@
       @font-face {
         font-family: 'Londrina Solid';
         src: url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LondrinaSolid-Light.woff?v=1732135812') format('woff'),
-            url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LondrinaSolid-Light.woff?v=1732135812') format('woff2');
+            url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LondrinaSolid-Light.woff2?v=1732135813') format('woff2');
         font-display: swap;
         font-weight: 300;
       }
-      
 
       {% for scheme in settings.color_schemes -%}
         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
