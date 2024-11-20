@@ -898,6 +898,7 @@ function remove_default_variant_selected(){
       }
 
       if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
+        console.log("AJAX request completed.");
           //document.querySelector('[name="add"]').disabled = true;
 
           const originalXHR = window.XMLHttpRequest;
