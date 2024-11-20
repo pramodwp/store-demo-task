@@ -919,16 +919,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-  // Select all radio buttons with the specified class
-const radioButtons = document.querySelectorAll('.swatch-input__input');
-
-// Add a click event listener to each radio button
-radioButtons.forEach(radio => {
-    radio.addEventListener('click', (event) => {
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('radio-class')) {
         console.log(`Radio button with value "${event.target.value}" clicked!`);
         // Add your custom logic here
-    });
+    }
 });
+
 
 </script>
 
