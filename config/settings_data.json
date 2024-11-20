@@ -400,7 +400,7 @@
     "custom_css": [
       ".subtitle {font-size: 150%; color: rgba(var(--color-foreground), 1);}",
       ".header__menu-item {font-size: 125%; font-weight: 400;}",
-      ".button--primary {font-size: 150%; border: 2px solid; font-family: \"Londrina Solid\";}",
+      ".button--primary {font-size: 150%; border: 2px solid; font-family: \"Londrina Solid\"; font-weight:400;}",
       ".button--primary:hover {font-size: 150%; border: 3px solid;}"
     ]
   }
