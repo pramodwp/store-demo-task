@@ -464,6 +464,8 @@
   font-size: 18px;
   color: #FFF;
   line-height: normal;
+  font-style: normal;
+  font-weight: 300;
 }
 
 .copyright__content a {
