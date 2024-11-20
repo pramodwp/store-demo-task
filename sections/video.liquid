@@ -190,9 +190,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var playhead = document.getElementById('video-banner-box-{{ section.id }}');
 
   // Play button click event
-  playButton.addEventListener('click', function() {
-    playhead.style.display = 'none'; // Hide the button when playing
-  });
+  if(playButton.length > 0){
+    playButton.addEventListener('click', function() {
+      playhead.style.display = 'none'; // Hide the button when playing
+    });
+  }
 });
 </script>
       
