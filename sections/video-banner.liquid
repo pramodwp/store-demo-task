@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var playheadv = document.getElementById('video-banner-box-{{ section.id }}');
   
   // Play button click event
-  if(playButtonv.length > 0){
+  
     playButtonv.addEventListener('click', function() {
       if (videov.paused) {
         videov.play();
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         playheadv.style.display = 'none'; // Hide the head when playing
       }
     });
-  }
+  
 });
 </script>
 
