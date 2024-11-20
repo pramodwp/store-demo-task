@@ -898,10 +898,9 @@ function remove_default_variant_selected(){
       }
 
       if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
-          document.querySelector('[name="add"]').disabled = true;
-
-          
-        
+          setTimeout(function(){
+            document.querySelector('[name="add"]').disabled = true;
+          }.1000);
       }
 
       
