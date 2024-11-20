@@ -897,7 +897,7 @@ function remove_default_variant_selected(){
         element.classList.remove('product__media_custom-list');
       }
       
-      setInternal(function(){
+      setInterval(function(){
         console.log('test');
         if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
           document.querySelector('[name="add"]').disabled = true;
