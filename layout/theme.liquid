@@ -7,7 +7,7 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400&display=swap" rel="stylesheet">
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -45,19 +45,7 @@
 
     {% style %}
 
-      @font-face {
-        font-family: 'Lilita One';
-        src: url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LilitaOne.woff?v=1730807174') format('woff'),
-            url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LilitaOne.woff2?v=1730807175') format('woff2');
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: 'Londrina Solid';
-        src: url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LondrinaSolid-Regular.woff?v=1730807174') format('woff'),
-            url('https://cdn.shopify.com/s/files/1/0693/8607/6387/files/LondrinaSolid-Regular.woff2?v=1730807174') format('woff2');
-        font-display: swap;
-      }
+      
 
       {% for scheme in settings.color_schemes -%}
         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
