@@ -887,6 +887,7 @@ function remove_default_variant_selected(){
     //************ Sta Step-5 ************************************************
     //************************************************************************
     // Function to handle the change or click event
+    var clicked_variant_option = false;
     function handleChange() {
       document.querySelectorAll('.product__media-item').forEach(function(slide) {
         slide.removeAttribute('style');
@@ -899,8 +900,6 @@ function remove_default_variant_selected(){
       if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled){
           document.querySelector('[name="add"]').disabled = true;
       }
-
-      console.log('test...');
     }
     /*document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
         input.addEventListener('change', handleChange); // 'change' event for radio inputs
