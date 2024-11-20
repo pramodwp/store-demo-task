@@ -1262,6 +1262,7 @@ button.shopify-payment-button__button--unbranded {
 
 .button:after {
   content: '';
+  position: absolute;
   top: var(--buttons-border-width);
   right: var(--buttons-border-width);
   bottom: var(--buttons-border-width);
