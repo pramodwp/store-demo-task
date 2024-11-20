@@ -888,7 +888,7 @@ function remove_default_variant_selected(){
     //************************************************************************
     // Function to handle the change or click event
     function handleChange() {
-      console.log("AJAX request completed.");
+      console.log("AJAX request completed." + add_to_cart_disabled);
       document.querySelectorAll('.product__media-item').forEach(function(slide) {
         slide.removeAttribute('style');
       });
