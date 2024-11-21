@@ -899,7 +899,11 @@ function remove_default_variant_selected(){
         }
       }, 100);
     }
-    
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('swatch-input__input')) {
+            handleChange();
+        }
+    });
     //************************************************************************
     //************ End Step-5 ************************************************
     //************************************************************************
