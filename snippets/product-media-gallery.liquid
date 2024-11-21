@@ -61,7 +61,7 @@
       class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
       role="list"
     >
-      {% comment %}
+     
       {%- if product.selected_or_first_available_variant.featured_media != null -%}
         {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
         <li
@@ -86,7 +86,7 @@
           %}
         </li>
       {%- endif -%}
-      {% endcomment %}
+     
       
       {%- for media in product.media -%}
         {% if media_position >= limit
