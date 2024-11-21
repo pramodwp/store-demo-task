@@ -1,12 +1,4 @@
-{%- style -%}
-.product:not(.product--columns) .product__media-list.product__media_custom-list .product__media-item:nth-child(1){
-	width: auto;
-}
-.product:not(.product--columns) .product__media-list.product__media_custom-list .product__media-item:nth-child(2){
-	width: 100%;
-    max-width: 100%;
-}
-{%- endstyle -%}
+
 
 <product-info
   id="MainProduct-{{ section.id }}"
@@ -899,7 +891,11 @@ function remove_default_variant_selected(){
         }
       }, 100);
     }
-    
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('swatch-input__input')) {
+            handleChange();
+        }
+    });
     //************************************************************************
     //************ End Step-5 ************************************************
     //************************************************************************
