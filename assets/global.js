@@ -1,3 +1,10 @@
+var product_gallery_slider_count = 0;
+if(document.querySelectorAll('slider-component .slider__slide').length > 0){
+  document.querySelectorAll('slider-component .slider__slide').forEach(function(img) {
+      product_gallery_slider_count = product_gallery_slider_count + 1;
+  });
+}
+
 function getFocusableElements(container) {
   return Array.from(
     container.querySelectorAll(
@@ -763,18 +770,17 @@ class SliderComponent extends HTMLElement {
     const previousPage = this.currentPage;
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
 
-    var slider_count = 0;
+    var new_slider_count = 0;
     if(document.querySelectorAll('slider-component .slider__slide').length > 0){
       document.querySelectorAll('slider-component .slider__slide').forEach(function(img) {
-          slider_count = slider_count + 1;
+          new_slider_count = new_slider_count + 1;
       });
     }
-    var new_slider_count = slider_count;
     
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
-      if(document.querySelectorAll('.first_variant_image').length > 0 && document.querySelectorAll('.gallery_first_image').length > 0 && new_slider_count==slider_count){
-        this.pageTotalElement.textContent = slider_count - 2;
+      if(document.querySelectorAll('.first_variant_image').length > 0 && document.querySelectorAll('.gallery_first_image').length > 0 && new_slider_count==product_gallery_slider_count){
+        this.pageTotalElement.textContent = product_gallery_slider_count - 2;
       }else{
         this.pageTotalElement.textContent = this.totalPages;
       }
