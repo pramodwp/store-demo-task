@@ -812,7 +812,7 @@ function remove_default_variant_selected(){
         var slider_count = 0;
         document.querySelectorAll('.product__media-list .slider__slide').forEach(function(img) {
             slider_count = slider_count + 1;
-        });
+        });console.log('count:'+slider_count);
         document.querySelectorAll('.product__media-list .slider-counter--total').forEach(function(span) {
             var old_slider_count = span.text;
             console.log('count:'+slider_count);
