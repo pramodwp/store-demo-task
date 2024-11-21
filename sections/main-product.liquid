@@ -808,13 +808,13 @@ function remove_default_variant_selected(){
         });
       }
       
-      if(document.querySelectorAll('.slider-counter--total').length > 0){
+      if(document.querySelectorAll('.slider__slide').length > 0){
         var slider_count = 0;
-        document.querySelectorAll('.slider-counter--total').forEach(function(img) {
+        document.querySelectorAll('.product__media-list .slider__slide').forEach(function(img) {
             slider_count = slider_count + 1;
         });
 
-        console.log(slider_count);
+        console.log('count:'+slider_count);
       }
     }
     //************************************************************************
