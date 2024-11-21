@@ -62,7 +62,7 @@
       role="list"
     >
       
-      {%- if product.selected_or_first_available_variant.featured_media != null && product.media -%}
+      {%- if product.selected_or_first_available_variant.featured_media != null and product.media -%}
         {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
         <li
           id="Slide-{{ section.id }}-{{ featured_media.id }}"
