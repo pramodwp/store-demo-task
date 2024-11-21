@@ -763,20 +763,27 @@ class SliderComponent extends HTMLElement {
     const previousPage = this.currentPage;
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
 
-    
+    var slider_count = 0;
+    var new_slider_count = 0;
+    if(document.querySelectorAll('slider-component .slider__slide').length > 0){
+      document.querySelectorAll('slider-component .slider__slide').forEach(function(img) {
+          slider_count = slider_count + 1;
+      });
+    }
+    var new_slider_count = slider_count;
     
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
-  
-      if(document.querySelectorAll('.first_variant_image').length > 0 && document.querySelectorAll('.gallery_first_image').length > 0){
 
+      if(document.querySelectorAll('.first_variant_image').length > 0 && document.querySelectorAll('.gallery_first_image').length > 0 && ){
+        
         if(document.querySelectorAll('slider-component .slider__slide').length > 0){
           var slider_count = 0;
           document.querySelectorAll('slider-component .slider__slide').forEach(function(img) {
               slider_count = slider_count + 1;
           });
         }
-        console.log('test...', slider_count);
+        
         this.pageTotalElement.textContent = slider_count - 2;
       }else{
         this.pageTotalElement.textContent = this.totalPages;
