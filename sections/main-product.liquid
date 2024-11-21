@@ -925,6 +925,14 @@ function remove_default_variant_selected(){
             element.remove();
         });
       }
+
+      var slider_count = 0;
+      if(document.querySelectorAll('slider-component .slider__slide').length > 0){
+        document.querySelectorAll('slider-component .slider__slide').forEach(function(img) {
+            slider_count = slider_count + 1;
+        });
+      }
+      console.log('count:'+slider_count);
     }
     document.addEventListener('click', (event) => {
         if (event.target.classList.contains('swatch-input__input')) {
