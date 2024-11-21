@@ -797,12 +797,16 @@ function remove_default_variant_selected(){
           document.querySelector('[name="add"]').disabled = true;
       }
 
-      document.querySelectorAll('.first_variant_image').forEach(function(img) {
-          img.style.display = 'none';
-      });
-      document.querySelectorAll('.gallery_first_image').forEach(function(img) {
-          img.style.display = 'none';
-      });
+      if(document.querySelectorAll('.first_variant_image').length > 0){
+        document.querySelectorAll('.first_variant_image').forEach(function(img) {
+            img.style.display = 'none';
+        });
+      }
+      if(document.querySelectorAll('.gallery_first_image').length > 0){
+        document.querySelectorAll('.gallery_first_image').forEach(function(img) {
+            img.style.display = 'none';
+        });
+      }
     }
     //************************************************************************
     //************ End Step-1 ************************************************
