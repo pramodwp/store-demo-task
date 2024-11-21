@@ -765,7 +765,15 @@ class SliderComponent extends HTMLElement {
 
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
-      this.pageTotalElement.textContent = this.totalPages - 2;
+
+      if(document.querySelectorAll('.first_variant_image').length > 0 && document.querySelectorAll('.gallery_first_image').length > 0){
+        this.pageTotalElement.textContent = this.totalPages - 2;
+      }
+      else if(document.querySelectorAll('.first_variant_image').length > 0 || document.querySelectorAll('.gallery_first_image').length > 0){
+        this.pageTotalElement.textContent = this.totalPages - 1;
+      }else{
+        this.pageTotalElement.textContent = this.totalPages;
+      }
     }
 
     if (this.currentPage != previousPage) {
