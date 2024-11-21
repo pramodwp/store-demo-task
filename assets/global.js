@@ -768,9 +768,6 @@ class SliderComponent extends HTMLElement {
 
       if(document.querySelectorAll('.first_variant_image').length > 0 && document.querySelectorAll('.gallery_first_image').length > 0){
         this.pageTotalElement.textContent = this.totalPages - 2;
-      }
-      else if(document.querySelectorAll('.first_variant_image').length > 0 || document.querySelectorAll('.gallery_first_image').length > 0){
-        this.pageTotalElement.textContent = this.totalPages - 1;
       }else{
         this.pageTotalElement.textContent = this.totalPages;
       }
