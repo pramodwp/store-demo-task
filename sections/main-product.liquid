@@ -816,7 +816,7 @@ function remove_default_variant_selected(){
         setTimeout(function(){
           document.querySelectorAll('slider-component .slider-counter--total').forEach(function(span) {
               var old_slider_count = span.text;
-              span.text = parseInt(old_slider_count) - 2;
+              span.innerHTML = parseInt(old_slider_count) - 2;
           });
         },5000);
       }
