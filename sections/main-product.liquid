@@ -902,6 +902,10 @@ function remove_default_variant_selected(){
           clearInterval(vbtn);
         }
       }, 100);
+
+      document.querySelectorAll('.main_product_image').forEach(element => {
+          element.remove();
+      });
     }
     document.addEventListener('click', (event) => {
         if (event.target.classList.contains('swatch-input__input')) {
