@@ -763,9 +763,11 @@ class SliderComponent extends HTMLElement {
     const previousPage = this.currentPage;
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
 
+    console.log('test...');
+    
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
-
+  
       if(document.querySelectorAll('.first_variant_image').length > 0 && document.querySelectorAll('.gallery_first_image').length > 0){
 
         if(document.querySelectorAll('slider-component .slider__slide').length > 0){
