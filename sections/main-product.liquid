@@ -910,12 +910,16 @@ function remove_default_variant_selected(){
         }
       }, 100);
 
-      document.querySelectorAll('.main_product_image').forEach(element => {
-          element.remove();
-      });
-      document.querySelectorAll('.gallery_second_image').forEach(element => {
-          element.remove();
-      });
+      if(document.querySelectorAll('.main_product_image').length > 0){
+        document.querySelectorAll('.main_product_image').forEach(element => {
+            element.remove();
+        });
+      }
+      if(document.querySelectorAll('.gallery_second_image').length > 0){
+        document.querySelectorAll('.gallery_second_image').forEach(element => {
+            element.remove();
+        });
+      }
     }
     document.addEventListener('click', (event) => {
         if (event.target.classList.contains('swatch-input__input')) {
