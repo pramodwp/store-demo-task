@@ -815,7 +815,7 @@ function remove_default_variant_selected(){
         });
         document.querySelectorAll('slider-component .slider-counter--total').forEach(function(span) {
             var old_slider_count = span.text;
-            console.log('count:'+slider_count);
+            span.text = parseInt(old_slider_count) - 2;
         });
       }
     }
