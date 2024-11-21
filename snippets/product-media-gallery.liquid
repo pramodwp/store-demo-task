@@ -132,8 +132,10 @@
         
       {%- endif -%}
      
-      
+      {% assign g_img_counter = 0 %} <!-- Initialize the variable -->
       {%- for media in product.media -%}
+        
+        
         {% if media_position >= limit
           or media_position >= 1
           and section.settings.hide_variants
@@ -142,10 +144,9 @@
           {% continue %}
         {% endif %}
 
-
-        {{ media_position }}
+        
         {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-
+            
           
           {% if media_position == 4 %}
             {%- if product.selected_or_first_available_variant.featured_media != null -%}
@@ -203,6 +204,8 @@
             %}
           </li>
         {%- endunless -%}
+
+        {% assign g_img_counter = g_img_counter | plus: 1 %} <!-- Increment the variable -->
       {%- endfor -%}
     </ul>
     <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
