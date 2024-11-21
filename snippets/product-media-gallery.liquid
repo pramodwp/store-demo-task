@@ -61,7 +61,6 @@
       class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
       role="list"
     >
-      {{ product.media.size }}
       {%- if product.selected_or_first_available_variant.featured_media != null and product.media.size <= 1 -%}
         {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
         <li
