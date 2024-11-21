@@ -770,6 +770,145 @@
   </div>
 </product-info>
 
+<script>
+function remove_default_variant_selected(){
+    //************************************************************************
+    //************ Sta Step-1 ************************************************
+    //************************************************************************
+    document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
+        input.checked = false;
+    });
+    
+    if(document.querySelectorAll('.product-form__input input[type="radio"]').length > 0){
+      document.querySelectorAll('.product-form__input .form__label span').forEach(function(span) {
+          span.innerHTML = '';
+      });
+      
+      /*document.querySelectorAll('.price .price-item').forEach(function(span) {
+          span.innerHTML = '';
+      });
+      document.querySelector('.price').style.display = 'none';*/
+      
+      if(document.querySelectorAll('[name="add"]').length > 0){
+          document.querySelector('[name="add"]').disabled = true;
+      }
+    }
+    //************************************************************************
+    //************ End Step-1 ************************************************
+    //************************************************************************
+
+
+    //************************************************************************
+    //************ Sta Step-2 ************************************************
+    //************************************************************************
+    // Replace with the correct ID or class of your slider component
+    var slider = document.querySelector('.product__media-list');
+    
+    // Replace with the specific slide number you want to activate (e.g., slide 2)
+    var slideNumber = 1; // Index starts from 0, so 2 means the 3rd slide
+
+    if (slider) {
+        var slides = slider.querySelectorAll('.product__media-item');
+        
+        if (slides && slides.length > slideNumber) {
+            // Remove 'is-active' or equivalent class from other slides
+            slides.forEach(function (slide) {
+                slide.classList.remove('is-active');
+            });
+
+            // Add 'is-active' or equivalent class to the target slide
+            slides[slideNumber].classList.add('is-active');
+
+            // Scroll to the target slide if necessary
+            //slides[slideNumber].scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+    //************************************************************************
+    //************ End Step-2 ************************************************
+    //************************************************************************
+  
+  
+    //************************************************************************
+    //************ Sta Step-3 ************************************************
+    //************************************************************************
+    // Select the product media list container
+    var mediaList = document.querySelector('.product__media-list');
+
+    // Check if the element exists
+    if (mediaList) {
+        // Add your custom class
+        mediaList.classList.add('product__media_custom-list');
+    }
+    //************************************************************************
+    //************ End Step-3 ************************************************
+    //************************************************************************
+
+  
+
+    //************************************************************************
+    //************ Sta Step-4 ************************************************
+    //************************************************************************
+    // Select the main product media list container
+    var mediaList = document.querySelector('.product__media-list');
+    if (mediaList) {
+        // Select all product media items
+        var mediaItems = mediaList.querySelectorAll('.product__media-item.slider__slide');
+        
+        // Ensure there are at least 2 items to switch
+        if (mediaItems.length > 1) {
+            // Loop through each item
+            mediaItems.forEach(function(item, index) {
+                if(index==0){
+                    mediaItems[index].style.order = '2';
+                }
+                else if(index==1){
+                    mediaItems[index].style.order = '0';
+                }
+                else if(index==2){
+                    mediaItems[index].style.order = '1';
+                }  
+                else if(index > 2){
+                    mediaItems[index].style.order = index;
+                }
+            });
+        }
+    }
+    //************************************************************************
+    //************ End Step-4 ************************************************
+    //************************************************************************
+
+  
+
+    //************************************************************************
+    //************ Sta Step-5 ************************************************
+    //************************************************************************
+    // Function to handle the change or click event
+    function handleChange() {
+      document.querySelectorAll('.product__media-item').forEach(function(slide) {
+        slide.removeAttribute('style');
+      });
+      const element = document.querySelector('.product__media_custom-list');
+      // Check if the element exists before trying to remove the class
+      if (element) {
+        element.classList.remove('product__media_custom-list');
+      }
+      var vbtn = setInterval(function(){
+        if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled && document.querySelector('[name="add"]').disabled == false){
+          document.querySelector('[name="add"]').disabled = true;
+          clearInterval(vbtn);
+        }
+      }, 100);
+    }
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('swatch-input__input')) {
+            handleChange();
+        }
+    });
+    //************************************************************************
+    //************ End Step-5 ************************************************
+    //************************************************************************
+}
+</script>
 
 {% schema %}
 {
