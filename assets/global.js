@@ -767,7 +767,7 @@ class SliderComponent extends HTMLElement {
       this.currentPageElement.textContent = this.currentPage;
 
       if(document.querySelectorAll('.first_variant_image').length > 0 && document.querySelectorAll('.gallery_first_image').length > 0){
-        this.pageTotalElement.textContent = this.totalPages - 2;
+        this.pageTotalElement.textContent = this.totalPages - 1;
       }else{
         this.pageTotalElement.textContent = this.totalPages;
       }
