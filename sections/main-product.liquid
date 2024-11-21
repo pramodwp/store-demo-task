@@ -813,15 +813,11 @@ function remove_default_variant_selected(){
         document.querySelectorAll('slider-component .slider__slide').forEach(function(img) {
             slider_count = slider_count + 1;
         });
-        document.querySelectorAll('slider-component .slider-counter--total').forEach(function(span) {
-            span.innerHTML = parseInt(slider_count) - 2;
-        });
-        setTimeout(function(){
+        var vbtn = setInterval(function(){
           document.querySelectorAll('slider-component .slider-counter--total').forEach(function(span) {
               span.innerHTML = parseInt(slider_count) - 2;
           });
         },100);
-        
       }
     }
     //************************************************************************
