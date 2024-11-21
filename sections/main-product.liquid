@@ -807,18 +807,6 @@ function remove_default_variant_selected(){
             img.style.display = 'none';
         });
       }
-      
-      if(document.querySelectorAll('slider-component .slider__slide').length > 0){
-        var slider_count = 0;
-        document.querySelectorAll('slider-component .slider__slide').forEach(function(img) {
-            slider_count = slider_count + 1;
-        });
-        var vbtn = setInterval(function(){
-          document.querySelectorAll('slider-component .slider-counter--total').forEach(function(span) {
-              span.innerHTML = parseInt(slider_count) - 2;
-          });
-        },1);
-      }
     }
     //************************************************************************
     //************ End Step-1 ************************************************
