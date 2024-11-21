@@ -82,7 +82,7 @@
     >
   {%- endif -%}
 
-  {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+  {% assign variant_images = product.images | where: 'attached_to_variant?', false | map: 'src' %}
 
   {{ variant_images }}
 
