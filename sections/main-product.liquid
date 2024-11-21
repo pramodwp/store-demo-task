@@ -899,11 +899,7 @@ function remove_default_variant_selected(){
         }
       }, 100);
     }
-    document.addEventListener('click', (event) => {
-        if (event.target.classList.contains('swatch-input__input')) {
-            handleChange();
-        }
-    });
+    
     //************************************************************************
     //************ End Step-5 ************************************************
     //************************************************************************
@@ -911,7 +907,7 @@ function remove_default_variant_selected(){
 
 //Remove on load init remove default variant selected color
 document.addEventListener('DOMContentLoaded', function () {
-    
+    remove_default_variant_selected();
 });
 </script>
 
