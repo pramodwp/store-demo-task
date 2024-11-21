@@ -813,10 +813,12 @@ function remove_default_variant_selected(){
         document.querySelectorAll('slider-component .slider__slide').forEach(function(img) {
             slider_count = slider_count + 1;
         });
-        document.querySelectorAll('slider-component .slider-counter--total').forEach(function(span) {
-            var old_slider_count = span.text;
-            span.text = parseInt(old_slider_count) - 2;
-        });
+        setTimeout(function(){
+          document.querySelectorAll('slider-component .slider-counter--total').forEach(function(span) {
+              var old_slider_count = span.text;
+              span.text = parseInt(old_slider_count) - 2;
+          });
+        },1000);
       }
     }
     //************************************************************************
