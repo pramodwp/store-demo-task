@@ -1,3 +1,13 @@
+{%- style -%}
+.product:not(.product--columns) .product__media-list.product__media_custom-list .product__media-item:nth-child(1){
+	width: auto;
+}
+.product:not(.product--columns) .product__media-list.product__media_custom-list .product__media-item:nth-child(2){
+	width: 100%;
+    max-width: 100%;
+}
+{%- endstyle -%}
+
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -152,10 +162,9 @@
                       {%- if product.selected_or_first_available_variant.inventory_quantity
                           <= block.settings.inventory_threshold
                       -%}
-                        <svg width="15" height="15" aria-hidden="true">
-                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(238,148,65, 0.3)"/>
-                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(238,148,65)"/>
-                        </svg>
+                        <span class="svg-wrapper" style="color: rgb(238, 148, 65)">
+                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
+                        </span>
                         {%- if block.settings.show_inventory_quantity -%}
                           {{-
                             'products.product.inventory_low_stock_show_count'
@@ -165,10 +174,9 @@
                           {{- 'products.product.inventory_low_stock' | t -}}
                         {%- endif -%}
                       {%- else -%}
-                        <svg width="15" height="15" aria-hidden="true">
-                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
-                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
-                        </svg>
+                        <span class="svg-wrapper" style="color: rgb(62, 214, 96)">
+                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
+                        </span>
                         {%- if block.settings.show_inventory_quantity -%}
                           {{-
                             'products.product.inventory_in_stock_show_count'
@@ -180,16 +188,14 @@
                       {%- endif -%}
                     {%- else -%}
                       {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
-                        <svg width="15" height="15" aria-hidden="true">
-                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
-                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
-                        </svg>
+                        <span class="svg-wrapper" style="color: rgb(62, 214, 96)">
+                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
+                        </span>
                         {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
                       {%- else -%}
-                        <svg width="15" height="15" aria-hidden="true">
-                          <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(200,200,200, 0.3)"/>
-                          <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(200,200,200)"/>
-                        </svg>
+                        <span class="svg-wrapper" style="color: rgb(200, 200, 200)">
+                          {{- 'icon-inventory-status.svg' | inline_asset_content -}}
+                        </span>
                         {{- 'products.product.inventory_out_of_stock' | t -}}
                       {%- endif -%}
                     {%- endif -%}
@@ -223,7 +229,7 @@
                           {{ block.settings.heading | default: block.settings.page.title | escape }}
                         </h2>
                       </div>
-                      {% render 'icon-caret' %}
+                      {{- 'icon-caret.svg' | inline_asset_content -}}
                     </summary>
                     <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                       {{ block.settings.content }}
@@ -260,7 +266,9 @@
                         <span class="visually-hidden">
                           {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                         </span>
-                        {% render 'icon-minus' %}
+                        <span class="svg-wrapper">
+                          {{- 'icon-minus.svg' | inline_asset_content -}}
+                        </span>
                       </button>
                       <input
                         class="quantity__input"
@@ -282,7 +290,9 @@
                         <span class="visually-hidden">
                           {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                         </span>
-                        {% render 'icon-plus' %}
+                        <span class="svg-wrapper">
+                          {{- 'icon-plus.svg' | inline_asset_content -}}
+                        </span>
                       </button>
                     </quantity-input>
                     {%- liquid
@@ -464,6 +474,41 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
+
+                {% assign current_at = "now" | date: "%s" %}
+                {% assign check_available_at = product.metafields.custom.available_at | date: "%s" %}
+
+                {% comment %} 
+                  Not available yet ("Condition 1")
+                  WHEN available_at is set and in the future
+                  THEN "Add to cart" (and all buying options) show but are disabled
+                  AND "Available {date} at {time}" badge shows
+                  
+                  Available ("Condition 2" and "Condition 3")
+                  WHEN available_at is NOT set OR available_at is in the past
+                  THEN "Add to cart" (and all buying options) should show and are enabled
+                  AND no badge appears
+                  
+                  Available but Sold Out
+                  WHEN available (see logic above) and inventory <= 0
+                  THEN "Add to cart" (and all buying options) are disabled
+                  THEN "Sold Out" badge shows
+                {% endcomment %}
+
+                {% assign badge_show = false %}
+                {% if product.metafields.custom.available_at != blank and check_available_at > current_at %}
+                  <script>var add_to_cart_disabled = true;</script>
+                  {% assign badge_show = true %}
+                {% endif %}
+
+                {%- if badge_show -%}
+                    <div class="availability-message">
+                		<span class="badge color-{{ settings.sale_badge_color_scheme }}">
+                		  Available {{ product.metafields.custom.available_at | date: "%m/%d/%Y" }} at {{ product.metafields.custom.available_at | date: "%I:%M%p" }} PST
+                		</span>
+                	</div>
+                {% endif %}
+              
                 {%- render 'buy-buttons',
                   block: block,
                   product: product,
@@ -471,6 +516,7 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+              
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -538,7 +584,7 @@
                           {%- endif -%}
                         </div>
                         {%- if block.settings.make_collapsible_row -%}
-                          {% render 'icon-caret' %}
+                          {{- 'icon-caret.svg' | inline_asset_content -}}
                           </summary>
                         {%- endif -%}
                         <slideshow-component class="slider-mobile-gutter">
@@ -604,7 +650,9 @@
                                 name="previous"
                                 aria-label="{{ 'general.slider.previous_slide' | t }}"
                               >
-                                {% render 'icon-caret' %}
+                                <span class="svg-wrapper">
+                                  {{- 'icon-caret.svg' | inline_asset_content -}}
+                                </span>
                               </button>
                               <div class="slider-counter slider-counter--{{ block.settings.pagination_style }}{% if block.settings.pagination_style == 'counter' or block.settings.pagination_style == 'numbers' %} caption{% endif %}">
                                 {%- if block.settings.pagination_style == 'counter' -%}
@@ -636,7 +684,9 @@
                                 name="next"
                                 aria-label="{{ 'general.slider.next_slide' | t }}"
                               >
-                                {% render 'icon-caret' %}
+                                <span class="svg-wrapper">
+                                  {{- 'icon-caret.svg' | inline_asset_content -}}
+                                </span>
                               </button>
                             </div>
                           {%- endif -%}
@@ -660,7 +710,7 @@
           {%- endfor -%}
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
-            {% render 'icon-arrow' %}
+            {{- 'icon-arrow.svg' | inline_asset_content -}}
           </a>
         </section>
       </div>
@@ -684,7 +734,7 @@
             class="product-popup-modal__toggle"
             aria-label="{{ 'accessibility.close' | t }}"
           >
-            {% render 'icon-close' %}
+            {{- 'icon-close.svg' | inline_asset_content -}}
           </button>
           <div class="product-popup-modal__content-info">
             <h1 class="h2">{{ block.settings.page.title | escape }}</h1>
@@ -719,6 +769,151 @@
     </script>
   </div>
 </product-info>
+
+<script>
+function remove_default_variant_selected(){
+    //************************************************************************
+    //************ Sta Step-1 ************************************************
+    //************************************************************************
+    document.querySelectorAll('.product-form__input input[type="radio"]').forEach(function(input) {
+        input.checked = false;
+    });
+    
+    if(document.querySelectorAll('.product-form__input input[type="radio"]').length > 0){
+      document.querySelectorAll('.product-form__input .form__label span').forEach(function(span) {
+          span.innerHTML = '';
+      });
+      
+      /*document.querySelectorAll('.price .price-item').forEach(function(span) {
+          span.innerHTML = '';
+      });
+      document.querySelector('.price').style.display = 'none';*/
+      
+      if(document.querySelectorAll('[name="add"]').length > 0){
+          document.querySelector('[name="add"]').disabled = true;
+      }
+    }
+    //************************************************************************
+    //************ End Step-1 ************************************************
+    //************************************************************************
+
+
+    //************************************************************************
+    //************ Sta Step-2 ************************************************
+    //************************************************************************
+    // Replace with the correct ID or class of your slider component
+    var slider = document.querySelector('.product__media-list');
+    
+    // Replace with the specific slide number you want to activate (e.g., slide 2)
+    var slideNumber = 1; // Index starts from 0, so 2 means the 3rd slide
+
+    if (slider) {
+        var slides = slider.querySelectorAll('.product__media-item');
+        
+        if (slides && slides.length > slideNumber) {
+            // Remove 'is-active' or equivalent class from other slides
+            slides.forEach(function (slide) {
+                slide.classList.remove('is-active');
+            });
+
+            // Add 'is-active' or equivalent class to the target slide
+            slides[slideNumber].classList.add('is-active');
+
+            // Scroll to the target slide if necessary
+            //slides[slideNumber].scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+    //************************************************************************
+    //************ End Step-2 ************************************************
+    //************************************************************************
+  
+  
+    //************************************************************************
+    //************ Sta Step-3 ************************************************
+    //************************************************************************
+    // Select the product media list container
+    var mediaList = document.querySelector('.product__media-list');
+
+    // Check if the element exists
+    if (mediaList) {
+        // Add your custom class
+        mediaList.classList.add('product__media_custom-list');
+    }
+    //************************************************************************
+    //************ End Step-3 ************************************************
+    //************************************************************************
+
+  
+
+    //************************************************************************
+    //************ Sta Step-4 ************************************************
+    //************************************************************************
+    // Select the main product media list container
+    var mediaList = document.querySelector('.product__media-list');
+    if (mediaList) {
+        // Select all product media items
+        var mediaItems = mediaList.querySelectorAll('.product__media-item.slider__slide');
+        
+        // Ensure there are at least 2 items to switch
+        if (mediaItems.length > 1) {
+            // Loop through each item
+            mediaItems.forEach(function(item, index) {
+                if(index==0){
+                    mediaItems[index].style.order = '2';
+                }
+                else if(index==1){
+                    mediaItems[index].style.order = '0';
+                }
+                else if(index==2){
+                    mediaItems[index].style.order = '1';
+                }  
+                else if(index > 2){
+                    mediaItems[index].style.order = index;
+                }
+            });
+        }
+    }
+    //************************************************************************
+    //************ End Step-4 ************************************************
+    //************************************************************************
+
+  
+
+    //************************************************************************
+    //************ Sta Step-5 ************************************************
+    //************************************************************************
+    // Function to handle the change or click event
+    function handleChange() {
+      document.querySelectorAll('.product__media-item').forEach(function(slide) {
+        slide.removeAttribute('style');
+      });
+      const element = document.querySelector('.product__media_custom-list');
+      // Check if the element exists before trying to remove the class
+      if (element) {
+        element.classList.remove('product__media_custom-list');
+      }
+      var vbtn = setInterval(function(){
+        if(document.querySelectorAll('[name="add"]').length > 0 && add_to_cart_disabled && document.querySelector('[name="add"]').disabled == false){
+          document.querySelector('[name="add"]').disabled = true;
+          clearInterval(vbtn);
+        }
+      }, 100);
+    }
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('swatch-input__input')) {
+            handleChange();
+        }
+    });
+    //************************************************************************
+    //************ End Step-5 ************************************************
+    //************************************************************************
+}
+
+//Remove on load init remove default variant selected color
+document.addEventListener('DOMContentLoaded', function () {
+    remove_default_variant_selected();
+});
+</script>
 
 {% schema %}
 {
