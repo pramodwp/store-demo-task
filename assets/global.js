@@ -763,7 +763,7 @@ class SliderComponent extends HTMLElement {
     const previousPage = this.currentPage;
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
 
-    console.log('test...');
+    
     
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
@@ -776,7 +776,7 @@ class SliderComponent extends HTMLElement {
               slider_count = slider_count + 1;
           });
         }
-        
+        console.log('test...');
         this.pageTotalElement.textContent = slider_count - 2;
       }else{
         this.pageTotalElement.textContent = this.totalPages;
