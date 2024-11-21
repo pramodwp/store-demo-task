@@ -774,16 +774,7 @@ class SliderComponent extends HTMLElement {
     
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
-
-      if(document.querySelectorAll('.first_variant_image').length > 0 && document.querySelectorAll('.gallery_first_image').length > 0 && ){
-        
-        if(document.querySelectorAll('slider-component .slider__slide').length > 0){
-          var slider_count = 0;
-          document.querySelectorAll('slider-component .slider__slide').forEach(function(img) {
-              slider_count = slider_count + 1;
-          });
-        }
-        
+      if(document.querySelectorAll('.first_variant_image').length > 0 && document.querySelectorAll('.gallery_first_image').length > 0 && new_slider_count==slider_count){
         this.pageTotalElement.textContent = slider_count - 2;
       }else{
         this.pageTotalElement.textContent = this.totalPages;
