@@ -776,7 +776,7 @@ class SliderComponent extends HTMLElement {
               slider_count = slider_count + 1;
           });
         }
-        console.log('test...');
+        console.log('test...', slider_count);
         this.pageTotalElement.textContent = slider_count - 2;
       }else{
         this.pageTotalElement.textContent = this.totalPages;
