@@ -913,6 +913,9 @@ function remove_default_variant_selected(){
       document.querySelectorAll('.main_product_image').forEach(element => {
           element.remove();
       });
+      document.querySelectorAll('.gallery_second_image').forEach(element => {
+          element.remove();
+      });
     }
     document.addEventListener('click', (event) => {
         if (event.target.classList.contains('swatch-input__input')) {
