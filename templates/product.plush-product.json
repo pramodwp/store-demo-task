@@ -49,6 +49,20 @@
           "type": "description",
           "settings": {}
         },
+        "icon_with_text_wBkza9": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "none",
+            "image_1": "shopify://shop_images/ages-8-and-up.png",
+            "heading_1": "Ages 8 and up",
+            "icon_2": "none",
+            "image_2": "shopify://shop_images/WarningNotFor0-3.png",
+            "heading_2": "Choking Hazard: Small parts. Not for children under 3 years.",
+            "icon_3": "none",
+            "heading_3": ""
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -64,6 +78,7 @@
         "quantity_selector",
         "buy_buttons",
         "description",
+        "icon_with_text_wBkza9",
         "share"
       ],
       "settings": {
